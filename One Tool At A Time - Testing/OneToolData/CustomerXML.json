@@ -1,0 +1,14 @@
+[
+    {
+        "row_id": 1,
+        "customer_xml": "<customer id=\"1022\">\n <membership_level>gold</membership_level>\n <membership_start>2014-05-29</membership_start>\n <transactions>\n  <transaction id=\"1\">\n   <date>2014-06-20</date>\n   <amount>60</amount>\n  </transaction>\n  <transaction id=\"2\">\n   <date>2014-09-20</date>\n   <amount>32</amount>\n  </transaction>\n  <transaction id=\"3\">\n   <date>2014-12-20</date>\n   <amount>25</amount>\n  </transaction>\n </transactions>\n</customer>"
+    },
+    {
+        "row_id": 2,
+        "customer_xml": "<customer id=\"1021\">\n <membership_level>platinum</membership_level>\n <membership_start>2015-02-16</membership_start>\n <transactions>\n  <transaction id=\"1\">\n   <date>2015-03-01</date>\n   <amount>1500</amount>\n  </transaction>\n  <transaction id=\"2\">\n   <date>2015-04-01</date>\n   <amount>120</amount>\n  </transaction>\n  <transaction id=\"3\">\n   <date>2015-05-01</date>\n   <amount>488</amount>\n  </transaction>\n  <transaction id=\"4\">\n   <date>2015-06-01</date>\n   <amount>2850</amount>\n  </transaction>\n </transactions>\n</customer>"
+    },
+    {
+        "row_id": 3,
+        "customer_xml": "<customer id=\"1021\">\n <membership_level>frozen</membership_level>\n <membership_start>2009-01-22</membership_start>\n <transactions>\n </transactions>\n</customer>"
+    }
+]

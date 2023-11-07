@@ -1,0 +1,586 @@
+[
+    {
+        "ToolName": "API Output",
+        "Category_and_Search_Tags": "Developer|[developer | api | \"application programming interface\" | application | programming | interface | output | \"developer category\"]"
+    },
+    {
+        "ToolName": "Action",
+        "Category_and_Search_Tags": "Interface|[Action | clapper | Apps | Macro | UI | Interface | \"question \"]"
+    },
+    {
+        "ToolName": "Allocate Append",
+        "Category_and_Search_Tags": "Demographic Analysis|[\"demographic analysis\" | demographic | analysis | allocate | append | \"demographic analysis category\"]"
+    },
+    {
+        "ToolName": "Allocate Input",
+        "Category_and_Search_Tags": "Demographic Analysis|[\"demographic analysis\" | demographic | analysis | allocate | input | \"demographic analysis category\"]"
+    },
+    {
+        "ToolName": "Allocate Metainfo",
+        "Category_and_Search_Tags": "Demographic Analysis|[\"demographic analysis\" | demographic | analysis | allocate | metainfo | \"demographic analysis category\"]"
+    },
+    {
+        "ToolName": "Allocate Report",
+        "Category_and_Search_Tags": "Demographic Analysis|[\"demographic analysis\" | demographic | analysis | allocate | report | presentation | \"demographic analysis category\" | output]"
+    },
+    {
+        "ToolName": "Amazon S3 Download",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | S3 | Download | \"simple storage service\" | simple | storage | service | web | input | \"connectors category\"]"
+    },
+    {
+        "ToolName": "Amazon S3 Upload",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | S3 | upload | \"simple storage service\" | simple | storage | service | web | output | \"connectors category\"]"
+    },
+    {
+        "ToolName": "Append Fields",
+        "Category_and_Search_Tags": "Join|[join | \"cartesian join\" | compare | \"join category\"]"
+    },
+    {
+        "ToolName": "Arrange",
+        "Category_and_Search_Tags": "Transform|[data | transpose | rearrage | report | presentation | \"transform category\"]"
+    },
+    {
+        "ToolName": "Auto Field",
+        "Category_and_Search_Tags": "Preparation|[optimize | automatic | data | format | caliper | \"preparation category\" | field | exercise1]"
+    },
+    {
+        "ToolName": "Behavior Metainfo",
+        "Category_and_Search_Tags": "Behavior Analysis|[\"behavior analysis\" | profile | metainfo | meta | info | information | \"behavior analysis category\"]"
+    },
+    {
+        "ToolName": "Blob Convert",
+        "Category_and_Search_Tags": "Developer|[developer | \"binary large object\" | blob | convert | \"data type\" | datatype | HEX | Base64 | \"MD5 Hash\" | image | JPG | PNG | GIF | media | write | \"developer category\"]"
+    },
+    {
+        "ToolName": "Blob Input",
+        "Category_and_Search_Tags": "Developer|[developer | \"binary large object\" | blob | input | image | JPG | PNG | GIF | media | read | \"developer category\"]"
+    },
+    {
+        "ToolName": "Blob Output",
+        "Category_and_Search_Tags": "Developer|[developer | \"binary large object\" | blob | output | image | JPG | PNG | GIF | media | write | \"developer category\"]"
+    },
+    {
+        "ToolName": "Block Until Done",
+        "Category_and_Search_Tags": "Developer|[developer | block | until | done | stop | pause | processing | hands | \"Kim Hands\" | \"developer category\"]"
+    },
+    {
+        "ToolName": "Browse",
+        "Category_and_Search_Tags": "In/Out|[output | view | data | \"In/Out category\" | exercise1 | exercise2 | exercise3 | exercise4 | exercise5 | exercise6 | exercise7 | Browse | temporary]"
+    },
+    {
+        "ToolName": "Browse In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Browse | SQL | database | Query | Clause | query | DBMS]"
+    },
+    {
+        "ToolName": "Buffer",
+        "Category_and_Search_Tags": "Spatial|[spatial | polygon | line | smooth | generalize | wave | \"spatial category\"]"
+    },
+    {
+        "ToolName": "CASS",
+        "Category_and_Search_Tags": "Address|[address | USPS | postal | \"coding accuracy support system\" | coding | accuracy | support | system | spatial | \"address category\" | standardize | standard | zip | \"zip code\" | zip4 | zip9 | \"zip 4\" | \"zip 9\"]"
+    },
+    {
+        "ToolName": "Calgary  Input",
+        "Category_and_Search_Tags": "Calgary|[calgary | list | database | db | input | \"calgary category\"]"
+    },
+    {
+        "ToolName": "Calgary  Join",
+        "Category_and_Search_Tags": "Calgary|[calgary | list | database | db | join | \"calgary category\"]"
+    },
+    {
+        "ToolName": "Calgary Loader",
+        "Category_and_Search_Tags": "Calgary|[calgary | list | database | db | load | loader | output | \"calgary category\"]"
+    },
+    {
+        "ToolName": "Chart",
+        "Category_and_Search_Tags": "Reporting|[\"\"]"
+    },
+    {
+        "ToolName": "Charting",
+        "Category_and_Search_Tags": "Reporting|[report | presentation | reporting | \"reporting category\" | area | \"stacked area\" | column | \"stacked column\" | bar | \"stacked bar\" | line | tornado | pareto | \"box and whisker\" | scatter | bubble | polar | radar | pie | legend | watermark]"
+    },
+    {
+        "ToolName": "Check Box",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | Checkbox | \"Check Box\" | \"question \"]"
+    },
+    {
+        "ToolName": "Cluster Code",
+        "Category_and_Search_Tags": "Behavior Analysis|[\"behavior analysis\" | profile | code | \"block group key\" | block | group | key | \"behavior analysis category\"]"
+    },
+    {
+        "ToolName": "Comment",
+        "Category_and_Search_Tags": "Documentation|[organization | organize | \"document \" | documentation | text | image | annotate | annotation | note | reference | \"documentation category\"]"
+    },
+    {
+        "ToolName": "Compare Behavior",
+        "Category_and_Search_Tags": "Behavior Analysis|[\"behavior analysis\" | profile | behavior | \"behavior analysis category\"]"
+    },
+    {
+        "ToolName": "Condition",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | Weather | Condition | True | False | Boolean | \"question \"]"
+    },
+    {
+        "ToolName": "Connect In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Input | \"Access Data\" | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "Control Parameter",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | Batch | \"Batch Macro\" | Input | Loop | \"question \"]"
+    },
+    {
+        "ToolName": "Create Points",
+        "Category_and_Search_Tags": "Spatial|[spatial | point | longitude | latitude | coordinate | map | \"spatial category\" | points]"
+    },
+    {
+        "ToolName": "Create Profile",
+        "Category_and_Search_Tags": "Behavior Analysis|[Behavior | analysis | \"behavior analysis\" | \"behavior analysis category\" | profile | \"behavior profile\"]"
+    },
+    {
+        "ToolName": "Cross  Count",
+        "Category_and_Search_Tags": "Calgary|[calgary | list | database | db | \"cross count\" | cross | count | aggregate | \"calgary category\"]"
+    },
+    {
+        "ToolName": "Cross Count Append",
+        "Category_and_Search_Tags": "Calgary|[calgary | list | database | db | \"cross count\" | cross | count | append | join | \"calgary category\"]"
+    },
+    {
+        "ToolName": "Cross Tab",
+        "Category_and_Search_Tags": "Transform|[summary | summarize | data | horizontal | vertical | layout | pivot | orientation | axis | transpose | tab | \"transform category\" | crosstab]"
+    },
+    {
+        "ToolName": "Data Stream In",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | \"Stream In\" | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "Data Stream Out",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | \"Stream Out\" | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima | Sort]"
+    },
+    {
+        "ToolName": "Date",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | Date | Calendar | \"question \"]"
+    },
+    {
+        "ToolName": "DateTime",
+        "Category_and_Search_Tags": "Parse|[date | time | standardize | format | expression | clock | \"parse category\"]"
+    },
+    {
+        "ToolName": "Detail Fields",
+        "Category_and_Search_Tags": "Behavior Analysis|[Behavior | analysis | \"behavior analysis\" | \"behavior analysis category\" | fields | cluster | group | profile]"
+    },
+    {
+        "ToolName": "Detour",
+        "Category_and_Search_Tags": "Developer|[developer | bypass | app | macro | \"developer category\"]"
+    },
+    {
+        "ToolName": "Detour End",
+        "Category_and_Search_Tags": "Developer|[developer | bypass | app | macro | End | \"developer category\"]"
+    },
+    {
+        "ToolName": "Directory",
+        "Category_and_Search_Tags": "In/Out|[directory | input | Folder | \"in/out category\"]"
+    },
+    {
+        "ToolName": "Distance",
+        "Category_and_Search_Tags": "Spatial|[spatial | drive | measure | calculate | \"spatial category\" | Guzzler]"
+    },
+    {
+        "ToolName": "Download",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | input | web | URL | internet | zeus | \"connectors category\" | http | ftp | API | Rest]"
+    },
+    {
+        "ToolName": "Drop Down",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | Selection | \"question \"]"
+    },
+    {
+        "ToolName": "Dynamic Input",
+        "Category_and_Search_Tags": "Developer|[dynamic | input | YXDB | CYDB | SZ | SDF | CSV | DBF | GDB | MDB | SHP | flat | KML | GRD | GRC | \"MID/MIF\" | TAB | MDB | ACCDB | XLS | XLSX | SQLite | XML | Hive | OLEDB | ODBC | Oracle | Netezza | DB2 | Teradata | \"SQL Server\" | Sybase | MySQL | Hadoop | \"developer category\"]"
+    },
+    {
+        "ToolName": "Dynamic Input In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Input | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "Dynamic Output In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Output | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "Dynamic Rename",
+        "Category_and_Search_Tags": "Developer|[dynamic | rename | hands | \"Kim Hands\" | \"developer category\"]"
+    },
+    {
+        "ToolName": "Dynamic Replace",
+        "Category_and_Search_Tags": "Developer|[dynamic | replace | data | \"developer category\"]"
+    },
+    {
+        "ToolName": "Dynamic Select",
+        "Category_and_Search_Tags": "Developer|[dynamic | select | formula | field | ABS | ACOS | ASIN | ATAN | ATAN2 | Average | BINARYAND | BINARYNOT | BINARYOR | BINARYXOR | BINTOINT | BOUND | CEIL | CHARFROMINT | CHARTOINT | CompareDictionary | CompareDigits | CompareEpsilon | ConvertFromCodePage | ConvertToCodePage | COS | COSH | COUNTWORDS | DATETIMEADD | DATETIMEDIFF | DATETIMEFIRSTOFMONTH | DATETIMEFORMAT | DATETIMELASTOFMONTH | DATETIMENOW | DATETIMEPARSE | DATETIMESTART | DATETIMETODAY | DATETIMETRIM | DECOMPOSEUNICODEFORMATCH | ESCAPEXMLMETACHARACTERS | EXP | FILEADDPATHS | FILEEXISTS | FILEGETDIR | FILEGETEXT | FILEGETFILENAME | FINANCECAGR | FINANCEEFFECTIVERATE | FINANCEFV | FINANCEFVSCHEDULE | FINANCEIRR | FINANCEMIRR | FINANCEMXIRR | FINANCENOMINALRATE | FINANCENPER | FINANCENPV | FINANCEPMT | FINANCEPV | FINANCERATE | FINANCEXIRR | FINANCEXNPV | CAGR | EFFECTIVERATE | FV | FVSCHEDULE | IRR | MIRR | MXIRR | NOMINALRATE | NPER | NPV | PMT | PV | RATE | XIRR | XNPV | FINDSTRING | FLOOR | GETENVIRONMENTVARIABLE | GETVAL | GETWORD | HEXTONUMBER | IIF | INDEX | INDEXVALUE | INTTOBIN | INTTOHEX | ISEMPTY | ISINTEGER | ISNULL | LEFT | LENGTH | LOG | LOG10 | LOWERCASE | MAX | MAXIDX | MD5_ASCII | MD5_UNICODE | MEDIAN | MIN | MINIDX | MOD | PADLEFT | PADRIGHT | PI | POW | RAND | RANDINT | RANGEMEDIAN | READREGISTRYSTRING | REGEX_COUNTMATCHES | REGEX_MATCH | REGEX_REPLACE | REPLACE | REPLACECHAR | REPLACEFIRST | REVERSESTRING | RIGHT | ROUND | SHIFTLEFT | SHIFTRIGHT | SIN | SINH | SMARTROUND | SOUNDEX | SOUNDEX_DIGITS | SQRT | ST_Area | ST_Boundary | ST_BoundingRectangle | ST_Centroid | ST_CentroidX | ST_CentroidY | ST_Combine | ST_Contains | ST_ConvexHull | ST_CreateLine | ST_CreatePoint | ST_CreatePolygon | ST_Cut | ST_Dimension | ST_Distance | ST_EndPoint | ST_Intersection | ST_Intersects | ST_InverseIntersection | ST_Length | ST_MaxX | ST_MaxY | ST_MD5 | ST_MinX | ST_MinY | ST_NumParts | ST_NumPoints | ST_ObjectType | ST_PointN | ST_RandomPoint | ST_Relate | ST_StartPoint | ST_Touches | ST_TouchesOrIntersects | ST_Within | Area | Boundary | BoundingRectangle | Centroid | CentroidX | CentroidY | Combine | Contains | ConvexHull | CreateLine | CreatePoint | CreatePolygon | Cut | Dimension | Distance | EndPoint | Intersection | Intersects | InverseIntersection | Length | \"]"
+    },
+    {
+        "ToolName": "Email",
+        "Category_and_Search_Tags": "Reporting|[report | presentation | smtp | mail | address | attachment | \"reporting category\" | output]"
+    },
+    {
+        "ToolName": "Error Message",
+        "Category_and_Search_Tags": "Interface|[Action | clapper | Apps | Macro | UI | Interface | Error | \"Throw error\" | \"question \"]"
+    },
+    {
+        "ToolName": "Explorer Box",
+        "Category_and_Search_Tags": "Documentation|[organization | organize | document | documentation | box | internet | windows | web | \"documentation category\" | html]"
+    },
+    {
+        "ToolName": "Field Info",
+        "Category_and_Search_Tags": "Developer|[dynamic | table | schema | \"developer category\" | \"field info\" | field | info | string | number | type | metainfo | size | date | float | double]"
+    },
+    {
+        "ToolName": "File Browse",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | \"File Browse\" | \"question \"]"
+    },
+    {
+        "ToolName": "Filter",
+        "Category_and_Search_Tags": "Preparation|[data | expression | true | false | prism | \"preparation category\" | exercise4 | exercise5]"
+    },
+    {
+        "ToolName": "Filter In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Filter | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "Find Nearest",
+        "Category_and_Search_Tags": "Spatial|[spatial | join | point | measure | \"spatial category\" | nearest | Guzzler]"
+    },
+    {
+        "ToolName": "Find Replace",
+        "Category_and_Search_Tags": "Join|[join | data | table | replace | \"join category\"]"
+    },
+    {
+        "ToolName": "Folder Browse",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | \"Folder Browse\" | \"question \"]"
+    },
+    {
+        "ToolName": "Formula",
+        "Category_and_Search_Tags": "Preparation|[calculate | calculation | expression | data | process | flask | ABS | ACOS | ASIN | ATAN | ATAN2 | Average | BINARYAND | BINARYNOT | BINARYOR | BINARYXOR | BINTOINT | BOUND | CEIL | CHARFROMINT | CHARTOINT | CompareDictionary | CompareDigits | CompareEpsilon | ConvertFromCodePage | ConvertToCodePage | COS | COSH | COUNTWORDS | DATETIMEADD | DATETIMEDIFF | DATETIMEFIRSTOFMONTH | DATETIMEFORMAT | DATETIMELASTOFMONTH | DATETIMENOW | DATETIMEPARSE | DATETIMESTART | DATETIMETODAY | DATETIMETRIM | DECOMPOSEUNICODEFORMATCH | ESCAPEXMLMETACHARACTERS | EXP | FILEADDPATHS | FILEEXISTS | FILEGETDIR | FILEGETEXT | FILEGETFILENAME | FINANCECAGR | FINANCEEFFECTIVERATE | FINANCEFV | FINANCEFVSCHEDULE | FINANCEIRR | FINANCEMIRR | FINANCEMXIRR | FINANCENOMINALRATE | FINANCENPER | FINANCENPV | FINANCEPMT | FINANCEPV | FINANCERATE | FINANCEXIRR | FINANCEXNPV | CAGR | EFFECTIVERATE | FV | FVSCHEDULE | IRR | MIRR | MXIRR | NOMINALRATE | NPER | NPV | PMT | PV | RATE | XIRR | XNPV | FINDSTRING | FLOOR | GETENVIRONMENTVARIABLE | GETVAL | GETWORD | HEXTONUMBER | IIF | INDEX | INDEXVALUE | INTTOBIN | INTTOHEX | ISEMPTY | ISINTEGER | ISNULL | LEFT | LENGTH | LOG | LOG10 | LOWERCASE | MAX | MAXIDX | MD5_ASCII | MD5_UNICODE | MEDIAN | MIN | MINIDX | MOD | PADLEFT | PADRIGHT | PI | POW | RAND | RANDINT | RANGEMEDIAN | READREGISTRYSTRING | REGEX_COUNTMATCHES | REGEX_MATCH | REGEX_REPLACE | REPLACE | REPLACECHAR | REPLACEFIRST | REVERSESTRING | RIGHT | ROUND | SHIFTLEFT | SHIFTRIGHT | SIN | SINH | SMARTROUND | SOUNDEX | SOUNDEX_DIGITS | SQRT | ST_Area | ST_Boundary | ST_BoundingRectangle | ST_Centroid | ST_CentroidX | ST_CentroidY | ST_Combine | ST_Contains | ST_ConvexHull | ST_CreateLine | ST_CreatePoint | ST_CreatePolygon | ST_Cut | ST_Dimension | ST_Distance | ST_EndPoint | ST_Intersection | ST_Intersects | ST_InverseIntersection | ST_Length | ST_MaxX | ST_MaxY | ST_MD5 | ST_MinX | ST_MinY | ST_NumParts | ST_NumPoints | ST_ObjectType | ST_PointN | ST_RandomPoint | ST_Relate | ST_StartPoint | ST_Touches | ST_TouchesOrIntersects | ST_Within | Area | Boundary | BoundingRectangle | Centroid | CentroidX | CentroidY | Combine | Contains | ConvexHull | CreateLine | CreatePoint | CreatePolygon | Cut | Dimension | Distance | EndPoint | Intersection | Intersects | \"Inve]"
+    },
+    {
+        "ToolName": "Formula In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Formula | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "Fuzzy Match",
+        "Category_and_Search_Tags": "Join|[join | match | duplicate | exact | inexact | value | \"join category\"]"
+    },
+    {
+        "ToolName": "Generalize",
+        "Category_and_Search_Tags": "Spatial|[spatial | polygon | line | smooth | buffer | simplify | node | wave | \"spatial category\"]"
+    },
+    {
+        "ToolName": "Generate Rows",
+        "Category_and_Search_Tags": "Preparation|[calculate | calculation | record | row | rows | loop | \"preparation category\"]"
+    },
+    {
+        "ToolName": "HDFS Input",
+        "Category_and_Search_Tags": "Connectors|[connector | Hadoop | hdfs | input | \"big data\" | data | avro | csv | \"input data \"]"
+    },
+    {
+        "ToolName": "HDFS Output",
+        "Category_and_Search_Tags": "Connectors|[connector | Hadoop | hdfs | output | \"big data\" | data | avro | csv | \"output data \"]"
+    },
+    {
+        "ToolName": "Image",
+        "Category_and_Search_Tags": "Reporting|[report | presentation | graphic | picture | camera | \"reporting category\"]"
+    },
+    {
+        "ToolName": "Input Data",
+        "Category_and_Search_Tags": "In/Out|[input | source | data | database | YXDB | CYDB | SZ | SDF | CSV | DBF | GDB | MDB | SHP | flat | KML | GRD | GRC | \"MID/MIF\" | TAB | MDB | ACCDB | Excel | XLS | XLSX | SQLite | XML | Hive | OLEDB | ODBC | Oracle | Netezza | DB2 | Teradata | \"SQL Server\" | Sybase | MySQL | Hadoop | \"in/out category\" | connector | database | social | \"social data\"]"
+    },
+    {
+        "ToolName": "JSON Parse",
+        "Category_and_Search_Tags": "Developer|[JSON | Parse | \"JSON Parse\" | \"developer category\" | Java | \"Java Script\" | \"Java Script Object Notation\" | \"Curly brackets\" | \"hockey Mask\" | Jason | \"Jason Voorhees\"]"
+    },
+    {
+        "ToolName": "Join",
+        "Category_and_Search_Tags": "Join|[join | combine | match | \"join category\" | exercise3 | exercise4 | exercise7]"
+    },
+    {
+        "ToolName": "Join In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Join | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "Join Multiple",
+        "Category_and_Search_Tags": "Join|[join | multiple | table | \"join category\"]"
+    },
+    {
+        "ToolName": "Layout",
+        "Category_and_Search_Tags": "Reporting|[report | presentation | snippet | horizontal | vertical | \"reporting category\"]"
+    },
+    {
+        "ToolName": "List Box",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | Selection | \"question \"]"
+    },
+    {
+        "ToolName": "Macro Input",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | Input | \"Macro Input\" | \"Field Map\" | question]"
+    },
+    {
+        "ToolName": "Macro Input In-DB ",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | \"In-Database\" | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | Apps | Macro | UI | Interface | Input | \"Macro Input\" | \"Field Map\" | question]"
+    },
+    {
+        "ToolName": "Macro Output",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | Output | \"Macro Output\" | \"question \"]"
+    },
+    {
+        "ToolName": "Macro Output In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | \"In-Database\" | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | Apps | Macro | UI | Interface | Output | \"Macro Output\" | \"question \"]"
+    },
+    {
+        "ToolName": "Make Grid",
+        "Category_and_Search_Tags": "Spatial|[spatial | grid | polygon | africa | \"spatial category\"]"
+    },
+    {
+        "ToolName": "Make Group",
+        "Category_and_Search_Tags": "Join|[join | group | data | relationship | organize | \"join category\"]"
+    },
+    {
+        "ToolName": "Map",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | Map | \"question \"]"
+    },
+    {
+        "ToolName": "Map Input",
+        "Category_and_Search_Tags": "In/Out|[spatial | object | info | latitude | longitude | coordinate | map | input | draw | polygon | point | line | display | \"in/out category\"]"
+    },
+    {
+        "ToolName": "Marketo Append",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | append | web | internet | marketo | db | database | \"connectors category\" | date | calendar | API | lead | \"lead record\" | leadrecord | changerecord | change | soap | Activityrecord | \"activity record\" | leadkey | lead]"
+    },
+    {
+        "ToolName": "Marketo Input",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | input | web | internet | marketo | db | database | \"connectors category\" | date | calendar | API | lead | \"lead record\" | leadrecord | changerecord | change | soap | \"lead \"]"
+    },
+    {
+        "ToolName": "Marketo Output",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | output | web | internet | marketo | db | database | \"connectors category\" | date | calendar | API | lead | \"lead record\" | leadrecord | changerecord | change | soap | lead]"
+    },
+    {
+        "ToolName": "Message",
+        "Category_and_Search_Tags": "Developer|[developer | \"output window\" | output | \"developer category\"]"
+    },
+    {
+        "ToolName": "MongoDB Input",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | input | web | internet | mongo | db | database | noSQL | \"connectors category\"]"
+    },
+    {
+        "ToolName": "MongoDB Output",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | output | web | internet | mongo | db | database | noSQL | \"connectors category\"]"
+    },
+    {
+        "ToolName": "Multi-Field Formula",
+        "Category_and_Search_Tags": "Preparation|[calculate | calculation | multiple | field | formula | data | flask | ABS | ACOS | ASIN | ATAN | ATAN2 | Average | BINARYAND | BINARYNOT | BINARYOR | BINARYXOR | BINTOINT | BOUND | CEIL | CHARFROMINT | CHARTOINT | CompareDictionary | CompareDigits | CompareEpsilon | ConvertFromCodePage | ConvertToCodePage | COS | COSH | COUNTWORDS | DATETIMEADD | DATETIMEDIFF | DATETIMEFIRSTOFMONTH | DATETIMEFORMAT | DATETIMELASTOFMONTH | DATETIMENOW | DATETIMEPARSE | DATETIMESTART | DATETIMETODAY | DATETIMETRIM | DECOMPOSEUNICODEFORMATCH | ESCAPEXMLMETACHARACTERS | EXP | FILEADDPATHS | FILEEXISTS | FILEGETDIR | FILEGETEXT | FILEGETFILENAME | FINANCECAGR | FINANCEEFFECTIVERATE | FINANCEFV | FINANCEFVSCHEDULE | FINANCEIRR | FINANCEMIRR | FINANCEMXIRR | FINANCENOMINALRATE | FINANCENPER | FINANCENPV | FINANCEPMT | FINANCEPV | FINANCERATE | FINANCEXIRR | FINANCEXNPV | CAGR | EFFECTIVERATE | FV | FVSCHEDULE | IRR | MIRR | MXIRR | NOMINALRATE | NPER | NPV | PMT | PV | RATE | XIRR | XNPV | FINDSTRING | FLOOR | GETENVIRONMENTVARIABLE | GETVAL | GETWORD | HEXTONUMBER | IIF | INDEX | INDEXVALUE | INTTOBIN | INTTOHEX | ISEMPTY | ISINTEGER | ISNULL | LEFT | LENGTH | LOG | LOG10 | LOWERCASE | MAX | MAXIDX | MD5_ASCII | MD5_UNICODE | MEDIAN | MIN | MINIDX | MOD | PADLEFT | PADRIGHT | PI | POW | RAND | RANDINT | RANGEMEDIAN | READREGISTRYSTRING | REGEX_COUNTMATCHES | REGEX_MATCH | REGEX_REPLACE | REPLACE | REPLACECHAR | REPLACEFIRST | REVERSESTRING | RIGHT | ROUND | SHIFTLEFT | SHIFTRIGHT | SIN | SINH | SMARTROUND | SOUNDEX | SOUNDEX_DIGITS | SQRT | ST_Area | ST_Boundary | ST_BoundingRectangle | ST_Centroid | ST_CentroidX | ST_CentroidY | ST_Combine | ST_Contains | ST_ConvexHull | ST_CreateLine | ST_CreatePoint | ST_CreatePolygon | ST_Cut | ST_Dimension | ST_Distance | ST_EndPoint | ST_Intersection | ST_Intersects | ST_InverseIntersection | ST_Length | ST_MaxX | ST_MaxY | ST_MD5 | ST_MinX | ST_MinY | ST_NumParts | ST_NumPoints | ST_ObjectType | ST_PointN | ST_RandomPoint | ST_Relate | ST_StartPoint | ST_Touches | ST_TouchesOrIntersects | ST_Within | Area | Boundary | BoundingRectangle | Centroid | CentroidX | CentroidY | Combine | Contains | ConvexHull | CreateLine | CreatePoint | CreatePolygon | Cut | Dimension | Distance | EndPoint | Intersection | Intersects]"
+    },
+    {
+        "ToolName": "Multi-Row Formula",
+        "Category_and_Search_Tags": "Preparation|[calculate | calculation | multiple | row | formula | data | parse | flask | ABS | ACOS | ASIN | ATAN | ATAN2 | Average | BINARYAND | BINARYNOT | BINARYOR | BINARYXOR | BINTOINT | BOUND | CEIL | CHARFROMINT | CHARTOINT | CompareDictionary | CompareDigits | CompareEpsilon | ConvertFromCodePage | ConvertToCodePage | COS | COSH | COUNTWORDS | DATETIMEADD | DATETIMEDIFF | DATETIMEFIRSTOFMONTH | DATETIMEFORMAT | DATETIMELASTOFMONTH | DATETIMENOW | DATETIMEPARSE | DATETIMESTART | DATETIMETODAY | DATETIMETRIM | DECOMPOSEUNICODEFORMATCH | ESCAPEXMLMETACHARACTERS | EXP | FILEADDPATHS | FILEEXISTS | FILEGETDIR | FILEGETEXT | FILEGETFILENAME | FINANCECAGR | FINANCEEFFECTIVERATE | FINANCEFV | FINANCEFVSCHEDULE | FINANCEIRR | FINANCEMIRR | FINANCEMXIRR | FINANCENOMINALRATE | FINANCENPER | FINANCENPV | FINANCEPMT | FINANCEPV | FINANCERATE | FINANCEXIRR | FINANCEXNPV | CAGR | EFFECTIVERATE | FV | FVSCHEDULE | IRR | MIRR | MXIRR | NOMINALRATE | NPER | NPV | PMT | PV | RATE | XIRR | XNPV | FINDSTRING | FLOOR | GETENVIRONMENTVARIABLE | GETVAL | GETWORD | HEXTONUMBER | IIF | INDEX | INDEXVALUE | INTTOBIN | INTTOHEX | ISEMPTY | ISINTEGER | ISNULL | LEFT | LENGTH | LOG | LOG10 | LOWERCASE | MAX | MAXIDX | MD5_ASCII | MD5_UNICODE | MEDIAN | MIN | MINIDX | MOD | PADLEFT | PADRIGHT | PI | POW | RAND | RANDINT | RANGEMEDIAN | READREGISTRYSTRING | REGEX_COUNTMATCHES | REGEX_MATCH | REGEX_REPLACE | REPLACE | REPLACECHAR | REPLACEFIRST | REVERSESTRING | RIGHT | ROUND | SHIFTLEFT | SHIFTRIGHT | SIN | SINH | SMARTROUND | SOUNDEX | SOUNDEX_DIGITS | SQRT | ST_Area | ST_Boundary | ST_BoundingRectangle | ST_Centroid | ST_CentroidX | ST_CentroidY | ST_Combine | ST_Contains | ST_ConvexHull | ST_CreateLine | ST_CreatePoint | ST_CreatePolygon | ST_Cut | ST_Dimension | ST_Distance | ST_EndPoint | ST_Intersection | ST_Intersects | ST_InverseIntersection | ST_Length | ST_MaxX | ST_MaxY | ST_MD5 | ST_MinX | ST_MinY | ST_NumParts | ST_NumPoints | ST_ObjectType | ST_PointN | ST_RandomPoint | ST_Relate | ST_StartPoint | ST_Touches | ST_TouchesOrIntersects | ST_Within | Area | Boundary | BoundingRectangle | Centroid | CentroidX | CentroidY | Combine | Contains | ConvexHull | CreateLine | CreatePoint | CreatePolygon | Cut | Dimension | Distance | EndPoint | Intersection | \"Inter]"
+    },
+    {
+        "ToolName": "Numeric Up Down",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | \"Numeric Up Down\" | question | number | up | down]"
+    },
+    {
+        "ToolName": "Output Data",
+        "Category_and_Search_Tags": "In/Out|[output | write | results | data | Qlikview | YXDB | CYDB | SZ | SDF | CSV | DBF | GDB | MDB | SHP | flat | KML | GRD | GRC | \"MID/MIF\" | TAB | MDB | ACCDB | XLS | XLSX | SQLite | Hive | OLEDB | ODBC | Oracle | Netezza | DB2 | Teradata | \"SQL Server\" | Sybase | MySQL | Hadoop | \"in/out category\" | Tableau | connector | database | social | \"social data\"]"
+    },
+    {
+        "ToolName": "Overlay",
+        "Category_and_Search_Tags": "Reporting|[report | presentation | snippet | title | legend | top | bottom | right | left | middle | \"reporting category\"]"
+    },
+    {
+        "ToolName": "Parse Address",
+        "Category_and_Search_Tags": "Address|[address | street | number | location | \"address category\" | standardize | standard | zip | \"zip code\" | zip4 | zip9 | \"zip 4\" | \"zip 9\"]"
+    },
+    {
+        "ToolName": "Pearson Correlation",
+        "Category_and_Search_Tags": "Data Investigation|[predictive | covariance | standard | deviation | \"standard deviation\" | \"pearson correlation\" | coefficient | \"data investigation category\" | p | pearson | correlation | linear | relationship]"
+    },
+    {
+        "ToolName": "Poly-Build",
+        "Category_and_Search_Tags": "Spatial|[spatial | polygon | build | group | split | \"spatial category\" | convex | \"Convex hull\"]"
+    },
+    {
+        "ToolName": "Poly-Split",
+        "Category_and_Search_Tags": "Spatial|[spatial | polygon | build | group | split | \"spatial category\"]"
+    },
+    {
+        "ToolName": "Profile  Input",
+        "Category_and_Search_Tags": "Behavior Analysis|[\"behavior analysis\" | profile | \".scd\" | behavior | set | input | segmentation | read | \"behavior analysis category\"]"
+    },
+    {
+        "ToolName": "Profile Output",
+        "Category_and_Search_Tags": "Behavior Analysis|[\"behavior analysis\" | profile | \".scd\" | scd | behavior | set | output | write | \"behavior analysis profile\" | \"behavior analysis category\"]"
+    },
+    {
+        "ToolName": "R",
+        "Category_and_Search_Tags": "Developer|[developer | predictive | statistical | statistics | code | gnu | \"R tool\" | \"Richard Snow\" | \"developer category\"]"
+    },
+    {
+        "ToolName": "Radio Button",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | \"Radio button group\" | question]"
+    },
+    {
+        "ToolName": "Record ID",
+        "Category_and_Search_Tags": "Preparation|[unique | identifier | data | \"preparation category\" | exercise2 | exercise3 | exercise4]"
+    },
+    {
+        "ToolName": "RegEx",
+        "Category_and_Search_Tags": "Parse|[\"regular expression\" | regular | data | parse | text | regex | \"parse category\"]"
+    },
+    {
+        "ToolName": "Render",
+        "Category_and_Search_Tags": "Reporting|[report | presentation | snippet | pdf | html | xlsx | docx | rtf | pptx | format | \"reporting category\" | output]"
+    },
+    {
+        "ToolName": "Report Map",
+        "Category_and_Search_Tags": "Reporting|[report | map | presentation | spatial | \"reporting category\"]"
+    },
+    {
+        "ToolName": "Report Text",
+        "Category_and_Search_Tags": "Reporting|[report | text | presentation | document | \"reporting category\"]"
+    },
+    {
+        "ToolName": "Run Command",
+        "Category_and_Search_Tags": "Developer|[developer | run | program | c | prompt | \"developer category\" | command | \"run command\" | dos]"
+    },
+    {
+        "ToolName": "Running Total",
+        "Category_and_Search_Tags": "Transform|[summary | summarize | cumulative | cumulate | record | file | run | \"transform category\" | total]"
+    },
+    {
+        "ToolName": "Salesforce Input",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | input | web | internet | salesforce | URL | \"connectors category\"]"
+    },
+    {
+        "ToolName": "Salesforce Output",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | output | web | internet | salesforce | URL | \"connectors category\"]"
+    },
+    {
+        "ToolName": "Sample",
+        "Category_and_Search_Tags": "Preparation|[first | last | percentage | \"%\" | data | \"preparation category\" | exercise4]"
+    },
+    {
+        "ToolName": "Sample In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Sample | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "Select",
+        "Category_and_Search_Tags": "Preparation|[data | optimize | order | reorder | \"field type\" | \"preparation category\" | exercise2 | exercise3 | exercise4 | exercise5 | exercise6 | exercise7]"
+    },
+    {
+        "ToolName": "Select In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Select | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "SharePoint List Input",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | input | web | internet | sharepoint | URL | list | \"connectors category\"]"
+    },
+    {
+        "ToolName": "SharePoint List Output",
+        "Category_and_Search_Tags": "Connectors|[cloud | connector | output | web | internet | sharepoint | URL | list | \"connectors category\"]"
+    },
+    {
+        "ToolName": "Smooth",
+        "Category_and_Search_Tags": "Spatial|[spatial | polygon | line | generalize | buffer | simplify | node | angle | curve | wave | \"spatial category\"]"
+    },
+    {
+        "ToolName": "Sort",
+        "Category_and_Search_Tags": "Preparation|[data | order | arrange | alphabetical | \"preparation category\" | exercise4 | exercise5]"
+    },
+    {
+        "ToolName": "Spatial Info",
+        "Category_and_Search_Tags": "Spatial|[spatial | object | info | latitude | longitude | coordinate | \"spatial category\"]"
+    },
+    {
+        "ToolName": "Spatial Match",
+        "Category_and_Search_Tags": "Spatial|[spatial | object | info | latitude | longitude | coordinate | join | match | \"spatial category\"]"
+    },
+    {
+        "ToolName": "Spatial Process",
+        "Category_and_Search_Tags": "Spatial|[spatial | join | relationship | contain | intersect | touch | edit | cut | combine | \"spatial category\"]"
+    },
+    {
+        "ToolName": "Street Geocoder",
+        "Category_and_Search_Tags": "Address|[address | spatial | latitude | logitude | geography | location | \"address category\" | geocoder | zip | \"zip code\"]"
+    },
+    {
+        "ToolName": "Summarize",
+        "Category_and_Search_Tags": "Transform|[summary | summarize | data | group | sum | count | spatial | concatenate | \"\" | Last | First | Min | Max | GroupBy | StdDev | \"Standard Deviation\" | Variance | Avg | Average | Sum | Count | CountNonNull | CountNull | CountBlank | Combine | Intersect | Combine | Concat | Longest | Shortest | Median | MedianNo0 | Mode | ModeNo0 | \"Bounding Rectangle\" | ConvexHull | Centroid | Spatial | IRR | NPV | MIRR | XIRR | XNPV | MXIRR | Finance | SolocastCombine | RptHorizontal | RptVertical | Report | \"transform category\" | summarise | exercise3 | exercise4 | exercise5 | total]"
+    },
+    {
+        "ToolName": "Summarize In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Summarize | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "Table",
+        "Category_and_Search_Tags": "Reporting|[report | presentation | data | pivot | \"reporting category\"]"
+    },
+    {
+        "ToolName": "Test",
+        "Category_and_Search_Tags": "Developer|[developer | error | check | \"developer category\"]"
+    },
+    {
+        "ToolName": "Text Box",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | \"Text box\" | question]"
+    },
+    {
+        "ToolName": "Text Input",
+        "Category_and_Search_Tags": "In/Out|[text | input | lookup | manual | \"in/out category\"]"
+    },
+    {
+        "ToolName": "Text To Columns",
+        "Category_and_Search_Tags": "Parse|[text | data | columns | field | row | \"parse category\"]"
+    },
+    {
+        "ToolName": "Throttle",
+        "Category_and_Search_Tags": "Developer|[Throttle | Limit | Records | \"per minute\" | minute | speed | \"slow \"]"
+    },
+    {
+        "ToolName": "Tile",
+        "Category_and_Search_Tags": "Preparation|[data | range | value | \"preparation category\"]"
+    },
+    {
+        "ToolName": "Tool Container",
+        "Category_and_Search_Tags": "Documentation|[organization | organize | \"document \" | documentation | disable | enable | open | close | group | collapse | expand | container | box | \"documentation category\"]"
+    },
+    {
+        "ToolName": "Trade Area",
+        "Category_and_Search_Tags": "Spatial|[spatial | map | \"trade area\" | area | drive | \"drive time\" | drivetime | region | radius | \"spatial category\" | overlap | \"over lap\" | \"over-lap\" | \"non overlap\" | \"non over lap\" | \"non over-lap\" | veronoi | Guzzler]"
+    },
+    {
+        "ToolName": "Transpose",
+        "Category_and_Search_Tags": "Transform|[summary | summarize | data | horizontal | vertical | layout | pivot | orientation | axis | \"cross tab\" | tab | \"transform category\" | crosstab]"
+    },
+    {
+        "ToolName": "Tree",
+        "Category_and_Search_Tags": "Interface|[Apps | Macro | UI | Interface | Tree | question]"
+    },
+    {
+        "ToolName": "US ZIP9 Coder",
+        "Category_and_Search_Tags": "Address|[address | spatial | latitude | logitude | geography | location | zip | \"address category\" | zip9 | zip4 | \"zip code\" | \"zip 9\" | \"zip 4\" | \"zip plus 4\" | geocode | geocoder]"
+    },
+    {
+        "ToolName": "Union",
+        "Category_and_Search_Tags": "Join|[join | append | stream | data | stacked | dna | \"join category\" | exercise4 | exercise7]"
+    },
+    {
+        "ToolName": "Union In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Union | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "Unique",
+        "Category_and_Search_Tags": "Preparation|[data | duplicate | redundant | copy | snowflake | \"Richard Snow\" | \"Snow, Richard\" | \"preparation category\" | exercise2 | exercise3 | exercise4]"
+    },
+    {
+        "ToolName": "Write Data In-DB",
+        "Category_and_Search_Tags": "In-Database|[\"In-DB\" | Output | \"Write Data\" | SQL | database | Query | Clause | query | DBMS | Oracle | \"SQL Server\" | OleDB | ODBC | \"In-Database\" | Poornima]"
+    },
+    {
+        "ToolName": "XML Parse",
+        "Category_and_Search_Tags": "Parse|[data | parse | \"extensible markup language\" | language | code | fields | \"parse category\"]"
+    }
+]

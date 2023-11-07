@@ -1,0 +1,1037 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.3">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="498" width="204" height="252" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Inputs</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="324" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+          <BG_Image>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</BG_Image>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="138" width="660" height="336" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>The FIFA World Cup is currently taking place in Qatar. Pawel would like to perform analyses on the event.
+
+The first dataset contains information about the stadiums: stadium name, city, capacity, latitude, and longitude. 
+
+The second dataset contains information about the events: match number, round, dates, location, which teams are playing, and the group or phase.
+
+For this challenge:
+1. Assuming that each match will have a full audience, find the top 10 teams that could have the largest audience in the group stage.
+2. Find the three cities with the most World Cup matches.
+
+
+Data Source: https://www.kaggle.com/datasets/palecznypawel/worldcup2022-fixture</Text>
+          <Font name="Microsoft Sans Serif" size="12" style="0" />
+          <TextColor name="Gray" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="462" y="66" width="252" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Weekly Challenge #349</Text>
+          <Font name="Microsoft Sans Serif" size="16.2" style="0" />
+          <TextColor name="Gray" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="2" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="510" y="498" width="204" height="252" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Outputs</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="174" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\MARIE~1.COU\AppData\Local\Temp\Engine_1016_5c14b93806c740b89af38c6652c2e7db_\Engine_23624_6c788f97e4d14efcaed5c2beebdba714_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="66" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="9" />
+          <Fields>
+            <Field name="Stadium Name" />
+            <Field name="City" />
+            <Field name="Capacity" />
+            <Field name="Latitude" />
+            <Field name="Longtitude" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Al Bayt Stadium</c>
+              <c>Al Khor City</c>
+              <c>60000</c>
+              <c>25.680408</c>
+              <c>51.496850</c>
+            </r>
+            <r>
+              <c>Lusail Stadium</c>
+              <c>Lusail City</c>
+              <c>80000</c>
+              <c>25.500000</c>
+              <c>51.483334</c>
+            </r>
+            <r>
+              <c>Ahmad Bin Ali Stadium</c>
+              <c>Al Rayyan</c>
+              <c>40000</c>
+              <c>25.285446</c>
+              <c>51.531040</c>
+            </r>
+            <r>
+              <c>Al Janoub Stadium</c>
+              <c>Al Wakrah</c>
+              <c>40000</c>
+              <c>25.176816</c>
+              <c>51.604843</c>
+            </r>
+            <r>
+              <c>Al Thumama Stadium</c>
+              <c>Al Thumama</c>
+              <c>40000</c>
+              <c>25.236347</c>
+              <c>51.564963</c>
+            </r>
+            <r>
+              <c>Education City Stadium</c>
+              <c>Al Rayyan</c>
+              <c>40000</c>
+              <c>25.285446</c>
+              <c>51.531040</c>
+            </r>
+            <r>
+              <c>Khalifa International Stadium</c>
+              <c>Al Rayyan</c>
+              <c>40000</c>
+              <c>25.285446</c>
+              <c>51.531040</c>
+            </r>
+            <r>
+              <c>Stadium 974</c>
+              <c>Ras Abu Abboud</c>
+              <c>40000</c>
+              <c>25.259596</c>
+              <c>51.583514</c>
+            </r>
+            <r>
+              <c />
+              <c>Doha</c>
+              <c />
+              <c>25.286106</c>
+              <c>51.534817</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="66" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="64" />
+          <Fields>
+            <Field name="Match Number" />
+            <Field name="Round Number" />
+            <Field name="Date" />
+            <Field name="Location" />
+            <Field name="Match" />
+            <Field name="Group/Phase" />
+          </Fields>
+          <Data>
+            <r>
+              <c>2</c>
+              <c>1</c>
+              <c>21.11.2022 10:00</c>
+              <c>Al Thumama Stadium</c>
+              <c>Senegal vs. Netherlands</c>
+              <c>Group A</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>1</c>
+              <c>21.11.2022 13:00</c>
+              <c>Khalifa International Stadium</c>
+              <c>England vs. Iran</c>
+              <c>Group B</c>
+            </r>
+            <r>
+              <c>1</c>
+              <c>1</c>
+              <c>21.11.2022 16:00</c>
+              <c>Al Bayt Stadium</c>
+              <c>Qatar vs. Ecuador</c>
+              <c>Group A</c>
+            </r>
+            <r>
+              <c>4</c>
+              <c>1</c>
+              <c>21.11.2022 19:00</c>
+              <c>Ahmad Bin Ali Stadium</c>
+              <c>USA vs. Wales</c>
+              <c>Group B</c>
+            </r>
+            <r>
+              <c>8</c>
+              <c>1</c>
+              <c>22.11.2022 10:00</c>
+              <c>Lusail Stadium</c>
+              <c>Argentina vs. Saudi Arabia</c>
+              <c>Group C</c>
+            </r>
+            <r>
+              <c>6</c>
+              <c>1</c>
+              <c>22.11.2022 13:00</c>
+              <c>Education City Stadium</c>
+              <c>Denmark vs. Tunisia</c>
+              <c>Group D</c>
+            </r>
+            <r>
+              <c>7</c>
+              <c>1</c>
+              <c>22.11.2022 16:00</c>
+              <c>Stadium 974</c>
+              <c>Mexico vs. Poland</c>
+              <c>Group C</c>
+            </r>
+            <r>
+              <c>5</c>
+              <c>1</c>
+              <c>22.11.2022 19:00</c>
+              <c>Al Janoub Stadium</c>
+              <c>France vs. Australia</c>
+              <c>Group D</c>
+            </r>
+            <r>
+              <c>12</c>
+              <c>1</c>
+              <c>23.11.2022 10:00</c>
+              <c>Al Bayt Stadium</c>
+              <c>Morocco vs. Croatia</c>
+              <c>Group F</c>
+            </r>
+            <r>
+              <c>11</c>
+              <c>1</c>
+              <c>23.11.2022 13:00</c>
+              <c>Khalifa International Stadium</c>
+              <c>Germany vs. Japan</c>
+              <c>Group E</c>
+            </r>
+            <r>
+              <c>10</c>
+              <c>1</c>
+              <c>23.11.2022 16:00</c>
+              <c>Al Thumama Stadium</c>
+              <c>Spain vs. Costa Rica</c>
+              <c>Group E</c>
+            </r>
+            <r>
+              <c>9</c>
+              <c>1</c>
+              <c>23.11.2022 19:00</c>
+              <c>Ahmad Bin Ali Stadium</c>
+              <c>Belgium vs. Canada</c>
+              <c>Group F</c>
+            </r>
+            <r>
+              <c>13</c>
+              <c>1</c>
+              <c>24.11.2022 10:00</c>
+              <c>Al Janoub Stadium</c>
+              <c>Switzerland vs. Cameroon</c>
+              <c>Group G</c>
+            </r>
+            <r>
+              <c>14</c>
+              <c>1</c>
+              <c>24.11.2022 13:00</c>
+              <c>Education City Stadium</c>
+              <c>Uruguay vs. Korea Republic</c>
+              <c>Group H</c>
+            </r>
+            <r>
+              <c>15</c>
+              <c>1</c>
+              <c>24.11.2022 16:00</c>
+              <c>Stadium 974</c>
+              <c>Portugal vs. Ghana</c>
+              <c>Group H</c>
+            </r>
+            <r>
+              <c>16</c>
+              <c>1</c>
+              <c>24.11.2022 19:00</c>
+              <c>Lusail Stadium</c>
+              <c>Brazil vs. Serbia</c>
+              <c>Group G</c>
+            </r>
+            <r>
+              <c>17</c>
+              <c>2</c>
+              <c>25.11.2022 10:00</c>
+              <c>Ahmad Bin Ali Stadium</c>
+              <c>Wales vs. Iran</c>
+              <c>Group B</c>
+            </r>
+            <r>
+              <c>18</c>
+              <c>2</c>
+              <c>25.11.2022 13:00</c>
+              <c>Al Thumama Stadium</c>
+              <c>Qatar vs. Senegal</c>
+              <c>Group A</c>
+            </r>
+            <r>
+              <c>19</c>
+              <c>2</c>
+              <c>25.11.2022 16:00</c>
+              <c>Khalifa International Stadium</c>
+              <c>Netherlands vs. Ecuador</c>
+              <c>Group A</c>
+            </r>
+            <r>
+              <c>20</c>
+              <c>2</c>
+              <c>25.11.2022 19:00</c>
+              <c>Al Bayt Stadium</c>
+              <c>England vs. USA</c>
+              <c>Group B</c>
+            </r>
+            <r>
+              <c>21</c>
+              <c>2</c>
+              <c>26.11.2022 10:00</c>
+              <c>Al Janoub Stadium</c>
+              <c>Tunisia vs. Australia</c>
+              <c>Group D</c>
+            </r>
+            <r>
+              <c>22</c>
+              <c>2</c>
+              <c>26.11.2022 13:00</c>
+              <c>Education City Stadium</c>
+              <c>Poland vs. Saudi Arabia</c>
+              <c>Group C</c>
+            </r>
+            <r>
+              <c>23</c>
+              <c>2</c>
+              <c>26.11.2022 16:00</c>
+              <c>Stadium 974</c>
+              <c>France vs. Denmark</c>
+              <c>Group D</c>
+            </r>
+            <r>
+              <c>24</c>
+              <c>2</c>
+              <c>26.11.2022 19:00</c>
+              <c>Lusail Stadium</c>
+              <c>Argentina vs. Mexico</c>
+              <c>Group C</c>
+            </r>
+            <r>
+              <c>25</c>
+              <c>2</c>
+              <c>27.11.2022 10:00</c>
+              <c>Ahmad Bin Ali Stadium</c>
+              <c>Japan vs. Costa Rica</c>
+              <c>Group E</c>
+            </r>
+            <r>
+              <c>26</c>
+              <c>2</c>
+              <c>27.11.2022 13:00</c>
+              <c>Al Thumama Stadium</c>
+              <c>Belgium vs. Morocco</c>
+              <c>Group F</c>
+            </r>
+            <r>
+              <c>27</c>
+              <c>2</c>
+              <c>27.11.2022 16:00</c>
+              <c>Khalifa International Stadium</c>
+              <c>Croatia vs. Canada</c>
+              <c>Group F</c>
+            </r>
+            <r>
+              <c>28</c>
+              <c>2</c>
+              <c>27.11.2022 19:00</c>
+              <c>Al Bayt Stadium</c>
+              <c>Spain vs. Germany</c>
+              <c>Group E</c>
+            </r>
+            <r>
+              <c>29</c>
+              <c>2</c>
+              <c>28.11.2022 10:00</c>
+              <c>Al Janoub Stadium</c>
+              <c>Cameroon vs. Serbia</c>
+              <c>Group G</c>
+            </r>
+            <r>
+              <c>30</c>
+              <c>2</c>
+              <c>28.11.2022 13:00</c>
+              <c>Education City Stadium</c>
+              <c>Korea Republic vs. Ghana</c>
+              <c>Group H</c>
+            </r>
+            <r>
+              <c>31</c>
+              <c>2</c>
+              <c>28.11.2022 16:00</c>
+              <c>Stadium 974</c>
+              <c>Brazil vs. Switzerland</c>
+              <c>Group G</c>
+            </r>
+            <r>
+              <c>32</c>
+              <c>2</c>
+              <c>28.11.2022 19:00</c>
+              <c>Lusail Stadium</c>
+              <c>Portugal vs. Uruguay</c>
+              <c>Group H</c>
+            </r>
+            <r>
+              <c>35</c>
+              <c>3</c>
+              <c>29.11.2022 15:00</c>
+              <c>Khalifa International Stadium</c>
+              <c>Ecuador vs. Senegal</c>
+              <c>Group A</c>
+            </r>
+            <r>
+              <c>36</c>
+              <c>3</c>
+              <c>29.11.2022 15:00</c>
+              <c>Al Bayt Stadium</c>
+              <c>Netherlands vs. Qatar</c>
+              <c>Group A</c>
+            </r>
+            <r>
+              <c>33</c>
+              <c>3</c>
+              <c>29.11.2022 19:00</c>
+              <c>Ahmad Bin Ali Stadium</c>
+              <c>Wales vs. England</c>
+              <c>Group B</c>
+            </r>
+            <r>
+              <c>34</c>
+              <c>3</c>
+              <c>29.11.2022 19:00</c>
+              <c>Al Thumama Stadium</c>
+              <c>Iran vs. USA</c>
+              <c>Group B</c>
+            </r>
+            <r>
+              <c>37</c>
+              <c>3</c>
+              <c>30.11.2022 15:00</c>
+              <c>Al Janoub Stadium</c>
+              <c>Australia vs. Denmark</c>
+              <c>Group D</c>
+            </r>
+            <r>
+              <c>38</c>
+              <c>3</c>
+              <c>30.11.2022 15:00</c>
+              <c>Education City Stadium</c>
+              <c>Tunisia vs. France</c>
+              <c>Group D</c>
+            </r>
+            <r>
+              <c>39</c>
+              <c>3</c>
+              <c>30.11.2022 19:00</c>
+              <c>Stadium 974</c>
+              <c>Poland vs. Argentina</c>
+              <c>Group C</c>
+            </r>
+            <r>
+              <c>40</c>
+              <c>3</c>
+              <c>30.11.2022 19:00</c>
+              <c>Lusail Stadium</c>
+              <c>Saudi Arabia vs. Mexico</c>
+              <c>Group C</c>
+            </r>
+            <r>
+              <c>41</c>
+              <c>3</c>
+              <c>01.12.2022 15:00</c>
+              <c>Ahmad Bin Ali Stadium</c>
+              <c>Croatia vs. Belgium</c>
+              <c>Group F</c>
+            </r>
+            <r>
+              <c>42</c>
+              <c>3</c>
+              <c>01.12.2022 15:00</c>
+              <c>Al Thumama Stadium</c>
+              <c>Canada vs. Morocco</c>
+              <c>Group F</c>
+            </r>
+            <r>
+              <c>43</c>
+              <c>3</c>
+              <c>01.12.2022 19:00</c>
+              <c>Khalifa International Stadium</c>
+              <c>Japan vs. Spain</c>
+              <c>Group E</c>
+            </r>
+            <r>
+              <c>44</c>
+              <c>3</c>
+              <c>01.12.2022 19:00</c>
+              <c>Al Bayt Stadium</c>
+              <c>Costa Rica vs. Germany</c>
+              <c>Group E</c>
+            </r>
+            <r>
+              <c>45</c>
+              <c>3</c>
+              <c>02.12.2022 15:00</c>
+              <c>Al Janoub Stadium</c>
+              <c>Ghana vs. Uruguay</c>
+              <c>Group H</c>
+            </r>
+            <r>
+              <c>46</c>
+              <c>3</c>
+              <c>02.12.2022 15:00</c>
+              <c>Education City Stadium</c>
+              <c>Korea Republic vs. Portugal</c>
+              <c>Group H</c>
+            </r>
+            <r>
+              <c>47</c>
+              <c>3</c>
+              <c>02.12.2022 19:00</c>
+              <c>Stadium 974</c>
+              <c>Serbia vs. Switzerland</c>
+              <c>Group G</c>
+            </r>
+            <r>
+              <c>48</c>
+              <c>3</c>
+              <c>02.12.2022 19:00</c>
+              <c>Lusail Stadium</c>
+              <c>Cameroon vs. Brazil</c>
+              <c>Group G</c>
+            </r>
+            <r>
+              <c>49</c>
+              <c>Round of 16</c>
+              <c>03.12.2022 15:00</c>
+              <c>Khalifa International Stadium</c>
+              <c>1A vs. 2B</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>50</c>
+              <c>Round of 16</c>
+              <c>03.12.2022 19:00</c>
+              <c>Ahmad Bin Ali Stadium</c>
+              <c>1C vs. 2D</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>52</c>
+              <c>Round of 16</c>
+              <c>04.12.2022 15:00</c>
+              <c>Al Thumama Stadium</c>
+              <c>1D vs. 2C</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>51</c>
+              <c>Round of 16</c>
+              <c>04.12.2022 19:00</c>
+              <c>Al Bayt Stadium</c>
+              <c>1B vs. 2A</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>53</c>
+              <c>Round of 16</c>
+              <c>05.12.2022 15:00</c>
+              <c>Al Janoub Stadium</c>
+              <c>1E vs. 2F</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>54</c>
+              <c>Round of 16</c>
+              <c>05.12.2022 19:00</c>
+              <c>Stadium 974</c>
+              <c>1G vs. 2H</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>55</c>
+              <c>Round of 16</c>
+              <c>06.12.2022 15:00</c>
+              <c>Education City Stadium</c>
+              <c>1F vs. 2E</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>56</c>
+              <c>Round of 16</c>
+              <c>06.12.2022 19:00</c>
+              <c>Lusail Stadium</c>
+              <c>1H vs. 2G</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>58</c>
+              <c>Quarter Finals</c>
+              <c>09.12.2022 15:00</c>
+              <c>Education City Stadium</c>
+              <c>W53 vs. W54</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>57</c>
+              <c>Quarter Finals</c>
+              <c>09.12.2022 19:00</c>
+              <c>Lusail Stadium</c>
+              <c>W49 vs. W48</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>60</c>
+              <c>Quarter Finals</c>
+              <c>10.12.2022 15:00</c>
+              <c>Al Thumama Stadium</c>
+              <c>W55 vs. W56</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>59</c>
+              <c>Quarter Finals</c>
+              <c>10.12.2022 19:00</c>
+              <c>Al Bayt Stadium</c>
+              <c>W51 vs. W52</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>61</c>
+              <c>Semi Finals</c>
+              <c>13.12.2022 19:00</c>
+              <c>Lusail Stadium</c>
+              <c>W57 vs. W58</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>62</c>
+              <c>Semi Finals</c>
+              <c>14.12.2022 19:00</c>
+              <c>Al Bayt Stadium</c>
+              <c>W59 vs. W60</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>63</c>
+              <c>Finals</c>
+              <c>17.12.2022 15:00</c>
+              <c>Khalifa International Stadium</c>
+              <c>L61 vs. L62</c>
+              <c>Play Off</c>
+            </r>
+            <r>
+              <c>64</c>
+              <c>Finals</c>
+              <c>18.12.2022 15:00</c>
+              <c>Lusail Stadium</c>
+              <c>W61 vs. W62</c>
+              <c>Play Off</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="79">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="174" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\MARIE~1.COU\AppData\Local\Temp\Engine_1016_5c14b93806c740b89af38c6652c2e7db_\Engine_23624_0cb665fcf1c749c58860a73baf06acdb_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="86">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="632" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\MARIE~1.COU\AppData\Local\Temp\Engine_1016_5c14b93806c740b89af38c6652c2e7db_\Engine_23624_8b571fb8c25343d2939991ef93afcbc1_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profil</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="87">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="536" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="10" />
+          <Fields>
+            <Field name="Team" />
+            <Field name="Sum_Capacity" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Argentina</c>
+              <c>200000</c>
+            </r>
+            <r>
+              <c>Brazil</c>
+              <c>200000</c>
+            </r>
+            <r>
+              <c>Mexico</c>
+              <c>200000</c>
+            </r>
+            <r>
+              <c>Saudi Arabia</c>
+              <c>200000</c>
+            </r>
+            <r>
+              <c>Cameroon</c>
+              <c>160000</c>
+            </r>
+            <r>
+              <c>Germany</c>
+              <c>160000</c>
+            </r>
+            <r>
+              <c>Portugal</c>
+              <c>160000</c>
+            </r>
+            <r>
+              <c>Qatar</c>
+              <c>160000</c>
+            </r>
+            <r>
+              <c>Serbia</c>
+              <c>160000</c>
+            </r>
+            <r>
+              <c>Uruguay</c>
+              <c>160000</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="88">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="536" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="3" />
+          <Fields>
+            <Field name="City" />
+            <Field name="Count" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Al Rayyan</c>
+              <c>23</c>
+            </r>
+            <r>
+              <c>Lusail City</c>
+              <c>10</c>
+            </r>
+            <r>
+              <c>Al Khor City</c>
+              <c>9</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="89">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="632" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\MARIE~1.COU\AppData\Local\Temp\Engine_1016_5c14b93806c740b89af38c6652c2e7db_\Engine_23624_83fb4ee934eb41759076e20653c09290_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profil</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="82" y="1280" width="656" height="84" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Alteryx Educational Asset - Terms and Conditions</Caption>
+          <Style TextColor="#ffffff" FillColor="#0d2345" BorderColor="#ffffff" Transparency="1" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="92" y="1314" width="636" height="40" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Use of this Alteryx asset is for educational purposes only and bound by the conditions set forth on alteryx.com/terms-and-conditions. Alteryx Information may not be reproduced, transmitted or distributed without Alteryx, Inc.'s permission.”</Text>
+              <Font name="Times New Roman" size="8.25" style="0" />
+              <TextColor name="White" />
+              <FillColor name="White" />
+              <Shape shape="3" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="79" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="88" Connection="Output" />
+      <Destination ToolID="89" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>challenge_349_start_file</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

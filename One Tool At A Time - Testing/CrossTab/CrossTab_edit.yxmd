@@ -1,0 +1,1003 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="191" width="492" height="283" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Group data by these values: These will be grouped together so that there is one row per unique value. In this example, there will be one row per presidentNo.
+
+Change column headers: A new column will be created for each unique value contained within the column selected. In this example, Pres_or_VP contains 2 unique values, President and Vice President. A new column will be created for each value.
+
+Values for new columns: This column will be used to populate the new columns created by the "Header column". Since there may be multiple rows that are being grouped together, a Method for aggregating values must be selected. In this example, we are concatenating all "Names" values that are associated with each unique Grouping/Header combination.
+
+Note that the Separator in the example is set as ",\s" to represent a comma followed by a space. Whitespace characters can be represented as separators by their escaped versions (see below).
+
+Space      - 
+Tab          -
+New line  - ]]></Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="162" width="588" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Cross Tab - A Basic Example</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="804" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text> Cross Tab Tool</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="White" />
+          <FillColor r="13" g="35" b="69" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="54" width="492" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>The Cross Tab tool creates 1 new column for each categorical value held in a single existing column, pivoting the data from a vertical layout to a more horizontal layout.</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="White" />
+          <FillColor r="111" g="111" b="111" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="486" width="588" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Cross Tab - Another Example</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="126">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="515" width="492" height="108" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>By changing the Change column headers column to VicePresidentNo, a column will be created for rows where VicePresidentNo is Null (the president), 1 (the first VP), 2 (the second VP), or 3 (the third VP).
+
+This is very similar to the data set produced in the above example, but the vice presidents are put in 3 columns instead of 1. The Cross Tab tool provides you with the flexibility to shape your data to your specifications.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="127">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="642" width="588" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Cross Tab - Multiple Grouping Columns</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="129">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="671" width="492" height="43" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>In this dataset, the names and dates are contained in the same column. Using the Cross Tab tool, we can pivot the data so that the names and dates are moved into their own columns.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="138">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="126" width="408" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>1) Run the workflow (Ctrl+R).</Text>
+          <Font name="Segoe UI" size="8.25" style="1" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="1" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="139">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="462" y="126" width="396" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>2) Select a tool to view its output in the Results window.</Text>
+          <Font name="Segoe UI" size="8.25" style="1" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="1" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="140">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="48" SearchSubDirs="False" RecordLimit="">..\OneToolData\Presidents_and_VPs.avro</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Presidents_and_VPs.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="presidentNo" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs.avro" type="Int32" />
+            <Field name="VicePresidentNo" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs.avro" type="Int32" />
+            <Field name="Pres_or_VP" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs.avro" type="V_WString" />
+            <Field name="Name" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs.avro" type="V_WString" />
+            <Field name="Dates" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs.avro" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="141">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="282" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="presidentNo" />
+          </GroupFields>
+          <HeaderField field="Pres_or_VP" />
+          <DataField field="Name" />
+          <Methods>
+            <Method method="Concat" />
+            <Separator>,\s</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="presidentNo" source="CrossTab:Group:Concat:" type="Int32" />
+            <Field name="President" size="2048" source="CrossTab:Header:Pres_or_VP:President:Concat:" type="V_WString" />
+            <Field name="Vice_President" size="2048" source="CrossTab:Header:Pres_or_VP:Vice President:Concat:" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="presidentNo" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="143">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="282" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="presidentNo" />
+          </GroupFields>
+          <HeaderField field="VicePresidentNo" />
+          <DataField field="Name" />
+          <Methods>
+            <Method method="Concat" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="presidentNo" source="CrossTab:Group:Concat:" type="Int32" />
+            <Field name="1" size="2048" source="CrossTab:Header:VicePresidentNo:1:Concat:" type="V_WString" />
+            <Field name="2" size="2048" source="CrossTab:Header:VicePresidentNo:2:Concat:" type="V_WString" />
+            <Field name="3" size="2048" source="CrossTab:Header:VicePresidentNo:3:Concat:" type="V_WString" />
+            <Field name="_Null_" size="2048" source="CrossTab:Header:VicePresidentNo:[Null]:Concat:" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="presidentNo" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="154">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="666" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="48" SearchSubDirs="False" RecordLimit="">..\OneToolData\Presidents_and_VPs (narrow).avro</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Presidents_and_VPs (narrow).yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="presidentNo" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs (narrow).avro" type="Int32" />
+            <Field name="VicePresidentNo" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs (narrow).avro" type="Int32" />
+            <Field name="Office" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs (narrow).avro" type="V_WString" />
+            <Field name="Field Type" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs (narrow).avro" type="V_WString" />
+            <Field name="Value" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs (narrow).avro" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="155">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="282" y="666" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="presidentNo" />
+            <Field field="VicePresidentNo" />
+            <Field field="Office" />
+          </GroupFields>
+          <HeaderField field="Field Type" />
+          <DataField field="Value" />
+          <Methods>
+            <Method method="First" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="presidentNo" source="CrossTab:Group:First:" type="Int32" />
+            <Field name="VicePresidentNo" source="CrossTab:Group:First:" type="Int32" />
+            <Field name="Office" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+            <Field name="Dates" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs (narrow).avro" type="V_WString" />
+            <Field name="Name" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs (narrow).avro" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="presidentNo" order="Asc" />
+            <Field field="VicePresidentNo" order="Asc" />
+            <Field field="Office" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="185">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="750" width="588" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Cross Tab - Multiple Grouping Columns with Columns Dropped</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="186">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="779" width="492" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Since VicePresidentNo is not included in the Group data by these values, Change column headers, or Values for new columns options, it is not included in the output. If there were multiple VPs for a given presidency, then only the first vice president will come through since First is selected in the Method for Aggregating Values option
+
+</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="188">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="282" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="presidentNo" />
+            <Field field="Office" />
+          </GroupFields>
+          <HeaderField field="Field Type" />
+          <DataField field="Value" />
+          <Methods>
+            <Method method="First" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="presidentNo" source="CrossTab:Group:First:" type="Int32" />
+            <Field name="Office" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
+            <Field name="Dates" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs (narrow).avro" type="V_WString" />
+            <Field name="Name" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\Presidents_and_VPs (narrow).avro" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="presidentNo" order="Asc" />
+            <Field field="Office" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="208">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="858" width="588" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Cross Tab - Using a Numeric Column as the Data Column</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="209">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="882" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="11" />
+          <Fields>
+            <Field name="Product" />
+            <Field name="Category" />
+            <Field name="Suggested Age Range" />
+            <Field name="Average Monthly Sales" />
+            <Field name="January" />
+            <Field name="February" />
+            <Field name="March" />
+            <Field name="April" />
+            <Field name="May" />
+            <Field name="June" />
+            <Field name="July" />
+            <Field name="August" />
+            <Field name="September" />
+            <Field name="October" />
+            <Field name="November" />
+            <Field name="December" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Graphing Calculators</c>
+              <c>General</c>
+              <c>13+</c>
+              <c>84020.17</c>
+              <c>191817</c>
+              <c>434</c>
+              <c>70654</c>
+              <c>166571</c>
+              <c>99066</c>
+              <c>64423</c>
+              <c>72846</c>
+              <c>52744</c>
+              <c>16150</c>
+              <c>98130</c>
+              <c>42312</c>
+              <c>133095</c>
+            </r>
+            <r>
+              <c>Office Supplies</c>
+              <c>General</c>
+              <c>All ages</c>
+              <c>83319.17</c>
+              <c>156628</c>
+              <c>82183</c>
+              <c>125043</c>
+              <c>11205</c>
+              <c>130896</c>
+              <c>31214</c>
+              <c>199932</c>
+              <c>121453</c>
+              <c>61049</c>
+              <c>16068</c>
+              <c>18098</c>
+              <c>46061</c>
+            </r>
+            <r>
+              <c>Encyclopedias</c>
+              <c>Educational</c>
+              <c>All ages</c>
+              <c>79280.75</c>
+              <c>6299</c>
+              <c>119153</c>
+              <c>161717</c>
+              <c>145195</c>
+              <c>22305</c>
+              <c>38385</c>
+              <c>9183</c>
+              <c>157398</c>
+              <c>169316</c>
+              <c>30902</c>
+              <c>74336</c>
+              <c>17180</c>
+            </r>
+            <r>
+              <c>Building Blocks</c>
+              <c>Fun and Games</c>
+              <c>3-6</c>
+              <c>97381.33</c>
+              <c>8313</c>
+              <c>184270</c>
+              <c>186021</c>
+              <c>190255</c>
+              <c>8211</c>
+              <c>134736</c>
+              <c>154287</c>
+              <c>4735</c>
+              <c>71620</c>
+              <c>113519</c>
+              <c>20765</c>
+              <c>91844</c>
+            </r>
+            <r>
+              <c>Books about Dinosaurs</c>
+              <c>Fun and Games</c>
+              <c>All ages</c>
+              <c>106175.58</c>
+              <c>193667</c>
+              <c>76441</c>
+              <c>163244</c>
+              <c>116158</c>
+              <c>42346</c>
+              <c>166919</c>
+              <c>153584</c>
+              <c>72374</c>
+              <c>155810</c>
+              <c>44161</c>
+              <c>55709</c>
+              <c>33694</c>
+            </r>
+            <r>
+              <c>Viggo Mortenson DVDs</c>
+              <c>Fun and Games</c>
+              <c>13+</c>
+              <c>117805.5</c>
+              <c>181291</c>
+              <c>178860</c>
+              <c>144830</c>
+              <c>35341</c>
+              <c>136331</c>
+              <c>199431</c>
+              <c>42309</c>
+              <c>42458</c>
+              <c>184727</c>
+              <c>80648</c>
+              <c>54734</c>
+              <c>132706</c>
+            </r>
+            <r>
+              <c>Clothing</c>
+              <c>General</c>
+              <c>All ages</c>
+              <c>121212.5</c>
+              <c>6988</c>
+              <c>71830</c>
+              <c>69881</c>
+              <c>137635</c>
+              <c>168495</c>
+              <c>118806</c>
+              <c>199716</c>
+              <c>153901</c>
+              <c>145946</c>
+              <c>20584</c>
+              <c>190893</c>
+              <c>169875</c>
+            </r>
+            <r>
+              <c>Frisbee and Frisbee Accessories</c>
+              <c>Fun and Games</c>
+              <c>7+</c>
+              <c>92629.92</c>
+              <c>4940</c>
+              <c>105607</c>
+              <c>53949</c>
+              <c>72655</c>
+              <c>140850</c>
+              <c>68332</c>
+              <c>154956</c>
+              <c>158538</c>
+              <c>116732</c>
+              <c>153754</c>
+              <c>46668</c>
+              <c>34578</c>
+            </r>
+            <r>
+              <c>Legumes</c>
+              <c>General</c>
+              <c>All ages</c>
+              <c>116122.75</c>
+              <c>73467</c>
+              <c>154459</c>
+              <c>92995</c>
+              <c>68466</c>
+              <c>159429</c>
+              <c>130945</c>
+              <c>32288</c>
+              <c>140673</c>
+              <c>153088</c>
+              <c>73637</c>
+              <c>176343</c>
+              <c>137683</c>
+            </r>
+            <r>
+              <c>Microscopes</c>
+              <c>Educational</c>
+              <c>7+</c>
+              <c>602.83</c>
+              <c>206</c>
+              <c>324</c>
+              <c>925</c>
+              <c>633</c>
+              <c>487</c>
+              <c>168</c>
+              <c>235</c>
+              <c>154</c>
+              <c>1432</c>
+              <c>861</c>
+              <c>530</c>
+              <c>1279</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="210">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="282" y="882" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="Suggested Age Range" />
+          </GroupFields>
+          <HeaderField field="Category" />
+          <DataField field="Average Monthly Sales" />
+          <Methods>
+            <Method method="Sum" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Suggested Age Range" size="8" source="CrossTab:Group:Sum:" type="String" />
+            <Field name="Educational" source="CrossTab:Header:Category:Educational:Sum:" type="Double" />
+            <Field name="Fun_and_Games" source="CrossTab:Header:Category:Fun and Games:Sum:" type="Double" />
+            <Field name="General" source="CrossTab:Header:Category:General:Sum:" type="Double" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Suggested Age Range" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="211">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="887" width="492" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Here we are calculating the total average monthly sales in each age group split out by product category.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="219">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="191" width="96" height="283" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   \s
+                   \t
+                   \n</Text>
+          <Font name="Segoe UI" size="8.25" style="1" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="9999">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="782" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="48" MaxRecords="">141 - Cross Tab - A Basic Example.avro</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <EnableCompression>True</EnableCompression>
+            <SupportNullValues>True</SupportNullValues>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>141 - Cross Tab - A Basic Example.avro</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="10001">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="906" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="48" MaxRecords="">143 - Cross Tab - Another Example.avro</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <EnableCompression>True</EnableCompression>
+            <SupportNullValues>True</SupportNullValues>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>143 - Cross Tab - Another Example.avro</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="10003">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="882" y="666" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="48" MaxRecords="">155 - Cross Tab - Multiple Grouping Columns.avro</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <EnableCompression>True</EnableCompression>
+            <SupportNullValues>True</SupportNullValues>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>155 - Cross Tab - Multiple Grouping Columns.avro</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="10005">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="782" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="48" MaxRecords="">188 - Cross Tab - Multiple Grouping Columns with Columns Dropped.avro</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <EnableCompression>True</EnableCompression>
+            <SupportNullValues>True</SupportNullValues>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>188 - Cross Tab - Multiple Grouping Columns with Columns Dropped.avro</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="10009">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="782" y="882" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="48" MaxRecords="">210 - Cross Tab - Using a Numeric Column as the Data Column.avro</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <EnableCompression>True</EnableCompression>
+            <SupportNullValues>True</SupportNullValues>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>210 - Cross Tab - Using a Numeric Column as the Data Column.avro</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="140" Connection="Output" />
+      <Destination ToolID="141" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="140" Connection="Output" />
+      <Destination ToolID="143" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="Output" />
+      <Destination ToolID="9999" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="143" Connection="Output" />
+      <Destination ToolID="10001" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="154" Connection="Output" />
+      <Destination ToolID="155" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="154" Connection="Output" />
+      <Destination ToolID="188" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="155" Connection="Output" />
+      <Destination ToolID="10003" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="188" Connection="Output" />
+      <Destination ToolID="10005" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="209" Connection="Output" />
+      <Destination ToolID="210" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="210" Connection="Output" />
+      <Destination ToolID="10009" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="False" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>CrossTab_edit</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="32e8e025-94ee-43de-b482-5c5ced9e0c6b" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="32e8e025-94ee-43de-b482-5c5ced9e0c6b" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

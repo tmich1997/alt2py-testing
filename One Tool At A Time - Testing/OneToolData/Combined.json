@@ -1,0 +1,554 @@
+[
+    {
+        "BUSINESS NAME": "Bashas Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 200534,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Bashas Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 452239,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Bashas Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 134437,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Bashas Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 186736,
+        "Store Name": "101PHOENIX",
+        "StoreID": 101,
+        "Store Sales": 9135294
+    },
+    {
+        "BUSINESS NAME": "Bashas Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 186736,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Bashas Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 186922,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Bashas Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 915048,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Bashas Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 915048,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Bashas Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 915048,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Bashas Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 33399,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 993609,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "Phoenix",
+        "SALES VOLUME": 411499,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 692852,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 917824,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 184726,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 184726,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 184726,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 253546,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 253546,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 253546,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 707184,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 707184,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 707184,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "Phoenix",
+        "SALES VOLUME": 58470,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "Phoenix",
+        "SALES VOLUME": 992081,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "Phoenix",
+        "SALES VOLUME": 992081,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "Phoenix",
+        "SALES VOLUME": 798617,
+        "Store Name": "105Phoenix",
+        "StoreID": 105,
+        "Store Sales": 8414409
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 692001,
+        "Store Name": "101PHOENIX",
+        "StoreID": 101,
+        "Store Sales": 9135294
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 873057,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 873057,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 915482,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 915482,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 915482,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 148880,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "Scottsdale",
+        "SALES VOLUME": 887233,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Safeway Inc",
+        "City": "GLENDALE",
+        "SALES VOLUME": 909634,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 21838,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 82640,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 839527,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 995319,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 995319,
+        "Store Name": "101PHOENIX",
+        "StoreID": 101,
+        "Store Sales": 9135294
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 995319,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 995319,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 716117,
+        "Store Name": "101PHOENIX",
+        "StoreID": 101,
+        "Store Sales": 9135294
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 716117,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 410794,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 410794,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 410794,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 10837,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 10837,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 10837,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 261908,
+        "Store Name": "101PHOENIX",
+        "StoreID": 101,
+        "Store Sales": 9135294
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 104485,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 104485,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 104485,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 781437,
+        "Store Name": "105Phoenix",
+        "StoreID": 105,
+        "Store Sales": 8414409
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "PHOENIX",
+        "SALES VOLUME": 507671,
+        "Store Name": "105Phoenix",
+        "StoreID": 105,
+        "Store Sales": 8414409
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 132457,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 160465,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 160465,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 160465,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 837185,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 837185,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 837185,
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "Store Sales": 3041689
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "SCOTTSDALE",
+        "SALES VOLUME": 589391,
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "Store Sales": 8784216
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "TEMPE",
+        "SALES VOLUME": 916161,
+        "Store Name": "105Phoenix",
+        "StoreID": 105,
+        "Store Sales": 8414409
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "GLENDALE",
+        "SALES VOLUME": 786073,
+        "Store Name": "101PHOENIX",
+        "StoreID": 101,
+        "Store Sales": 9135294
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "GLENDALE",
+        "SALES VOLUME": 318723,
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "Store Sales": 7710978
+    },
+    {
+        "BUSINESS NAME": "Smiths Food & Drug Centers Inc",
+        "City": "LAVEEN",
+        "SALES VOLUME": 341260,
+        "Store Name": "105Phoenix",
+        "StoreID": 105,
+        "Store Sales": 8414409
+    }
+]

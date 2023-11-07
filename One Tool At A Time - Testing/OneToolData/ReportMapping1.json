@@ -1,0 +1,52 @@
+[
+    {
+        "Store Name": "101PHOENIX",
+        "StoreID": 101,
+        "City": "PHOENIX",
+        "State": "AZ",
+        "Zip": "85021",
+        "SALES VOLUME": 9135294,
+        "LATITUDE": 33.55434,
+        "LONGITUDE": -112.0995
+    },
+    {
+        "Store Name": "102PHOENIX",
+        "StoreID": 102,
+        "City": "PHOENIX",
+        "State": "AZ",
+        "Zip": "85028",
+        "SALES VOLUME": 8784216,
+        "LATITUDE": 33.58336,
+        "LONGITUDE": -111.9777
+    },
+    {
+        "Store Name": "103PHOENIX",
+        "StoreID": 103,
+        "City": "PHOENIX",
+        "State": "AZ",
+        "Zip": "85032",
+        "SALES VOLUME": 7710978,
+        "LATITUDE": 33.6534,
+        "LONGITUDE": -112.0307
+    },
+    {
+        "Store Name": "104PHOENIX",
+        "StoreID": 104,
+        "City": "PHOENIX",
+        "State": "AZ",
+        "Zip": "85032",
+        "SALES VOLUME": 3041689,
+        "LATITUDE": 33.6259,
+        "LONGITUDE": -111.979
+    },
+    {
+        "Store Name": "105Phoenix",
+        "StoreID": 105,
+        "City": "Phoenix",
+        "State": "AZ",
+        "Zip": "85042",
+        "SALES VOLUME": 8414409,
+        "LATITUDE": 33.39141,
+        "LONGITUDE": -112.0731
+    }
+]

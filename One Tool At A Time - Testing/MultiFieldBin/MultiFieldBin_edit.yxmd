@@ -1,0 +1,994 @@
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="804" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Multi-Field Binning Tool</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="White" />
+          <FillColor r="13" g="35" b="69" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="438" y="54" width="420" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>The Multi-Field Binning tool assigns data into bins based on the values in one or more columns.</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="White" />
+          <FillColor r="111" g="111" b="111" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="126" width="408" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>1) Run the workflow (Ctrl+R).</Text>
+          <Font name="Segoe UI" size="8.25" style="1" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="1" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="462" y="126" width="396" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>2) Select a tool to view its output in the Results window.</Text>
+          <Font name="Segoe UI" size="8.25" style="1" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="1" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="20" />
+          <Fields>
+            <Field name="Employee" />
+            <Field name="Enterprise Sales 2015" />
+            <Field name="Commercial Sales 2015" />
+            <Field name="Other Sales 2015" />
+            <Field name="Number of Years in Current Position" />
+            <Field name="401k Contribution for 2015" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Elena Diaz</c>
+              <c>898340</c>
+              <c>8923</c>
+              <c>0</c>
+              <c>5</c>
+              <c>10000</c>
+            </r>
+            <r>
+              <c>Jacob Miller</c>
+              <c>8955</c>
+              <c>108000</c>
+              <c>98798</c>
+              <c>3</c>
+              <c>20000</c>
+            </r>
+            <r>
+              <c>David Wright</c>
+              <c>48000</c>
+              <c>96700</c>
+              <c>98734</c>
+              <c>8</c>
+              <c>18000</c>
+            </r>
+            <r>
+              <c>Erin Lewis</c>
+              <c>18032</c>
+              <c>78320</c>
+              <c>78923</c>
+              <c>12</c>
+              <c>12000</c>
+            </r>
+            <r>
+              <c>Miranda Davis</c>
+              <c>89038</c>
+              <c>89430</c>
+              <c>80234</c>
+              <c>4</c>
+              <c>15000</c>
+            </r>
+            <r>
+              <c>Bellamy Anderson</c>
+              <c>874789</c>
+              <c>5500</c>
+              <c>0</c>
+              <c>2</c>
+              <c>13000</c>
+            </r>
+            <r>
+              <c>Jennifer Kim</c>
+              <c>78939</c>
+              <c>22000</c>
+              <c>9033</c>
+              <c>1</c>
+              <c>9000</c>
+            </r>
+            <r>
+              <c>Shawn Jackson</c>
+              <c>550000</c>
+              <c>0</c>
+              <c>1266</c>
+              <c>6</c>
+              <c>11000</c>
+            </r>
+            <r>
+              <c>Andrew Newsome</c>
+              <c>0</c>
+              <c>103000</c>
+              <c>8000</c>
+              <c>7</c>
+              <c>14000</c>
+            </r>
+            <r>
+              <c>Wanda Sauer</c>
+              <c>890000</c>
+              <c>0</c>
+              <c>5400</c>
+              <c>4</c>
+              <c>14500</c>
+            </r>
+            <r>
+              <c>Aidan O'Rourke</c>
+              <c>10500</c>
+              <c>76000</c>
+              <c>0</c>
+              <c>9</c>
+              <c>13200</c>
+            </r>
+            <r>
+              <c>Juan Hernandez</c>
+              <c>789999</c>
+              <c>3200</c>
+              <c>45400</c>
+              <c>11</c>
+              <c>12000</c>
+            </r>
+            <r>
+              <c>Laila Bryant</c>
+              <c>89034</c>
+              <c>113000</c>
+              <c>4200</c>
+              <c>10</c>
+              <c>11000</c>
+            </r>
+            <r>
+              <c>Watson Davies</c>
+              <c>98900</c>
+              <c>13000</c>
+              <c>80000</c>
+              <c>14</c>
+              <c>16000</c>
+            </r>
+            <r>
+              <c>Fiona Jones</c>
+              <c>7900</c>
+              <c>200000</c>
+              <c>7600</c>
+              <c>2</c>
+              <c>17500</c>
+            </r>
+            <r>
+              <c>Denise Myers</c>
+              <c>983498</c>
+              <c>0</c>
+              <c>5430</c>
+              <c>3</c>
+              <c>13400</c>
+            </r>
+            <r>
+              <c>Patrick Tremont</c>
+              <c>30400</c>
+              <c>109000</c>
+              <c>6400</c>
+              <c>1</c>
+              <c>15430</c>
+            </r>
+            <r>
+              <c>Neville Pearson</c>
+              <c>0</c>
+              <c>250000</c>
+              <c>4300</c>
+              <c>5</c>
+              <c>17000</c>
+            </r>
+            <r>
+              <c>Aditya Patel</c>
+              <c>53000</c>
+              <c>117000</c>
+              <c>9000</c>
+              <c>6</c>
+              <c>16500</c>
+            </r>
+            <r>
+              <c>Priscilla Hyler</c>
+              <c>102000</c>
+              <c>21700</c>
+              <c>40000</c>
+              <c>2</c>
+              <c>17000</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings>
+        <Position x="282" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="List Box (297)">Enterprise Sales 2015=True,Commercial Sales 2015=False,Other Sales 2015=False,Number of Years in Current Position=False,401k Contribution for 2015=False</Value>
+          <Value name="Radio Button (299)">True</Value>
+          <Value name="Numeric Up Down (298)">2</Value>
+          <Value name="Radio Button (301)">False</Value>
+          <Value name="Numeric Up Down (300)">5</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Employee" size="16" source="TextInput:" type="String" />
+            <Field name="Enterprise Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Commercial Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Other Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Number of Years in Current Position" source="TextInput:" type="Byte" />
+            <Field name="401k Contribution for 2015" source="TextInput:" type="Int16" />
+            <Field name="Enterprise Sales 2015_Tile_Num" source="CrossTab:Header:FieldID:1:Sum:" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="MultiFieldBinning_v2.yxmc" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings>
+        <Position x="282" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="List Box (297)">Enterprise Sales 2015=True,Commercial Sales 2015=False,Other Sales 2015=False,Number of Years in Current Position=False,401k Contribution for 2015=False</Value>
+          <Value name="Radio Button (299)">False</Value>
+          <Value name="Numeric Up Down (298)">5</Value>
+          <Value name="Radio Button (301)">True</Value>
+          <Value name="Numeric Up Down (300)">2</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Employee" size="16" source="TextInput:" type="String" />
+            <Field name="Enterprise Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Commercial Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Other Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Number of Years in Current Position" source="TextInput:" type="Byte" />
+            <Field name="401k Contribution for 2015" source="TextInput:" type="Int16" />
+            <Field name="Enterprise Sales 2015_Tile_Num" source="CrossTab:Header:FieldID:1:Sum:" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="MultiFieldBinning_v2.yxmc" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="162" width="588" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Binning Based on Equal Records - Two Bins</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="479" width="492" height="108" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>When the Equal Intervals option is selected, rows are divided into equal-sized ranges based on the values in the selected column. This is done by subtracting the minimum from the maximum and dividing by the number of intervals.
+
+Here, the range within Enterprise Sales 2015 is from 0 to 983498. When divided into 2 ranges, 491749 is the midpoint. 14 rows with values below that are assigned to Bin 2 and 6 rows with higher values are assigned to Bin 1.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="450" width="588" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Binning Based on Equal Intervals - Two Bins</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="78" y="702" width="780" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text> More Info</Text>
+          <Font name="Segoe UI" size="14.25" style="0" />
+          <TextColor name="White" />
+          <FillColor r="13" g="35" b="69" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="318" y="702" width="540" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>The Multi-Field Binning tool will only accept numeric fields. Use the Tile tool for non-numeric data.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="White" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="191" width="492" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>20 rows are assigned equally into 2 bins based on the values in the selected column. 
+
+The 10 rows with the lowest values in "Enterprise Sales 2015" are assigned to bin 2, and the 10 highest are assigned to bin 1.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings>
+        <Position x="282" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="List Box (297)">Enterprise Sales 2015=True,Commercial Sales 2015=False,Other Sales 2015=False,Number of Years in Current Position=False,401k Contribution for 2015=False</Value>
+          <Value name="Radio Button (299)">True</Value>
+          <Value name="Numeric Up Down (298)">3</Value>
+          <Value name="Radio Button (301)">False</Value>
+          <Value name="Numeric Up Down (300)">5</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Employee" size="16" source="TextInput:" type="String" />
+            <Field name="Enterprise Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Commercial Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Other Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Number of Years in Current Position" source="TextInput:" type="Byte" />
+            <Field name="401k Contribution for 2015" source="TextInput:" type="Int16" />
+            <Field name="Enterprise Sales 2015_Tile_Num" source="CrossTab:Header:FieldID:1:Sum:" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="MultiFieldBinning_v2.yxmc" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="299" width="492" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>The same set of 20 rows is split into 3 bins. 
+
+Because 20 is not divisible by 3, not all bins will have the same number of rows.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings>
+        <Position x="282" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="List Box (297)">Enterprise Sales 2015=True,Commercial Sales 2015=True,Other Sales 2015=False,Number of Years in Current Position=False,401k Contribution for 2015=False</Value>
+          <Value name="Radio Button (299)">True</Value>
+          <Value name="Numeric Up Down (298)">3</Value>
+          <Value name="Radio Button (301)">False</Value>
+          <Value name="Numeric Up Down (300)">5</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Employee" size="16" source="TextInput:" type="String" />
+            <Field name="Enterprise Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Commercial Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Other Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Number of Years in Current Position" source="TextInput:" type="Byte" />
+            <Field name="401k Contribution for 2015" source="TextInput:" type="Int16" />
+            <Field name="Enterprise Sales 2015_Tile_Num" source="CrossTab:Header:FieldID:1:Sum:" type="Int64" />
+            <Field name="Commercial Sales 2015_Tile_Num" source="CrossTab:Header:FieldID:2:Sum:" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="MultiFieldBinning_v2.yxmc" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="395" width="492" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>When more than one column is selected, a set of bins is created for each one.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings>
+        <Position x="282" y="630" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="List Box (297)">Enterprise Sales 2015=True,Commercial Sales 2015=True,Other Sales 2015=False,Number of Years in Current Position=False,401k Contribution for 2015=False</Value>
+          <Value name="Radio Button (299)">False</Value>
+          <Value name="Numeric Up Down (298)">5</Value>
+          <Value name="Radio Button (301)">True</Value>
+          <Value name="Numeric Up Down (300)">3</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Employee" size="16" source="TextInput:" type="String" />
+            <Field name="Enterprise Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Commercial Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Other Sales 2015" source="TextInput:" type="Int32" />
+            <Field name="Number of Years in Current Position" source="TextInput:" type="Byte" />
+            <Field name="401k Contribution for 2015" source="TextInput:" type="Int16" />
+            <Field name="Enterprise Sales 2015_Tile_Num" source="CrossTab:Header:FieldID:1:Sum:" type="Int64" />
+            <Field name="Commercial Sales 2015_Tile_Num" source="CrossTab:Header:FieldID:2:Sum:" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="MultiFieldBinning_v2.yxmc" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="635" width="492" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>This example demonstrates the Equal Intervals option in use with more than one column.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="270" width="588" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Binning Based on Equal Records - Three Bins</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="366" width="588" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Binning Based on Equal Records - Three Bins</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="606" width="588" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Binning Based on Equal Intervals - Three Bins</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  <Node ToolID="9999">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="782" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="48">9 - Binning Based on Equal Records - Two Bins.avro</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Out</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node><Node ToolID="10000">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="982" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="48" SearchSubDirs="False" RecordLimit="">9 - Binning Based on Equal Records - Two Bins.avro</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>151 - Generating Rows as a Standalone Dataset.avro</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node><Node ToolID="10001">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="782" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="48">10 - Binning Based on Equal Intervals - Two Bins.avro</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Out</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node><Node ToolID="10002">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="982" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="48" SearchSubDirs="False" RecordLimit="">10 - Binning Based on Equal Intervals - Two Bins.avro</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>151 - Generating Rows as a Standalone Dataset.avro</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node><Node ToolID="10003">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="782" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="48">19 - Binning Based on Equal Records - Three Bins.avro</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Out</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node><Node ToolID="10004">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="982" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="48" SearchSubDirs="False" RecordLimit="">19 - Binning Based on Equal Records - Three Bins.avro</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>151 - Generating Rows as a Standalone Dataset.avro</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node><Node ToolID="10005">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="782" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="48">21 - Binning Based on Equal Records - Three Bins.avro</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Out</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node><Node ToolID="10006">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="982" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="48" SearchSubDirs="False" RecordLimit="">21 - Binning Based on Equal Records - Three Bins.avro</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>151 - Generating Rows as a Standalone Dataset.avro</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node><Node ToolID="10007">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="782" y="630" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="48">23 - Binning Based on Equal Intervals - Three Bins.avro</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Out</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node><Node ToolID="10008">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="982" y="630" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="48" SearchSubDirs="False" RecordLimit="">23 - Binning Based on Equal Intervals - Three Bins.avro</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>151 - Generating Rows as a Standalone Dataset.avro</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node></Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+  <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="9999" Connection="Input" />
+    </Connection><Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="10001" Connection="Input" />
+    </Connection><Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="10003" Connection="Input" />
+    </Connection><Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="10005" Connection="Input" />
+    </Connection><Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="10007" Connection="Input" />
+    </Connection></Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="False" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>MultiFieldBin</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="cdbd6673-659f-4d1f-8f91-3f348c1d0192" />
+      <Telemetry>
+        <PreviousWorkflowId value="f9fd16eb-1b47-46a7-b2f1-bc8e8d7837a6" />
+        <OriginWorkflowId value="f9fd16eb-1b47-46a7-b2f1-bc8e8d7837a6" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

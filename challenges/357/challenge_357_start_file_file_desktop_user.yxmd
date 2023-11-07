@@ -1,0 +1,1323 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.3">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="642" width="204" height="132" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Input</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="324" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+          <BG_Image>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</BG_Image>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="150" width="660" height="480" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>In this weekly challenge, you need to clean and format data; sort data; and create a calculated field. 
+
+Your high school-aged child is planning on attending college after graduation. They do not know what they should choose as a major, so being the great parent you are, you want to steer them in the right direction. 
+
+Based on this dataset, determine which majors have an employment rate equal to or higher than 80%. If you suggest these areas of study to your child, you may have the best chance of making sure they don’t move back into your house after college graduation!
+For this challenge you should:
+
+1. Split the data into columns on the comma delimiter.
+2. Convert the first row of data into a header.
+3. Assign appropriate data types to numeric columns.
+4. Create a column that calculates the percent (rounded up to the nearest whole number) of students who are employed. Use the Employed and Total columns for your calculation.
+5. Sort the data in descending order.
+6. Filter the majors with an employment percentage equal to or higher than 80%.
+
+
+
+Data Source: www.kaggle.com/datasets/tunguz/college-majors</Text>
+          <Font name="Microsoft Sans Serif" size="12" style="0" />
+          <TextColor name="Gray" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="462" y="66" width="252" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Weekly Challenge #357</Text>
+          <Font name="Microsoft Sans Serif" size="16.2" style="0" />
+          <TextColor name="Gray" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="2" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="522" y="642" width="192" height="132" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Output ]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="630" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\MARIE~1.COU\AppData\Local\Temp\Engine_16716_d2d1e186f8d247ac8b1979acbc96726f_\Engine_17568_659d4a9200a44354a0b3920712032dd7_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Map</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>Alteryx_Dark</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="174" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\MARIE~1.COU\AppData\Local\Temp\Engine_16716_d2d1e186f8d247ac8b1979acbc96726f_\Engine_17568_5ce3cf50986f4323983d1b1672632168_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="546" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="35" />
+          <Fields>
+            <Field name="Major_code" />
+            <Field name="Major" />
+            <Field name="Major_category" />
+            <Field name="Total" />
+            <Field name="Employed" />
+            <Field name="Employed_full_time_year_round" />
+            <Field name="Unemployed" />
+            <Field name="Unemployment_rate" />
+            <Field name="Median" />
+            <Field name="P25th" />
+            <Field name="P75th" />
+            <Field name="Percentage_Employed" />
+          </Fields>
+          <Data>
+            <r>
+              <c>2100</c>
+              <c>COMPUTER AND INFORMATION SYSTEMS</c>
+              <c>Computers &amp; Mathematics</c>
+              <c>253782</c>
+              <c>218248</c>
+              <c>189950</c>
+              <c>11945</c>
+              <c>0.051891239</c>
+              <c>65000</c>
+              <c>45000</c>
+              <c>90000</c>
+              <c>86</c>
+            </r>
+            <r>
+              <c>2105</c>
+              <c>INFORMATION SCIENCES</c>
+              <c>Computers &amp; Mathematics</c>
+              <c>77805</c>
+              <c>66393</c>
+              <c>57604</c>
+              <c>3704</c>
+              <c>0.052841063</c>
+              <c>68000</c>
+              <c>46200</c>
+              <c>95000</c>
+              <c>86</c>
+            </r>
+            <r>
+              <c>2107</c>
+              <c>COMPUTER NETWORKING AND TELECOMMUNICATIONS</c>
+              <c>Computers &amp; Mathematics</c>
+              <c>51771</c>
+              <c>44071</c>
+              <c>35954</c>
+              <c>2748</c>
+              <c>0.05869412</c>
+              <c>55000</c>
+              <c>36000</c>
+              <c>80000</c>
+              <c>86</c>
+            </r>
+            <r>
+              <c>5601</c>
+              <c>CONSTRUCTION SERVICES</c>
+              <c>Industrial Arts &amp; Consumer Services</c>
+              <c>92346</c>
+              <c>79055</c>
+              <c>65916</c>
+              <c>4257</c>
+              <c>0.051097081</c>
+              <c>65000</c>
+              <c>45000</c>
+              <c>95000</c>
+              <c>86</c>
+            </r>
+            <r>
+              <c>6212</c>
+              <c>MANAGEMENT INFORMATION SYSTEMS AND STATISTICS</c>
+              <c>Business</c>
+              <c>156673</c>
+              <c>134478</c>
+              <c>118249</c>
+              <c>6186</c>
+              <c>0.043977137</c>
+              <c>72000</c>
+              <c>50000</c>
+              <c>100000</c>
+              <c>86</c>
+            </r>
+            <r>
+              <c>2102</c>
+              <c>COMPUTER SCIENCE</c>
+              <c>Computers &amp; Mathematics</c>
+              <c>783292</c>
+              <c>656372</c>
+              <c>561052</c>
+              <c>34196</c>
+              <c>0.049518657</c>
+              <c>78000</c>
+              <c>51000</c>
+              <c>105000</c>
+              <c>84</c>
+            </r>
+            <r>
+              <c>2407</c>
+              <c>COMPUTER ENGINEERING</c>
+              <c>Engineering</c>
+              <c>154160</c>
+              <c>128742</c>
+              <c>111025</c>
+              <c>7456</c>
+              <c>0.054743829</c>
+              <c>80000</c>
+              <c>60000</c>
+              <c>107000</c>
+              <c>84</c>
+            </r>
+            <r>
+              <c>1301</c>
+              <c>ENVIRONMENTAL SCIENCE</c>
+              <c>Biology &amp; Life Science</c>
+              <c>106106</c>
+              <c>87602</c>
+              <c>65238</c>
+              <c>4736</c>
+              <c>0.051289827</c>
+              <c>52000</c>
+              <c>38000</c>
+              <c>75000</c>
+              <c>83</c>
+            </r>
+            <r>
+              <c>2106</c>
+              <c>COMPUTER ADMINISTRATION MANAGEMENT AND SECURITY</c>
+              <c>Computers &amp; Mathematics</c>
+              <c>39362</c>
+              <c>32366</c>
+              <c>28156</c>
+              <c>2626</c>
+              <c>0.075045725</c>
+              <c>55000</c>
+              <c>40000</c>
+              <c>80000</c>
+              <c>83</c>
+            </r>
+            <r>
+              <c>2504</c>
+              <c>MECHANICAL ENGINEERING RELATED TECHNOLOGIES</c>
+              <c>Engineering</c>
+              <c>29348</c>
+              <c>24190</c>
+              <c>21273</c>
+              <c>1101</c>
+              <c>0.043533273</c>
+              <c>60000</c>
+              <c>40000</c>
+              <c>82000</c>
+              <c>83</c>
+            </r>
+            <r>
+              <c>2599</c>
+              <c>MISCELLANEOUS ENGINEERING TECHNOLOGIES</c>
+              <c>Engineering</c>
+              <c>64196</c>
+              <c>53097</c>
+              <c>46183</c>
+              <c>3401</c>
+              <c>0.060196821</c>
+              <c>63000</c>
+              <c>42000</c>
+              <c>90000</c>
+              <c>83</c>
+            </r>
+            <r>
+              <c>6204</c>
+              <c>OPERATIONS LOGISTICS AND E-COMMERCE</c>
+              <c>Business</c>
+              <c>57200</c>
+              <c>47341</c>
+              <c>41104</c>
+              <c>2141</c>
+              <c>0.043268259</c>
+              <c>65000</c>
+              <c>45000</c>
+              <c>90000</c>
+              <c>83</c>
+            </r>
+            <r>
+              <c>6207</c>
+              <c>FINANCE</c>
+              <c>Business</c>
+              <c>816548</c>
+              <c>670681</c>
+              <c>561073</c>
+              <c>34166</c>
+              <c>0.048472931</c>
+              <c>65000</c>
+              <c>45000</c>
+              <c>100000</c>
+              <c>83</c>
+            </r>
+            <r>
+              <c>4005</c>
+              <c>MATHEMATICS AND COMPUTER SCIENCE</c>
+              <c>Computers &amp; Mathematics</c>
+              <c>7184</c>
+              <c>5874</c>
+              <c>5039</c>
+              <c>150</c>
+              <c>0.024900398</c>
+              <c>92000</c>
+              <c>53000</c>
+              <c>136000</c>
+              <c>82</c>
+            </r>
+            <r>
+              <c>4101</c>
+              <c>PHYSICAL FITNESS PARKS RECREATION AND LEISURE</c>
+              <c>Industrial Arts &amp; Consumer Services</c>
+              <c>350409</c>
+              <c>286683</c>
+              <c>204242</c>
+              <c>14108</c>
+              <c>0.046902999</c>
+              <c>44000</c>
+              <c>30000</c>
+              <c>60000</c>
+              <c>82</c>
+            </r>
+            <r>
+              <c>5008</c>
+              <c>MATERIALS SCIENCE</c>
+              <c>Engineering</c>
+              <c>7208</c>
+              <c>5866</c>
+              <c>4505</c>
+              <c>134</c>
+              <c>0.022333333</c>
+              <c>75000</c>
+              <c>60000</c>
+              <c>100000</c>
+              <c>82</c>
+            </r>
+            <r>
+              <c>5301</c>
+              <c>CRIMINAL JUSTICE AND FIRE PROTECTION</c>
+              <c>Law &amp; Public Policy</c>
+              <c>757141</c>
+              <c>613369</c>
+              <c>517599</c>
+              <c>35037</c>
+              <c>0.054035589</c>
+              <c>50000</c>
+              <c>35000</c>
+              <c>74000</c>
+              <c>82</c>
+            </r>
+            <r>
+              <c>6211</c>
+              <c>HOSPITALITY MANAGEMENT</c>
+              <c>Business</c>
+              <c>200854</c>
+              <c>163393</c>
+              <c>122499</c>
+              <c>8862</c>
+              <c>0.051446983</c>
+              <c>49000</c>
+              <c>33000</c>
+              <c>70000</c>
+              <c>82</c>
+            </r>
+            <r>
+              <c>1101</c>
+              <c>AGRICULTURE PRODUCTION AND MANAGEMENT</c>
+              <c>Agriculture &amp; Natural Resources</c>
+              <c>95326</c>
+              <c>76865</c>
+              <c>64240</c>
+              <c>2266</c>
+              <c>0.028636059</c>
+              <c>54000</c>
+              <c>36000</c>
+              <c>80000</c>
+              <c>81</c>
+            </r>
+            <r>
+              <c>1901</c>
+              <c>COMMUNICATIONS</c>
+              <c>Communications &amp; Journalism</c>
+              <c>987676</c>
+              <c>790696</c>
+              <c>595739</c>
+              <c>54390</c>
+              <c>0.064360314</c>
+              <c>50000</c>
+              <c>35000</c>
+              <c>80000</c>
+              <c>81</c>
+            </r>
+            <r>
+              <c>1903</c>
+              <c>MASS MEDIA</c>
+              <c>Communications &amp; Journalism</c>
+              <c>211213</c>
+              <c>170474</c>
+              <c>125489</c>
+              <c>15431</c>
+              <c>0.08300476</c>
+              <c>48000</c>
+              <c>32000</c>
+              <c>70000</c>
+              <c>81</c>
+            </r>
+            <r>
+              <c>2500</c>
+              <c>ENGINEERING TECHNOLOGIES</c>
+              <c>Engineering</c>
+              <c>37382</c>
+              <c>30102</c>
+              <c>25651</c>
+              <c>1475</c>
+              <c>0.046711214</c>
+              <c>63000</c>
+              <c>40000</c>
+              <c>93000</c>
+              <c>81</c>
+            </r>
+            <r>
+              <c>3604</c>
+              <c>ECOLOGY</c>
+              <c>Biology &amp; Life Science</c>
+              <c>45368</c>
+              <c>36708</c>
+              <c>25677</c>
+              <c>1888</c>
+              <c>0.048916986</c>
+              <c>47500</c>
+              <c>32000</c>
+              <c>73000</c>
+              <c>81</c>
+            </r>
+            <r>
+              <c>4006</c>
+              <c>COGNITIVE SCIENCE AND BIOPSYCHOLOGY</c>
+              <c>Biology &amp; Life Science</c>
+              <c>6898</c>
+              <c>5527</c>
+              <c>3639</c>
+              <c>284</c>
+              <c>0.048872827</c>
+              <c>53000</c>
+              <c>31500</c>
+              <c>93000</c>
+              <c>81</c>
+            </r>
+            <r>
+              <c>5002</c>
+              <c>ATMOSPHERIC SCIENCES AND METEOROLOGY</c>
+              <c>Physical Sciences</c>
+              <c>14051</c>
+              <c>11252</c>
+              <c>9098</c>
+              <c>429</c>
+              <c>0.036726308</c>
+              <c>60000</c>
+              <c>39000</c>
+              <c>90000</c>
+              <c>81</c>
+            </r>
+            <r>
+              <c>6005</c>
+              <c>FILM VIDEO AND PHOTOGRAPHIC ARTS</c>
+              <c>Arts</c>
+              <c>133508</c>
+              <c>107651</c>
+              <c>69303</c>
+              <c>10080</c>
+              <c>0.085618911</c>
+              <c>47000</c>
+              <c>30000</c>
+              <c>70000</c>
+              <c>81</c>
+            </r>
+            <r>
+              <c>6202</c>
+              <c>ACTUARIAL SCIENCE</c>
+              <c>Business</c>
+              <c>9763</c>
+              <c>7846</c>
+              <c>6880</c>
+              <c>466</c>
+              <c>0.056063523</c>
+              <c>72000</c>
+              <c>53000</c>
+              <c>115000</c>
+              <c>81</c>
+            </r>
+            <r>
+              <c>1105</c>
+              <c>PLANT SCIENCE AND AGRONOMY</c>
+              <c>Agriculture &amp; Natural Resources</c>
+              <c>79409</c>
+              <c>63043</c>
+              <c>51077</c>
+              <c>2070</c>
+              <c>0.031790887</c>
+              <c>50000</c>
+              <c>35000</c>
+              <c>75000</c>
+              <c>80</c>
+            </r>
+            <r>
+              <c>1303</c>
+              <c>NATURAL RESOURCES MANAGEMENT</c>
+              <c>Agriculture &amp; Natural Resources</c>
+              <c>83188</c>
+              <c>65937</c>
+              <c>50595</c>
+              <c>3789</c>
+              <c>0.054341279</c>
+              <c>52000</c>
+              <c>37100</c>
+              <c>75000</c>
+              <c>80</c>
+            </r>
+            <r>
+              <c>2001</c>
+              <c>COMMUNICATION TECHNOLOGIES</c>
+              <c>Computers &amp; Mathematics</c>
+              <c>62141</c>
+              <c>49609</c>
+              <c>37261</c>
+              <c>4609</c>
+              <c>0.085008669</c>
+              <c>50000</c>
+              <c>34500</c>
+              <c>75000</c>
+              <c>80</c>
+            </r>
+            <r>
+              <c>2503</c>
+              <c>INDUSTRIAL PRODUCTION TECHNOLOGIES</c>
+              <c>Engineering</c>
+              <c>82142</c>
+              <c>65401</c>
+              <c>57266</c>
+              <c>3431</c>
+              <c>0.049846002</c>
+              <c>70000</c>
+              <c>48000</c>
+              <c>98000</c>
+              <c>80</c>
+            </r>
+            <r>
+              <c>3701</c>
+              <c>APPLIED MATHEMATICS</c>
+              <c>Computers &amp; Mathematics</c>
+              <c>19112</c>
+              <c>15136</c>
+              <c>12109</c>
+              <c>892</c>
+              <c>0.055652608</c>
+              <c>70000</c>
+              <c>47000</c>
+              <c>106000</c>
+              <c>80</c>
+            </r>
+            <r>
+              <c>5503</c>
+              <c>CRIMINOLOGY</c>
+              <c>Social Science</c>
+              <c>75085</c>
+              <c>59534</c>
+              <c>48763</c>
+              <c>4106</c>
+              <c>0.06451917</c>
+              <c>49000</c>
+              <c>35000</c>
+              <c>72000</c>
+              <c>80</c>
+            </r>
+            <r>
+              <c>6104</c>
+              <c>MEDICAL ASSISTING SERVICES</c>
+              <c>Health</c>
+              <c>64316</c>
+              <c>51279</c>
+              <c>25118</c>
+              <c>1660</c>
+              <c>0.031356845</c>
+              <c>55000</c>
+              <c>37000</c>
+              <c>75000</c>
+              <c>80</c>
+            </r>
+            <r>
+              <c>6206</c>
+              <c>MARKETING AND MARKETING RESEARCH</c>
+              <c>Business</c>
+              <c>1114624</c>
+              <c>890125</c>
+              <c>704912</c>
+              <c>51839</c>
+              <c>0.055032889</c>
+              <c>56000</c>
+              <c>38500</c>
+              <c>90000</c>
+              <c>80</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="78" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="172" />
+          <Fields>
+            <Field name="Field_1" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Major_code,Major,Major_category,Total,Employed,Employed_full_time_year_round,Unemployed,Median,P25th,P75th</c>
+            </r>
+            <r>
+              <c>1100,GENERAL AGRICULTURE,Agriculture &amp; Natural Resources,128148,90245,74078,2423,50000,34000,80000</c>
+            </r>
+            <r>
+              <c>1101,AGRICULTURE PRODUCTION AND MANAGEMENT,Agriculture &amp; Natural Resources,95326,76865,64240,2266,54000,36000,80000</c>
+            </r>
+            <r>
+              <c>1102,AGRICULTURAL ECONOMICS,Agriculture &amp; Natural Resources,33955,26321,22810,821,63000,40000,98000</c>
+            </r>
+            <r>
+              <c>1103,ANIMAL SCIENCES,Agriculture &amp; Natural Resources,103549,81177,64937,3619,46000,30000,72000</c>
+            </r>
+            <r>
+              <c>1104,FOOD SCIENCE,Agriculture &amp; Natural Resources,24280,17281,12722,894,62000,38500,90000</c>
+            </r>
+            <r>
+              <c>1105,PLANT SCIENCE AND AGRONOMY,Agriculture &amp; Natural Resources,79409,63043,51077,2070,50000,35000,75000</c>
+            </r>
+            <r>
+              <c>1106,SOIL SCIENCE,Agriculture &amp; Natural Resources,6586,4926,4042,264,63000,39400,88000</c>
+            </r>
+            <r>
+              <c>1199,MISCELLANEOUS AGRICULTURE,Agriculture &amp; Natural Resources,8549,6392,5074,261,52000,35000,75000</c>
+            </r>
+            <r>
+              <c>1301,ENVIRONMENTAL SCIENCE,Biology &amp; Life Science,106106,87602,65238,4736,52000,38000,75000</c>
+            </r>
+            <r>
+              <c>1302,FORESTRY,Agriculture &amp; Natural Resources,69447,48228,39613,2144,58000,40500,80000</c>
+            </r>
+            <r>
+              <c>1303,NATURAL RESOURCES MANAGEMENT,Agriculture &amp; Natural Resources,83188,65937,50595,3789,52000,37100,75000</c>
+            </r>
+            <r>
+              <c>1401,ARCHITECTURE,Engineering,294692,216770,163020,20394,63000,40400,93500</c>
+            </r>
+            <r>
+              <c>1501,AREA ETHNIC AND CIVILIZATION STUDIES,Humanities &amp; Liberal Arts,103740,75798,50530,5525,46000,32000,71000</c>
+            </r>
+            <r>
+              <c>1901,COMMUNICATIONS,Communications &amp; Journalism,987676,790696,595739,54390,50000,35000,80000</c>
+            </r>
+            <r>
+              <c>1902,JOURNALISM,Communications &amp; Journalism,418104,314438,235407,20754,50000,35000,80000</c>
+            </r>
+            <r>
+              <c>1903,MASS MEDIA,Communications &amp; Journalism,211213,170474,125489,15431,48000,32000,70000</c>
+            </r>
+            <r>
+              <c>1904,ADVERTISING AND PUBLIC RELATIONS,Communications &amp; Journalism,186829,147433,111552,10624,50000,34000,75000</c>
+            </r>
+            <r>
+              <c>2001,COMMUNICATION TECHNOLOGIES,Computers &amp; Mathematics,62141,49609,37261,4609,50000,34500,75000</c>
+            </r>
+            <r>
+              <c>2100,COMPUTER AND INFORMATION SYSTEMS,Computers &amp; Mathematics,253782,218248,189950,11945,65000,45000,90000</c>
+            </r>
+            <r>
+              <c>2101,COMPUTER PROGRAMMING AND DATA PROCESSING,Computers &amp; Mathematics,29317,22828,18747,2265,60000,40000,85000</c>
+            </r>
+            <r>
+              <c>2102,COMPUTER SCIENCE,Computers &amp; Mathematics,783292,656372,561052,34196,78000,51000,105000</c>
+            </r>
+            <r>
+              <c>2105,INFORMATION SCIENCES,Computers &amp; Mathematics,77805,66393,57604,3704,68000,46200,95000</c>
+            </r>
+            <r>
+              <c>2106,COMPUTER ADMINISTRATION MANAGEMENT AND SECURITY,Computers &amp; Mathematics,39362,32366,28156,2626,55000,40000,80000</c>
+            </r>
+            <r>
+              <c>2107,COMPUTER NETWORKING AND TELECOMMUNICATIONS,Computers &amp; Mathematics,51771,44071,35954,2748,55000,36000,80000</c>
+            </r>
+            <r>
+              <c>2201,COSMETOLOGY SERVICES AND CULINARY ARTS,Industrial Arts &amp; Consumer Services,42325,33388,25780,1941,40000,26200,60000</c>
+            </r>
+            <r>
+              <c>2300,GENERAL EDUCATION,Education,1438867,843693,591863,38742,43000,32000,59000</c>
+            </r>
+            <r>
+              <c>2301,EDUCATIONAL ADMINISTRATION AND SUPERVISION,Education,4037,3113,2468,0,58000,44750,79000</c>
+            </r>
+            <r>
+              <c>2303,SCHOOL STUDENT COUNSELING,Education,2396,1492,1093,169,41000,33200,50000</c>
+            </r>
+            <r>
+              <c>2304,ELEMENTARY EDUCATION,Education,1446701,819393,501786,32685,40000,31000,50000</c>
+            </r>
+            <r>
+              <c>2305,MATHEMATICS TEACHER EDUCATION,Education,68808,47203,29494,1610,43000,34000,60000</c>
+            </r>
+            <r>
+              <c>2306,PHYSICAL AND HEALTH EDUCATION TEACHING,Education,281661,193542,136343,9389,48400,34000,66500</c>
+            </r>
+            <r>
+              <c>2307,EARLY CHILDHOOD EDUCATION,Education,157079,113460,71133,5890,35300,27000,45800</c>
+            </r>
+            <r>
+              <c>2308,SCIENCE AND COMPUTER TEACHER EDUCATION,Education,56477,36224,24817,1596,46000,35000,61000</c>
+            </r>
+            <r>
+              <c>2309,SECONDARY TEACHER EDUCATION,Education,224262,129486,88917,5925,45000,34000,60000</c>
+            </r>
+            <r>
+              <c>2310,SPECIAL NEEDS EDUCATION,Education,149689,108272,71615,5357,42000,34000,53000</c>
+            </r>
+            <r>
+              <c>2311,SOCIAL SCIENCE OR HISTORY TEACHER EDUCATION,Education,127022,78785,51632,3800,45000,33000,64000</c>
+            </r>
+            <r>
+              <c>2312,TEACHER EDUCATION: MULTIPLE LEVELS,Education,88067,58885,37892,2032,40000,30000,51000</c>
+            </r>
+            <r>
+              <c>2313,LANGUAGE AND DRAMA EDUCATION,Education,181445,111347,67651,5624,42000,32000,54000</c>
+            </r>
+            <r>
+              <c>2314,ART AND MUSIC EDUCATION,Education,231861,155159,94756,6629,42600,32000,56000</c>
+            </r>
+            <r>
+              <c>2399,MISCELLANEOUS EDUCATION,Education,225553,126054,91322,5145,50000,35600,71000</c>
+            </r>
+            <r>
+              <c>2400,GENERAL ENGINEERING,Engineering,503080,359172,312023,17986,75000,50000,100000</c>
+            </r>
+            <r>
+              <c>2401,AEROSPACE ENGINEERING,Engineering,65734,44944,38491,1969,80000,58000,110000</c>
+            </r>
+            <r>
+              <c>2402,BIOLOGICAL ENGINEERING,Engineering,32748,24270,18621,1521,62000,40000,91000</c>
+            </r>
+            <r>
+              <c>2403,ARCHITECTURAL ENGINEERING,Engineering,19587,13713,11180,1017,78000,50000,102000</c>
+            </r>
+            <r>
+              <c>2404,BIOMEDICAL ENGINEERING,Engineering,18347,12876,9202,1105,65000,40000,96000</c>
+            </r>
+            <r>
+              <c>2405,CHEMICAL ENGINEERING,Engineering,188046,131697,109406,6388,86000,60000,120000</c>
+            </r>
+            <r>
+              <c>2406,CIVIL ENGINEERING,Engineering,358593,262831,220528,14823,78000,55000,105000</c>
+            </r>
+            <r>
+              <c>2407,COMPUTER ENGINEERING,Engineering,154160,128742,111025,7456,80000,60000,107000</c>
+            </r>
+            <r>
+              <c>2408,ELECTRICAL ENGINEERING,Engineering,671647,489965,422317,26064,88000,60000,116000</c>
+            </r>
+            <r>
+              <c>2409,ENGINEERING MECHANICS PHYSICS AND SCIENCE,Engineering,20582,14909,12257,683,65000,45000,100000</c>
+            </r>
+            <r>
+              <c>2410,ENVIRONMENTAL ENGINEERING,Engineering,13016,9849,8104,472,70000,50000,95000</c>
+            </r>
+            <r>
+              <c>2411,GEOLOGICAL AND GEOPHYSICAL ENGINEERING,Engineering,6264,4120,3350,0,85000,55000,125000</c>
+            </r>
+            <r>
+              <c>2412,INDUSTRIAL AND MANUFACTURING ENGINEERING,Engineering,138366,101273,85014,5498,75000,50000,101000</c>
+            </r>
+            <r>
+              <c>2413,MATERIALS ENGINEERING AND MATERIALS SCIENCE,Engineering,21430,14687,11871,933,78000,55000,105000</c>
+            </r>
+            <r>
+              <c>2414,MECHANICAL ENGINEERING,Engineering,581529,422207,362053,19360,80000,59000,110000</c>
+            </r>
+            <r>
+              <c>2415,METALLURGICAL ENGINEERING,Engineering,12818,6939,5462,326,96000,65000,123000</c>
+            </r>
+            <r>
+              <c>2416,MINING AND MINERAL ENGINEERING,Engineering,10746,7416,6419,366,92000,52000,124000</c>
+            </r>
+            <r>
+              <c>2417,NAVAL ARCHITECTURE AND MARINE ENGINEERING,Engineering,16094,10690,9226,449,97000,60000,125000</c>
+            </r>
+            <r>
+              <c>2418,NUCLEAR ENGINEERING,Engineering,9826,7320,6474,527,95000,65000,128000</c>
+            </r>
+            <r>
+              <c>2419,PETROLEUM ENGINEERING,Engineering,19631,14002,11636,617,125000,75000,210000</c>
+            </r>
+            <r>
+              <c>2499,MISCELLANEOUS ENGINEERING,Engineering,57006,43906,37194,2744,70000,50000,100000</c>
+            </r>
+            <r>
+              <c>2500,ENGINEERING TECHNOLOGIES,Engineering,37382,30102,25651,1475,63000,40000,93000</c>
+            </r>
+            <r>
+              <c>2501,ENGINEERING AND INDUSTRIAL MANAGEMENT,Engineering,47098,27275,22104,1577,74000,50000,107000</c>
+            </r>
+            <r>
+              <c>2502,ELECTRICAL ENGINEERING TECHNOLOGY,Engineering,94697,73737,64157,4572,67000,46900,91000</c>
+            </r>
+            <r>
+              <c>2503,INDUSTRIAL PRODUCTION TECHNOLOGIES,Engineering,82142,65401,57266,3431,70000,48000,98000</c>
+            </r>
+            <r>
+              <c>2504,MECHANICAL ENGINEERING RELATED TECHNOLOGIES,Engineering,29348,24190,21273,1101,60000,40000,82000</c>
+            </r>
+            <r>
+              <c>2599,MISCELLANEOUS ENGINEERING TECHNOLOGIES,Engineering,64196,53097,46183,3401,63000,42000,90000</c>
+            </r>
+            <r>
+              <c>2601,LINGUISTICS AND COMPARATIVE LANGUAGE AND LITERATURE,Humanities &amp; Liberal Arts,75791,45657,30428,4043,48000,30000,70000</c>
+            </r>
+            <r>
+              <c>2602,FRENCH GERMAN LATIN AND OTHER COMMON FOREIGN LANGUAGE STUDIES,Humanities &amp; Liberal Arts,236342,153654,99459,9598,48000,33500,69000</c>
+            </r>
+            <r>
+              <c>2603,OTHER FOREIGN LANGUAGES,Humanities &amp; Liberal Arts,57793,34696,23046,2707,45000,30000,75000</c>
+            </r>
+            <r>
+              <c>2901,FAMILY AND CONSUMER SCIENCES,Industrial Arts &amp; Consumer Services,402038,241585,154167,14273,40500,30000,60000</c>
+            </r>
+            <r>
+              <c>3201,COURT REPORTING,Law &amp; Public Policy,9330,7270,6143,518,50000,34000,75000</c>
+            </r>
+            <r>
+              <c>3202,PRE-LAW AND LEGAL STUDIES,Law &amp; Public Policy,67037,49259,37254,3699,48000,34000,70000</c>
+            </r>
+            <r>
+              <c>3301,ENGLISH LANGUAGE AND LITERATURE,Humanities &amp; Liberal Arts,1098647,708882,482229,52248,50000,32900,75000</c>
+            </r>
+            <r>
+              <c>3302,COMPOSITION AND RHETORIC,Humanities &amp; Liberal Arts,59211,44913,29628,3569,40000,28800,65000</c>
+            </r>
+            <r>
+              <c>3401,LIBERAL ARTS,Humanities &amp; Liberal Arts,601221,404932,296792,29348,50000,33000,75000</c>
+            </r>
+            <r>
+              <c>3402,HUMANITIES,Humanities &amp; Liberal Arts,46188,29971,19460,2530,46700,30000,70000</c>
+            </r>
+            <r>
+              <c>3501,LIBRARY SCIENCE,Education,16193,7091,4330,743,40000,30000,55000</c>
+            </r>
+            <r>
+              <c>3600,BIOLOGY,Biology &amp; Life Science,839454,583079,422788,36757,51000,35000,80000</c>
+            </r>
+            <r>
+              <c>3601,BIOCHEMICAL SCIENCES,Biology &amp; Life Science,75322,52594,37103,4056,53000,33000,82000</c>
+            </r>
+            <r>
+              <c>3602,BOTANY,Biology &amp; Life Science,14135,9284,6333,327,50000,32000,75000</c>
+            </r>
+            <r>
+              <c>3603,MOLECULAR BIOLOGY,Biology &amp; Life Science,28197,20221,13366,1303,45000,30000,70000</c>
+            </r>
+            <r>
+              <c>3604,ECOLOGY,Biology &amp; Life Science,45368,36708,25677,1888,47500,32000,73000</c>
+            </r>
+            <r>
+              <c>3605,GENETICS,Biology &amp; Life Science,6362,4747,3498,206,48000,33000,80000</c>
+            </r>
+            <r>
+              <c>3606,MICROBIOLOGY,Biology &amp; Life Science,68885,45422,33990,2435,60000,40000,85000</c>
+            </r>
+            <r>
+              <c>3607,PHARMACOLOGY,Biology &amp; Life Science,5015,3481,2579,57,60000,35000,105000</c>
+            </r>
+            <r>
+              <c>3608,PHYSIOLOGY,Biology &amp; Life Science,43984,31394,20207,1692,50000,30000,75000</c>
+            </r>
+            <r>
+              <c>3609,ZOOLOGY,Biology &amp; Life Science,55395,35714,26152,1815,55000,34000,85000</c>
+            </r>
+            <r>
+              <c>3611,NEUROSCIENCE,Biology &amp; Life Science,13676,8987,5446,665,35000,28000,52000</c>
+            </r>
+            <r>
+              <c>3699,MISCELLANEOUS BIOLOGY,Biology &amp; Life Science,29389,22298,16508,1114,52000,33500,72800</c>
+            </r>
+            <r>
+              <c>3700,MATHEMATICS,Computers &amp; Mathematics,432806,280902,209838,15701,66000,42000,100000</c>
+            </r>
+            <r>
+              <c>3701,APPLIED MATHEMATICS,Computers &amp; Mathematics,19112,15136,12109,892,70000,47000,106000</c>
+            </r>
+            <r>
+              <c>3702,STATISTICS AND DECISION SCIENCE,Computers &amp; Mathematics,24806,18808,14468,1138,70000,43000,102000</c>
+            </r>
+            <r>
+              <c>3801,MILITARY TECHNOLOGIES,Industrial Arts &amp; Consumer Services,4315,1650,1708,187,64000,39750,90000</c>
+            </r>
+            <r>
+              <c>4000,MULTI/INTERDISCIPLINARY STUDIES,Interdisciplinary,45199,35706,26038,2990,43000,32000,55000</c>
+            </r>
+            <r>
+              <c>4001,INTERCULTURAL AND INTERNATIONAL STUDIES,Humanities &amp; Liberal Arts,56580,43114,27499,3462,45000,30000,69000</c>
+            </r>
+            <r>
+              <c>4002,NUTRITION SCIENCES,Health,64534,43878,28112,2961,49500,34000,69000</c>
+            </r>
+            <r>
+              <c>4005,MATHEMATICS AND COMPUTER SCIENCE,Computers &amp; Mathematics,7184,5874,5039,150,92000,53000,136000</c>
+            </r>
+            <r>
+              <c>4006,COGNITIVE SCIENCE AND BIOPSYCHOLOGY,Biology &amp; Life Science,6898,5527,3639,284,53000,31500,93000</c>
+            </r>
+            <r>
+              <c>4007,INTERDISCIPLINARY SOCIAL SCIENCES,Social Science,61871,43312,31078,3030,45000,33000,67000</c>
+            </r>
+            <r>
+              <c>4101,PHYSICAL FITNESS PARKS RECREATION AND LEISURE,Industrial Arts &amp; Consumer Services,350409,286683,204242,14108,44000,30000,60000</c>
+            </r>
+            <r>
+              <c>4801,PHILOSOPHY AND RELIGIOUS STUDIES,Humanities &amp; Liberal Arts,205763,138734,95429,11252,45000,30000,70000</c>
+            </r>
+            <r>
+              <c>4901,THEOLOGY AND RELIGIOUS VOCATIONS,Humanities &amp; Liberal Arts,232865,164827,121606,7317,40000,27000,56000</c>
+            </r>
+            <r>
+              <c>5000,PHYSICAL SCIENCES,Physical Sciences,8856,5872,4961,238,60000,38000,89000</c>
+            </r>
+            <r>
+              <c>5001,ASTRONOMY AND ASTROPHYSICS,Physical Sciences,4700,3400,2447,320,80000,40000,106000</c>
+            </r>
+            <r>
+              <c>5002,ATMOSPHERIC SCIENCES AND METEOROLOGY,Physical Sciences,14051,11252,9098,429,60000,39000,90000</c>
+            </r>
+            <r>
+              <c>5003,CHEMISTRY,Physical Sciences,308062,198075,153308,11468,59000,38700,90000</c>
+            </r>
+            <r>
+              <c>5004,GEOLOGY AND EARTH SCIENCE,Physical Sciences,107902,75698,59262,5272,65000,42000,100000</c>
+            </r>
+            <r>
+              <c>5005,GEOSCIENCES,Physical Sciences,8267,6129,5020,274,57000,36000,80000</c>
+            </r>
+            <r>
+              <c>5006,OCEANOGRAPHY,Physical Sciences,10741,7882,6508,449,55000,40000,90000</c>
+            </r>
+            <r>
+              <c>5007,PHYSICS,Physical Sciences,122620,80797,60812,4440,70000,40000,110000</c>
+            </r>
+            <r>
+              <c>5008,MATERIALS SCIENCE,Engineering,7208,5866,4505,134,75000,60000,100000</c>
+            </r>
+            <r>
+              <c>5098,MULTI-DISCIPLINARY OR GENERAL SCIENCE,Physical Sciences,427953,308461,238933,14613,56000,38000,85000</c>
+            </r>
+            <r>
+              <c>5200,PSYCHOLOGY,Psychology &amp; Social Work,1484075,1055854,736817,79066,45000,31000,68000</c>
+            </r>
+            <r>
+              <c>5201,EDUCATIONAL PSYCHOLOGY,Psychology &amp; Social Work,14041,8751,5763,716,40000,33000,70000</c>
+            </r>
+            <r>
+              <c>5202,CLINICAL PSYCHOLOGY,Psychology &amp; Social Work,7638,5128,3297,587,45000,26100,62000</c>
+            </r>
+            <r>
+              <c>5203,COUNSELING PSYCHOLOGY,Psychology &amp; Social Work,17633,13071,8888,954,39000,25000,50000</c>
+            </r>
+            <r>
+              <c>5205,INDUSTRIAL AND ORGANIZATIONAL PSYCHOLOGY,Psychology &amp; Social Work,17969,11878,8631,1084,62000,40000,84000</c>
+            </r>
+            <r>
+              <c>5206,SOCIAL PSYCHOLOGY,Psychology &amp; Social Work,10871,6897,5226,660,47000,35000,70000</c>
+            </r>
+            <r>
+              <c>5299,MISCELLANEOUS PSYCHOLOGY,Psychology &amp; Social Work,34102,23921,15688,2137,45000,30000,70000</c>
+            </r>
+            <r>
+              <c>5301,CRIMINAL JUSTICE AND FIRE PROTECTION,Law &amp; Public Policy,757141,613369,517599,35037,50000,35000,74000</c>
+            </r>
+            <r>
+              <c>5401,PUBLIC ADMINISTRATION,Law &amp; Public Policy,54636,37879,31262,2836,56000,40000,85000</c>
+            </r>
+            <r>
+              <c>5402,PUBLIC POLICY,Law &amp; Public Policy,14782,11147,8196,959,60000,38000,90000</c>
+            </r>
+            <r>
+              <c>5403,HUMAN SERVICES AND COMMUNITY ORGANIZATION,Psychology &amp; Social Work,81786,61402,44959,4794,38000,29000,52000</c>
+            </r>
+            <r>
+              <c>5404,SOCIAL WORK,Psychology &amp; Social Work,319163,225081,164020,14208,40000,30000,53000</c>
+            </r>
+            <r>
+              <c>5500,GENERAL SOCIAL SCIENCES,Social Science,127363,80165,57036,6132,50000,35000,75000</c>
+            </r>
+            <r>
+              <c>5501,ECONOMICS,Social Science,757616,535446,430580,34974,69000,42000,110000</c>
+            </r>
+            <r>
+              <c>5502,ANTHROPOLOGY AND ARCHEOLOGY,Humanities &amp; Liberal Arts,143087,102399,66046,8684,43000,30000,68000</c>
+            </r>
+            <r>
+              <c>5503,CRIMINOLOGY,Social Science,75085,59534,48763,4106,49000,35000,72000</c>
+            </r>
+            <r>
+              <c>5504,GEOGRAPHY,Social Science,115423,83671,63070,6202,54000,38300,78000</c>
+            </r>
+            <r>
+              <c>5505,INTERNATIONAL RELATIONS,Social Science,77371,56564,42091,4278,55000,40000,89000</c>
+            </r>
+            <r>
+              <c>5506,POLITICAL SCIENCE AND GOVERNMENT,Social Science,748956,541630,421761,40376,58000,38000,90000</c>
+            </r>
+            <r>
+              <c>5507,SOCIOLOGY,Social Science,674558,459174,336515,32344,47000,33000,70000</c>
+            </r>
+            <r>
+              <c>5599,MISCELLANEOUS SOCIAL SCIENCES,Social Science,15882,12307,9444,708,52000,40000,80000</c>
+            </r>
+            <r>
+              <c>5601,CONSTRUCTION SERVICES,Industrial Arts &amp; Consumer Services,92346,79055,65916,4257,65000,45000,95000</c>
+            </r>
+            <r>
+              <c>5901,TRANSPORTATION SCIENCES AND TECHNOLOGIES,Industrial Arts &amp; Consumer Services,126639,98814,83519,4902,67000,42500,98000</c>
+            </r>
+            <r>
+              <c>6000,FINE ARTS,Arts,571961,386961,256747,29912,45000,30000,70000</c>
+            </r>
+            <r>
+              <c>6001,DRAMA AND THEATER ARTS,Arts,174817,135071,81519,11789,42000,29000,62000</c>
+            </r>
+            <r>
+              <c>6002,MUSIC,Arts,276262,192704,116142,11155,45000,30000,67000</c>
+            </r>
+            <r>
+              <c>6003,VISUAL AND PERFORMING ARTS,Arts,55141,41098,23479,4297,40000,27000,59000</c>
+            </r>
+            <r>
+              <c>6004,COMMERCIAL ART AND GRAPHIC DESIGN,Arts,504657,379980,266671,30330,46600,32000,70000</c>
+            </r>
+            <r>
+              <c>6005,FILM VIDEO AND PHOTOGRAPHIC ARTS,Arts,133508,107651,69303,10080,47000,30000,70000</c>
+            </r>
+            <r>
+              <c>6006,ART HISTORY AND CRITICISM,Humanities &amp; Liberal Arts,90852,61295,38989,4185,44500,30000,70000</c>
+            </r>
+            <r>
+              <c>6007,STUDIO ARTS,Arts,81008,58799,36943,5372,37600,24900,58000</c>
+            </r>
+            <r>
+              <c>6099,MISCELLANEOUS FINE ARTS,Arts,8511,6431,3802,1190,45000,30000,60000</c>
+            </r>
+            <r>
+              <c>6100,GENERAL MEDICAL AND HEALTH SERVICES,Health,104516,78198,53746,4525,50000,35000,73000</c>
+            </r>
+            <r>
+              <c>6102,COMMUNICATION DISORDERS SCIENCES AND SERVICES,Health,74977,49393,26085,2407,42000,30000,60000</c>
+            </r>
+            <r>
+              <c>6103,HEALTH AND MEDICAL ADMINISTRATIVE SERVICES,Health,108510,85360,67294,5160,50000,35000,75000</c>
+            </r>
+            <r>
+              <c>6104,MEDICAL ASSISTING SERVICES,Health,64316,51279,25118,1660,55000,37000,75000</c>
+            </r>
+            <r>
+              <c>6105,MEDICAL TECHNOLOGIES TECHNICIANS,Health,164990,121479,92128,4564,60000,45000,76000</c>
+            </r>
+            <r>
+              <c>6106,HEALTH AND MEDICAL PREPARATORY PROGRAMS,Health,32514,19009,13147,1431,50000,34000,85000</c>
+            </r>
+            <r>
+              <c>6107,NURSING,Health,1769892,1325711,947546,36503,62000,48000,80000</c>
+            </r>
+            <r>
+              <c>6108,PHARMACY PHARMACEUTICAL SCIENCES AND ADMINISTRATION,Health,180084,124058,89234,4414,106000,78000,125000</c>
+            </r>
+            <r>
+              <c>6109,TREATMENT THERAPY PROFESSIONS,Health,252138,199174,128115,5378,61000,40000,80000</c>
+            </r>
+            <r>
+              <c>6110,COMMUNITY AND PUBLIC HEALTH,Health,56741,42543,28912,3032,47000,32800,70000</c>
+            </r>
+            <r>
+              <c>6199,MISCELLANEOUS HEALTH MEDICAL PROFESSIONS,Health,77647,52610,35676,2978,45000,32000,62000</c>
+            </r>
+            <r>
+              <c>6200,GENERAL BUSINESS,Business,2148712,1580978,1304646,85626,60000,40000,95000</c>
+            </r>
+            <r>
+              <c>6201,ACCOUNTING,Business,1779219,1335825,1095027,75379,65000,42500,100000</c>
+            </r>
+            <r>
+              <c>6202,ACTUARIAL SCIENCE,Business,9763,7846,6880,466,72000,53000,115000</c>
+            </r>
+            <r>
+              <c>6203,BUSINESS MANAGEMENT AND ADMINISTRATION,Business,3123510,2354398,1939384,147261,58000,39500,86000</c>
+            </r>
+            <r>
+              <c>6204,OPERATIONS LOGISTICS AND E-COMMERCE,Business,57200,47341,41104,2141,65000,45000,90000</c>
+            </r>
+            <r>
+              <c>6205,BUSINESS ECONOMICS,Business,75547,57983,48471,3816,65000,45000,100000</c>
+            </r>
+            <r>
+              <c>6206,MARKETING AND MARKETING RESEARCH,Business,1114624,890125,704912,51839,56000,38500,90000</c>
+            </r>
+            <r>
+              <c>6207,FINANCE,Business,816548,670681,561073,34166,65000,45000,100000</c>
+            </r>
+            <r>
+              <c>6209,HUMAN RESOURCES AND PERSONNEL MANAGEMENT,Business,187274,142879,116466,9241,54000,38000,80000</c>
+            </r>
+            <r>
+              <c>6210,INTERNATIONAL BUSINESS,Business,86064,66453,51012,5106,54000,38600,80000</c>
+            </r>
+            <r>
+              <c>6211,HOSPITALITY MANAGEMENT,Business,200854,163393,122499,8862,49000,33000,70000</c>
+            </r>
+            <r>
+              <c>6212,MANAGEMENT INFORMATION SYSTEMS AND STATISTICS,Business,156673,134478,118249,6186,72000,50000,100000</c>
+            </r>
+            <r>
+              <c>6299,MISCELLANEOUS BUSINESS &amp; MEDICAL ADMINISTRATION,Business,102753,77471,61603,4308,53000,36000,83000</c>
+            </r>
+            <r>
+              <c>6402,HISTORY,Humanities &amp; Liberal Arts,712509,478416,354163,33725,50000,35000,80000</c>
+            </r>
+            <r>
+              <c>6403,UNITED STATES HISTORY,Humanities &amp; Liberal Arts,17746,11887,8204,943,50000,39000,81000</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="68" y="1064" width="656" height="84" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Alteryx Educational Asset - Terms and Conditions</Caption>
+          <Style TextColor="#ffffff" FillColor="#0d2345" BorderColor="#ffffff" Transparency="1" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="78" y="1098" width="636" height="40" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Use of this Alteryx asset is for educational purposes only and bound by the conditions set forth on alteryx.com/terms-and-conditions. Alteryx Information may not be reproduced, transmitted or distributed without Alteryx, Inc.'s permission.”</Text>
+              <Font name="Times New Roman" size="8.25" style="0" />
+              <TextColor name="White" />
+              <FillColor name="White" />
+              <Shape shape="3" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>challenge_357_start_file_file_desktop_user</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

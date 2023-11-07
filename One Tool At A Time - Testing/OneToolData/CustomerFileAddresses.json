@@ -1,0 +1,812 @@
+[
+    {
+        "CustomerID": 1,
+        "FirstName": "PAMELA",
+        "LastName": "WRIGHT",
+        "Address": "2316 E 5th Ave,Denver,CO 80206-4205",
+        "StoreNumber": 100,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 2,
+        "FirstName": "MELISSA",
+        "LastName": "RUFF",
+        "Address": "2753 S Milwaukee St,Denver,CO 80210-6426",
+        "StoreNumber": 100,
+        "CustomerSegment": "Consumer",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 3,
+        "FirstName": "CONSTANTI",
+        "LastName": "VLASSIS",
+        "Address": "16911 E Harvard Ave,Aurora,CO 80013-1507",
+        "StoreNumber": 104,
+        "CustomerSegment": "Small Business",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 4,
+        "FirstName": "AMY",
+        "LastName": "LOCKEMER",
+        "Address": "3721 S Pitkin Ct,Aurora,CO 80013-3024",
+        "StoreNumber": 104,
+        "CustomerSegment": "Home Office",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 5,
+        "FirstName": "DANELL",
+        "LastName": "VALDEZ",
+        "Address": "2925 W College Ave,Denver,CO 80219-6059",
+        "StoreNumber": 101,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 6,
+        "FirstName": "JESSICA",
+        "LastName": "RINEHART",
+        "Address": "4220 W 35th Ave,Denver,CO 80212-1902",
+        "StoreNumber": 107,
+        "CustomerSegment": "Small Business",
+        "Visits": 2
+    },
+    {
+        "CustomerID": 7,
+        "FirstName": "NANCY",
+        "LastName": "CLARK",
+        "Address": "8785 Cloverleaf Cir,Parker,CO 80134-3948",
+        "StoreNumber": 104,
+        "CustomerSegment": "Small Business",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 8,
+        "FirstName": "ANDREA",
+        "LastName": "BRUN",
+        "Address": "2080 Fenton St,Denver,CO 80214-1128",
+        "StoreNumber": 107,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 9,
+        "FirstName": "DENISE",
+        "LastName": "PENTICO",
+        "Address": "4125C S Evanston Cir,Aurora,CO 80014",
+        "StoreNumber": 104,
+        "CustomerSegment": "Corporate",
+        "Visits": 2
+    },
+    {
+        "CustomerID": 10,
+        "FirstName": "ERNA",
+        "LastName": "ARUSTAMYAN",
+        "Address": "1137 S Boston Ct,Denver,CO 80247-2374",
+        "StoreNumber": 100,
+        "CustomerSegment": "Consumer",
+        "Visits": 2
+    },
+    {
+        "CustomerID": 11,
+        "FirstName": "ZAREFA",
+        "LastName": "HAMMAD",
+        "Address": "1651 Biscay Cir,Aurora,CO 80011-5220",
+        "StoreNumber": 105,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 12,
+        "FirstName": "MURIEL",
+        "LastName": "COULTER",
+        "Address": "12704 E Asbury Cir,Aurora,CO 80014-2759",
+        "StoreNumber": 104,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 13,
+        "FirstName": "KAREN",
+        "LastName": "OSBORNE",
+        "Address": "7595 S Teller Ct,Littleton,CO 80128-5488",
+        "StoreNumber": 106,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 14,
+        "FirstName": "SHIRLEY",
+        "LastName": "KRYWONIS",
+        "Address": "370 Eudora St,Denver,CO 80220-5722",
+        "StoreNumber": 107,
+        "CustomerSegment": "Home Office",
+        "Visits": 7
+    },
+    {
+        "CustomerID": 15,
+        "FirstName": "MICHELE",
+        "LastName": "MUNSEY",
+        "Address": "8300 Fairmount Dr,Denver,CO 80247-6527",
+        "StoreNumber": 105,
+        "CustomerSegment": "Home Office",
+        "Visits": 6
+    },
+    {
+        "CustomerID": 16,
+        "FirstName": "DIANNE",
+        "LastName": "VANGILDER",
+        "Address": "15358 E Saratoga Pl,Aurora,CO 80015-1726",
+        "StoreNumber": 104,
+        "CustomerSegment": "Home Office",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 17,
+        "FirstName": "NELE",
+        "LastName": "MENDIOLA",
+        "Address": "7498 Alkire St,Arvada,CO 80005",
+        "StoreNumber": 109,
+        "CustomerSegment": "Home Office",
+        "Visits": 3
+    },
+    {
+        "CustomerID": 18,
+        "FirstName": "JOAN",
+        "LastName": "LADD",
+        "Address": "2552 E Alameda Ave,Denver,CO 80209-3303",
+        "StoreNumber": 100,
+        "CustomerSegment": "Home Office",
+        "Visits": 7
+    },
+    {
+        "CustomerID": 19,
+        "FirstName": "DOROTHY",
+        "LastName": "COLE",
+        "Address": "6561 Welch Ct,Arvada,CO 80004-2223",
+        "StoreNumber": 103,
+        "CustomerSegment": "Consumer",
+        "Visits": 15
+    },
+    {
+        "CustomerID": 20,
+        "FirstName": "DEANNE",
+        "LastName": "BADER",
+        "Address": "8060 E Girard Ave,Denver,CO 80231-4411",
+        "StoreNumber": 105,
+        "CustomerSegment": "Small Business",
+        "Visits": 8
+    },
+    {
+        "CustomerID": 21,
+        "FirstName": "SHAVELL",
+        "LastName": "BROWN",
+        "Address": "16520 E Brown Dr,Aurora,CO 80013-1837",
+        "StoreNumber": 104,
+        "CustomerSegment": "Small Business",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 22,
+        "FirstName": "MARY",
+        "LastName": "KINIRY",
+        "Address": "16449 E Berry Ave,Aurora,CO 80015-4051",
+        "StoreNumber": 104,
+        "CustomerSegment": "Small Business",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 23,
+        "FirstName": "DARCY",
+        "LastName": "SOUZA",
+        "Address": "7867 S Jersey Way,Englewood,CO 80112-2453",
+        "StoreNumber": 101,
+        "CustomerSegment": "Small Business",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 24,
+        "FirstName": "BELINDA",
+        "LastName": "DEHERRERA",
+        "Address": "13492 W 67th Dr,Arvada,CO 80004-2119",
+        "StoreNumber": 108,
+        "CustomerSegment": "Small Business",
+        "Visits": 7
+    },
+    {
+        "CustomerID": 25,
+        "FirstName": "CASSANDRA",
+        "LastName": "PATTON",
+        "Address": "985 S Miller St,Denver,CO 80226-3938",
+        "StoreNumber": 106,
+        "CustomerSegment": "Small Business",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 26,
+        "FirstName": "KELI",
+        "LastName": "SCOTT",
+        "Address": "648 Allison St,Denver,CO 80214-4494",
+        "StoreNumber": 103,
+        "CustomerSegment": "Small Business",
+        "Visits": 3
+    },
+    {
+        "CustomerID": 27,
+        "FirstName": "MARIA",
+        "LastName": "RAMIREZ",
+        "Address": "4550 E Jewell Ave,Denver,CO 80222-4629",
+        "StoreNumber": 105,
+        "CustomerSegment": "Small Business",
+        "Visits": 6
+    },
+    {
+        "CustomerID": 28,
+        "FirstName": "VIONE",
+        "LastName": "JOHANSON",
+        "Address": "11625 Community Center Dr,Denver,CO 80233-1966",
+        "StoreNumber": 103,
+        "CustomerSegment": "Consumer",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 29,
+        "FirstName": "LORRALNE",
+        "LastName": "WATKINS",
+        "Address": "3072 S Rosemary St,Denver,CO 80231-4187",
+        "StoreNumber": 100,
+        "CustomerSegment": "Small Business",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 30,
+        "FirstName": "CYNTHIA",
+        "LastName": "WYAT",
+        "Address": "9521 W 65th Ave,Arvada,CO 80004-5256",
+        "StoreNumber": 103,
+        "CustomerSegment": "Small Business",
+        "Visits": 7
+    },
+    {
+        "CustomerID": 31,
+        "FirstName": "JASMIN",
+        "LastName": "SELIMOVIC",
+        "Address": "1110 S Bellaire St,Denver,CO 80246-3042",
+        "StoreNumber": 101,
+        "CustomerSegment": "Small Business",
+        "Visits": 2
+    },
+    {
+        "CustomerID": 32,
+        "FirstName": "ANN",
+        "LastName": "BALLIETT",
+        "Address": "7145 W 48th Ave,Wheat Ridge,CO 80033-3544",
+        "StoreNumber": 107,
+        "CustomerSegment": "Corporate",
+        "Visits": 7
+    },
+    {
+        "CustomerID": 33,
+        "FirstName": "LORENA",
+        "LastName": "GEORGE",
+        "Address": "7141 Beech St,Arvada,CO 80004-1132",
+        "StoreNumber": 103,
+        "CustomerSegment": "Home Office",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 34,
+        "FirstName": "KAREN",
+        "LastName": "PERRAULT",
+        "Address": "18796 E Baltic Pl,Aurora,CO 80013-7997",
+        "StoreNumber": 105,
+        "CustomerSegment": "Home Office",
+        "Visits": 3
+    },
+    {
+        "CustomerID": 35,
+        "FirstName": "ROBERTA",
+        "LastName": "LOHR",
+        "Address": "5375 Sombrero,Littleton,CO 80123-1426",
+        "StoreNumber": 101,
+        "CustomerSegment": "Corporate",
+        "Visits": 2
+    },
+    {
+        "CustomerID": 36,
+        "FirstName": "ELLEN",
+        "LastName": "BRILLIANT",
+        "Address": "415 Grape St,Denver,CO 80220-5231",
+        "StoreNumber": 100,
+        "CustomerSegment": "Consumer",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 37,
+        "FirstName": "KARISSA",
+        "LastName": "NORTE",
+        "Address": "6554 S Quemoy Way,Aurora,CO 80016-2684",
+        "StoreNumber": 104,
+        "CustomerSegment": "Small Business",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 38,
+        "FirstName": "ANNA",
+        "LastName": "SHEAHAN",
+        "Address": "11782 Larkspur Dr,Parker,CO 80134-7130",
+        "StoreNumber": 104,
+        "CustomerSegment": "Small Business",
+        "Visits": 2
+    },
+    {
+        "CustomerID": 39,
+        "FirstName": "KIM",
+        "LastName": "SMITH",
+        "Address": "20127 E Kenyon Pl,Aurora,CO 80013-6624",
+        "StoreNumber": 100,
+        "CustomerSegment": "Small Business",
+        "Visits": 2
+    },
+    {
+        "CustomerID": 40,
+        "FirstName": "NEYRA",
+        "LastName": "LOZANO",
+        "Address": "6615 W 13th Ave,Denver,CO 80214-1980",
+        "StoreNumber": 106,
+        "CustomerSegment": "Home Office",
+        "Visits": 6
+    },
+    {
+        "CustomerID": 41,
+        "FirstName": "ESTELLA",
+        "LastName": "BICKFORD",
+        "Address": "6450 Urban St,Arvada,CO 80004-2428",
+        "StoreNumber": 108,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 42,
+        "FirstName": "J",
+        "LastName": "RITZ",
+        "Address": "1604 S Syracuse St,Denver,CO 80231-2691",
+        "StoreNumber": 104,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 43,
+        "FirstName": "SIRENE",
+        "LastName": "MARQUISS",
+        "Address": "12168 E Exposition Dr,Aurora,CO 80012-2336",
+        "StoreNumber": 105,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 44,
+        "FirstName": "JERALYN",
+        "LastName": "BRADDOCK",
+        "Address": "143 S Perry St,Denver,CO 80219-1837",
+        "StoreNumber": 106,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 45,
+        "FirstName": "KARYN",
+        "LastName": "ROGERS",
+        "Address": "17065 E Dorado Cir,Aurora,CO 80015-3015",
+        "StoreNumber": 104,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 46,
+        "FirstName": "AMY",
+        "LastName": "HALTER",
+        "Address": "2456 W 111th Ct,Denver,CO 80234-3176",
+        "StoreNumber": 109,
+        "CustomerSegment": "Consumer",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 47,
+        "FirstName": "DAWN",
+        "LastName": "CROSSWHITE",
+        "Address": "3636 Clay St,Denver,CO 80211-2832",
+        "StoreNumber": 108,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 48,
+        "FirstName": "SARITA",
+        "LastName": "BAKER",
+        "Address": "19774 E Union Dr,Aurora,CO 80015-3486",
+        "StoreNumber": 104,
+        "CustomerSegment": "Corporate",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 49,
+        "FirstName": "MARY",
+        "LastName": "WETMORE",
+        "Address": "7988 W 82nd Pl,Arvada,CO 80005-2503",
+        "StoreNumber": 103,
+        "CustomerSegment": "Corporate",
+        "Visits": 6
+    },
+    {
+        "CustomerID": 50,
+        "FirstName": "STACEY",
+        "LastName": "BLICKER",
+        "Address": "355 Ash St,Broomfield,CO 80020-1530",
+        "StoreNumber": 109,
+        "CustomerSegment": "Corporate",
+        "Visits": 5
+    },
+    {
+        "CustomerID": 51,
+        "FirstName": "HEATHER",
+        "LastName": "CONWAY",
+        "Address": "8090 W 19th Ave,Denver,CO 80214-5901",
+        "StoreNumber": 106,
+        "CustomerSegment": "Small Business",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 52,
+        "FirstName": "NICOLE",
+        "LastName": "SMITH",
+        "Address": "7816 Cathedral Peak,Littleton,CO 80127-4051",
+        "StoreNumber": 101,
+        "CustomerSegment": "Small Business",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 53,
+        "FirstName": "NORMA",
+        "LastName": "GOODELL",
+        "Address": "1282 S Troy St,Aurora,CO 80012-4440",
+        "StoreNumber": 105,
+        "CustomerSegment": "Small Business",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 54,
+        "FirstName": "JULIANA",
+        "LastName": "OSBORNE",
+        "Address": "1772 Biscay St,Aurora,CO 80011-5228",
+        "StoreNumber": 100,
+        "CustomerSegment": "Small Business",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 55,
+        "FirstName": "JULIE",
+        "LastName": "SMITH",
+        "Address": "2226 Glencoe St,Denver,CO 80207-3835",
+        "StoreNumber": 107,
+        "CustomerSegment": "Consumer",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 56,
+        "FirstName": "CHRISTINE",
+        "LastName": "TRIANTOS",
+        "Address": "232 N Biloxi Way,Aurora,CO 80018-1567",
+        "StoreNumber": 105,
+        "CustomerSegment": "Small Business",
+        "Visits": 11
+    },
+    {
+        "CustomerID": 57,
+        "FirstName": "KATIE",
+        "LastName": "BILLS",
+        "Address": "6343 Moore Cir,Arvada,CO 80004-4829",
+        "StoreNumber": 108,
+        "CustomerSegment": "Small Business",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 58,
+        "FirstName": "JUDY",
+        "LastName": "LAMB",
+        "Address": "4433 Aaron Pl,Boulder,CO 80303-1114",
+        "StoreNumber": 109,
+        "CustomerSegment": "Small Business",
+        "Visits": 6
+    },
+    {
+        "CustomerID": 59,
+        "FirstName": "MEGAN",
+        "LastName": "MCMILLIN",
+        "Address": "7875 Elder Cir,Denver,CO 80221-4026",
+        "StoreNumber": 106,
+        "CustomerSegment": "Small Business",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 60,
+        "FirstName": "LANH",
+        "LastName": "NGUYEN",
+        "Address": "4983 S Zephyr St,Littleton,CO 80123-4620",
+        "StoreNumber": 101,
+        "CustomerSegment": "Corporate",
+        "Visits": 3
+    },
+    {
+        "CustomerID": 61,
+        "FirstName": "LARIE",
+        "LastName": "MARRIOTT",
+        "Address": "8321 Solana Dr,Denver,CO 80229-5409",
+        "StoreNumber": 107,
+        "CustomerSegment": "Corporate",
+        "Visits": 3
+    },
+    {
+        "CustomerID": 62,
+        "FirstName": "JOAN",
+        "LastName": "SHAFER",
+        "Address": "610 S Clinton St,Denver,CO 80247-1574",
+        "StoreNumber": 100,
+        "CustomerSegment": "Home Office",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 63,
+        "FirstName": "ALEXANDRA",
+        "LastName": "MURCRAY",
+        "Address": "4535 S Jellison St,Littleton,CO 80123-1023",
+        "StoreNumber": 101,
+        "CustomerSegment": "Home Office",
+        "Visits": 5
+    },
+    {
+        "CustomerID": 64,
+        "FirstName": "KATHRYN",
+        "LastName": "HALL",
+        "Address": "18343 E Arkansas Ave,Aurora,CO 80017-4312",
+        "StoreNumber": 100,
+        "CustomerSegment": "Consumer",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 65,
+        "FirstName": "MELISSA",
+        "LastName": "MADSEN",
+        "Address": "6281 S Adams Dr,Littleton,CO 80121-3007",
+        "StoreNumber": 104,
+        "CustomerSegment": "Corporate",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 66,
+        "FirstName": "ROSEMARY",
+        "LastName": "BREINER",
+        "Address": "1297 Krameria St,Denver,CO 80220-2714",
+        "StoreNumber": 104,
+        "CustomerSegment": "Corporate",
+        "Visits": 3
+    },
+    {
+        "CustomerID": 67,
+        "FirstName": "MARY",
+        "LastName": "HETHERINGTON",
+        "Address": "2521 Perry St,Denver,CO 80212-1228",
+        "StoreNumber": 107,
+        "CustomerSegment": "Home Office",
+        "Visits": 6
+    },
+    {
+        "CustomerID": 68,
+        "FirstName": "ERIN",
+        "LastName": "FUGLEBERG",
+        "Address": "319 Nome St,Aurora,CO 80010-4735",
+        "StoreNumber": 100,
+        "CustomerSegment": "Home Office",
+        "Visits": 2
+    },
+    {
+        "CustomerID": 69,
+        "FirstName": "RAUNCE",
+        "LastName": "SCOTT",
+        "Address": "1094 Ouray St,Aurora,CO 80011-7529",
+        "StoreNumber": 105,
+        "CustomerSegment": "Corporate",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 70,
+        "FirstName": "OLGA",
+        "LastName": "ESCALANTE",
+        "Address": "826 S Eliot St,Denver,CO 80219-3533",
+        "StoreNumber": 106,
+        "CustomerSegment": "Corporate",
+        "Visits": 2
+    },
+    {
+        "CustomerID": 71,
+        "FirstName": "DAYNA",
+        "LastName": "BUSTILLOS",
+        "Address": "327 Harlan St,Denver,CO 80226-1859",
+        "StoreNumber": 106,
+        "CustomerSegment": "Consumer",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 72,
+        "FirstName": "VICTORIA",
+        "LastName": "MILLETTE",
+        "Address": "8601 Garland Ct,Arvada,CO 80005-1265",
+        "StoreNumber": 103,
+        "CustomerSegment": "Corporate",
+        "Visits": 7
+    },
+    {
+        "CustomerID": 73,
+        "FirstName": "P",
+        "LastName": "PATTON",
+        "Address": "1270 Marion St,Denver,CO 80218-2251",
+        "StoreNumber": 105,
+        "CustomerSegment": "Corporate",
+        "Visits": 3
+    },
+    {
+        "CustomerID": 74,
+        "FirstName": "MARY",
+        "LastName": "LABATE",
+        "Address": "16053 E Nichols Pl,Englewood,CO 80112-4660",
+        "StoreNumber": 102,
+        "CustomerSegment": "Corporate",
+        "Visits": 3
+    },
+    {
+        "CustomerID": 75,
+        "FirstName": "KATHRINE",
+        "LastName": "WEISSNER",
+        "Address": "2691 S King St,Denver,CO 80219-5836",
+        "StoreNumber": 107,
+        "CustomerSegment": "Corporate",
+        "Visits": 2
+    },
+    {
+        "CustomerID": 76,
+        "FirstName": "ALBERTA",
+        "LastName": "GRAVES",
+        "Address": "7663 Saulsbury St,Arvada,CO 80003-2220",
+        "StoreNumber": 107,
+        "CustomerSegment": "Home Office",
+        "Visits": 8
+    },
+    {
+        "CustomerID": 77,
+        "FirstName": "PATRICIA",
+        "LastName": "CROCOMBE",
+        "Address": "9477 W Utah Pl,Denver,CO 80232-6479",
+        "StoreNumber": 101,
+        "CustomerSegment": "Home Office",
+        "Visits": 5
+    },
+    {
+        "CustomerID": 78,
+        "FirstName": "J",
+        "LastName": "LUPERCIO",
+        "Address": "7727 Harlan St,Arvada,CO 80003-2448",
+        "StoreNumber": 103,
+        "CustomerSegment": "Corporate",
+        "Visits": 6
+    },
+    {
+        "CustomerID": 79,
+        "FirstName": "SHEILA",
+        "LastName": "WHITE",
+        "Address": "8591 Oakwood St,Westminster,CO 80031-3621",
+        "StoreNumber": 109,
+        "CustomerSegment": "Corporate",
+        "Visits": 4
+    },
+    {
+        "CustomerID": 80,
+        "FirstName": "TRISHA",
+        "LastName": "BONTZ",
+        "Address": "7265 W Center Ave,Denver,CO 80226-2777",
+        "StoreNumber": 100,
+        "CustomerSegment": "Consumer",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 81,
+        "FirstName": "JUDITH",
+        "LastName": "SEDBROOK",
+        "Address": "778 S Bryant St,Denver,CO 80219-3545",
+        "StoreNumber": 106,
+        "CustomerSegment": "Corporate",
+        "Visits": 7
+    },
+    {
+        "CustomerID": 82,
+        "FirstName": "DOREEN",
+        "LastName": "HANSEN",
+        "Address": "8557 W Hampden Ave,Denver,CO 80227-6265",
+        "StoreNumber": 106,
+        "CustomerSegment": "Small Business",
+        "Visits": 3
+    },
+    {
+        "CustomerID": 83,
+        "FirstName": "BONNIE",
+        "LastName": "GILL",
+        "Address": "401 S Leyden St,Denver,CO 80224-1248",
+        "StoreNumber": 100,
+        "CustomerSegment": "Corporate",
+        "Visits": 2
+    },
+    {
+        "CustomerID": 84,
+        "FirstName": "KATHLEEN",
+        "LastName": "PATSEY",
+        "Address": "6879 Johnson St,Arvada,CO 80004-2948",
+        "StoreNumber": 108,
+        "CustomerSegment": "Corporate",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 85,
+        "FirstName": "RANDI",
+        "LastName": "HOWE",
+        "Address": "1070 S Foothill Dr,Denver,CO 80228-3405",
+        "StoreNumber": 106,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 86,
+        "FirstName": "M",
+        "LastName": "POMEROY",
+        "Address": "3057 S Pitkin Way,Aurora,CO 80013-2248",
+        "StoreNumber": 104,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 87,
+        "FirstName": "LETRICIA",
+        "LastName": "CANDELARIA",
+        "Address": "1927 E 115th Pl,Denver,CO 80233-2295",
+        "StoreNumber": 109,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 88,
+        "FirstName": "MARIA",
+        "LastName": "DELGADO",
+        "Address": "605 S Lowell Blvd,Denver,CO 80219-2710",
+        "StoreNumber": 106,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 89,
+        "FirstName": "PEGGY",
+        "LastName": "LOCKE",
+        "Address": "808 S Quitman St,Denver,CO 80219-3240",
+        "StoreNumber": 106,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    },
+    {
+        "CustomerID": 90,
+        "FirstName": "MARIA",
+        "LastName": "GONZALEZ",
+        "Address": "3883 Quitman St,Denver,CO 80212-2145",
+        "StoreNumber": 106,
+        "CustomerSegment": "Home Office",
+        "Visits": 1
+    }
+]

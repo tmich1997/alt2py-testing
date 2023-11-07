@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="126" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="5" />
+          <Fields>
+            <Field name="Range" />
+            <Field name="Region" />
+            <Field name="Sales Rep" />
+            <Field name="Expect Revenue" />
+          </Fields>
+          <Data>
+            <r>
+              <c>2000-2019</c>
+              <c>R1</c>
+              <c>John</c>
+              <c>1000000</c>
+            </r>
+            <r>
+              <c>2020-2039</c>
+              <c>R2</c>
+              <c>Ted</c>
+              <c>3245234</c>
+            </r>
+            <r>
+              <c>2040-2059</c>
+              <c>R3</c>
+              <c>Nick</c>
+              <c>456654</c>
+            </r>
+            <r>
+              <c>2060-2079</c>
+              <c>R4</c>
+              <c>Mike</c>
+              <c>234545</c>
+            </r>
+            <r>
+              <c>2080-2100</c>
+              <c>R5</c>
+              <c>Paul</c>
+              <c>1232345</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="246" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Region" selected="True" />
+            <SelectField field="Range" selected="True" rename="sdf" />
+            <SelectField field="Sales Rep" selected="True" type="WString" size="10" />
+            <SelectField field="Expect Revenue" selected="True" />
+            <SelectField field="Range1" selected="True" rename="Start" type="Int32" size="4" />
+            <SelectField field="Range2" selected="True" rename="End" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Use a select tool to rename the new fields as "start" and "end".</AnnotationText>
+          <DefaultAnnotationText>Use a select tool to rename the new fields as "start" and "end".</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>select_test</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="3c0ca657-ccf4-4528-83f8-d7ed439129f3" />
+      <Telemetry>
+        <PreviousWorkflowId value="f8d7f9a9-841c-45fd-a4de-19b66e1d8bf8" />
+        <OriginWorkflowId value="f8d7f9a9-841c-45fd-a4de-19b66e1d8bf8" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

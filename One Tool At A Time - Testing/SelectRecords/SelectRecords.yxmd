@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">..\..\..\data\OneToolData\Merged_employees.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Merged_employees.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="MGMT_LEVEL" source="File: (Multiple Sources)" type="Byte" />
+            <Field name="MONTH1_METRIC2_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH1_METRIC2_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH1_METRIC3_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH1_METRIC3_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH1_METRIC4_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH1_METRIC4_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH1_METRIC5_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH1_METRIC5_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH2_METRIC2_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH2_METRIC2_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH2_METRIC3_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH2_METRIC3_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH2_METRIC4_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH2_METRIC4_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH2_METRIC5_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH2_METRIC5_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH3_METRIC2_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH3_METRIC2_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH3_METRIC3_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH3_METRIC3_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH3_METRIC4_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH3_METRIC4_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH3_METRIC5_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH3_METRIC5_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH4_METRIC2_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH4_METRIC2_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH4_METRIC3_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH4_METRIC3_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH4_METRIC4_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH4_METRIC4_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH4_METRIC5_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH4_METRIC5_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH5_METRIC2_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH5_METRIC2_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH5_METRIC3_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH5_METRIC3_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH5_METRIC4_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH5_METRIC4_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH5_METRIC5_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH5_METRIC5_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH6_METRIC2_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH6_METRIC2_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH6_METRIC3_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH6_METRIC3_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH6_METRIC4_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH6_METRIC4_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH6_METRIC5_RESULT" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="MONTH6_METRIC5_ATTAIN" source="Formula: [_CurrentField_]*100" type="Double" />
+            <Field name="Hire Date" size="10" source="File: (Multiple Sources)" type="String" />
+            <Field name="Last Period" size="10" source="File: (Multiple Sources)" type="String" />
+            <Field name="Tenure (days)" source="File: (Multiple Sources)" type="Int16" />
+            <Field name="Outcome_indicator" size="64" source="Formula: (Multiple Sources)" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="162" width="600" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>A Single Row</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="66" y="54" width="804" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Select Records Tool</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="White" />
+          <FillColor r="13" g="35" b="69" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="402" y="54" width="468" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>The Select Records tool can be used to choose a precise subset of input rows.</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="White" />
+          <FillColor r="111" g="111" b="111" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="66" y="126" width="396" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>1) Run the workflow (Ctrl+R).</Text>
+          <Font name="Segoe UI" size="8.25" style="1" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="1" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="462" y="126" width="408" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>2) Select a tool to view its output in the Results window.</Text>
+          <Font name="Segoe UI" size="8.25" style="1" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="1" />
+          <Justification Justification="1" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="438" width="600" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Multiple Selections</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings>
+        <Position x="282" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">-87
+109-113
+10800
+20000+</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="467" width="504" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Multiple selections can be listed together. 
+
+This Select Records tool is configured to return rows 1-87, 109-113, 10800, and 20000 through the end of the data set.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings>
+        <Position x="282" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">109-113</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="191" width="504" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>The Select Records tool can be used to specify a single row, such as 10800 in this example.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings>
+        <Position x="282" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">10800</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings>
+        <Position x="282" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">20000+</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="359" width="504" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>A plus (+) is used to select rows starting at 20000 and also return all rows through the last row in the set.
+
+Alternately, a minus (-) can be used to return all rows preceding a certain row. (see below)</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="246" width="600" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>A Range of Rows</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="366" y="275" width="504" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>A hyphen is used to specify a range, in this case rows 109-113.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="270" y="330" width="600" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>All Rows Beyond a Certain Row</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="130" g="141" b="169" />
+          <FillColor r="225" g="231" b="242" />
+          <Shape shape="1" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="False" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Select_Records</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="d32e36a4-6b0c-4788-9315-b5317417a4ab" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="d32e36a4-6b0c-4788-9315-b5317417a4ab" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

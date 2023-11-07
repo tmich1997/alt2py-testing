@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="186" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="48" SearchSubDirs="False" RecordLimit="">.\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>CustomerFile4.avro</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CustomerID" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro" type="Int32" />
+            <Field name="FirstName" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro" type="V_WString" />
+            <Field name="LastName" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro" type="V_WString" />
+            <Field name="City" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro" type="V_WString" />
+            <Field name="State" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro" type="V_WString" />
+            <Field name="ZIP" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro" type="V_WString" />
+            <Field name="CustomerSegment" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro" type="V_WString" />
+            <Field name="Visits" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro" type="Int32" />
+            <Field name="Spend" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro" type="Double" />
+            <Field name="SpatialObj" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro" type="V_WString" />
+            <Field name="JoinDate" size="1073741823" source="File: C:\Users\Michael Michelini\Desktop\alt2py\One Tool At A Time - Testing\OneToolData\CustomerFile4.avro" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="294" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SpatialObj" selected="True" type="SpatialObj" size="536870911" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="378" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="State" action="GroupBy" rename="State" />
+            <SummarizeField field="City" action="GroupBy" rename="City" />
+            <SummarizeField field="SpatialObj" action="SpatialObjCombine" rename="SpatialObjCombine_SpatialObj" />
+            <SummarizeField field="SpatialObj" action="SpatialObjConvexHull" rename="SpatialObjConvexHull_SpatialObj" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>test</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="82808968-6831-44da-8bf7-d6c2a213621e" />
+      <Telemetry>
+        <PreviousWorkflowId value="ec6ae082-b88f-415c-a7d6-8ac414e5a832" />
+        <OriginWorkflowId value="ec6ae082-b88f-415c-a7d6-8ac414e5a832" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
