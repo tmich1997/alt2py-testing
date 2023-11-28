@@ -3,37 +3,23 @@ import re
 from tools.Summarise import Aggregators as Agg
 
 class Impute:
-    def __init__(self,xml=None,json=None,config=None,**kwargs):
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
         elif kwargs:
             self.load_json(kwargs);
 
-
-# <Configuration>
-# <Value name="listbox Select Incoming Fields">"item_id","2012_sales","2013_sales","2014_sales"</Value>
-# <Value name="radio Null Value">True</Value>
-# <Value name="radio User Specified Replace From Value">False</Value>
-# <Value name="updown User Replace Value">0.00000</Value>
-# <Value name="radio Mean">False</Value>
-# <Value name="radio Median">False</Value>
-# <Value name="radio Mode">False</Value>
-# <Value name="radio User Specified Replace With Value">True</Value>
-# <Value name="updown User Replace With Value">0.00000</Value>
-# <Value name="checkbox Impute Indicator">False</Value>
-# <Value name="checkbox Imputed Values Separate Field">False</Value>
-# </Configuration>
-
     def load_json(self,json):
         c = self.config;
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,execute=True):
         c = self.config;
+        xml = tool.xml;
         values = {v.get("name"):v.text for v in xml.find(".//Configuration")}
 
         print(values)
@@ -46,6 +32,11 @@ class Impute:
         c.add_fields = values["checkbox Imputed Values Separate Field"]=="True"
         c.new_suffix = "_ImputedValue"
         c.indicator_suffix = "_Indicator"
+
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
         c = self.config;

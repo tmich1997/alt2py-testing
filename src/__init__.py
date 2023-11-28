@@ -3,6 +3,6 @@ import sys
 for i in sys.path:
     print(i)
 
-import _utils.Aggregators as Aggs
+from _utils import Aggregators
 from tools import GenerateRows
-print(GenerateRows)
+print(Aggregators)

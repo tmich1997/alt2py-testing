@@ -2,12 +2,12 @@ import pandas as pd
 from tools.Select import dtype_map
 
 class RecordID:
-    def __init__(self,xml=None,json=None,config=None,**kwargs):
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool);
         elif json:
             self.load_json(json);
         elif kwargs:
@@ -22,7 +22,8 @@ class RecordID:
         c.size = kwargs["size"] if "size" in kwargs else c.size
         c.position = kwargs["position"] if "position" in kwargs else c.position
 
-    def load_xml(self,xml):
+
+    def load_yxdb_tool(self,xml):
         c = self.config;
 
         c.field = xml.find(".//Configuration//FieldName").text
@@ -30,6 +31,11 @@ class RecordID:
         c.type = dtype_map[xml.find(".//Configuration//FieldType").text]
         c.size = int(xml.find(".//Configuration//FieldSize").text)
         c.position = True if xml.find(".//Configuration//Position").text=="0" else False;
+
+        if execute:
+            df = tool.get_input("Input")
+            next_df = RecordID(xml=tool.xml).execute(df)
+            tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
         c = self.config

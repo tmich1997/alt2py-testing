@@ -1,51 +1,135 @@
+
+print(type(True))
 from .Config import Config;
 import pandas as pd;
 import numpy as np;
 import re;
 
-class Clean:
-    def __init__(self,xml=None,json=None,config=None):
-        # LOAD DEFAULTS
-        self.config = Config(
-            fields = None,
-            filter_na_cols = False,
-            filter_na_rows = False,
-            replace_na_blank = False,
-            replace_na_zero = False,
-            trim_whitespace = False,
-            remove_dup_space = False,
-            remove_all_space = False,
-            remove_letters = False,
-            remove_numbers = False,
-            remove_punctuation = False,
-            modify = False,
-            modifier = "title"
-        );
-        if config:
-            self.config = config
-        elif xml:
-            self.load_xml(xml)
-        elif json:
-            self.load_json(json);
 
-    def load_xml(self,xml):
-        c = self.config;
+# IF A CONSTRAINT IS REQUIRED YOU SHOULD NOT SET A DEFAULT
+# IF A CONSTRAINT IS NOT REQUIRED YOU MUST SET A DEFAULT
+FIELD_CONSTRAINTS = [
+{
+    "name":"fields",
+    "required":False,
+    "type":list,
+    "sub_type":str,
+    "default":[],
+},
+{
+    "name":"filter_na_cols",
+    "required":False,
+    "type":bool,
+    "default":False,
+    "condition":True
+},
+{
+    "name":"filter_na_rows",
+    "required":False,
+    "type":bool,
+    "default":False,
+    "condition":True
+},
+{
+    "name":"replace_na_blank",
+    "required":False,
+    "type":bool,
+    "default":False,
+    "condition":True
+},
+{
+    "name":"replace_na_zero",
+    "required":False,
+    "type":bool,
+    "default":False,
+    "condition":True
+},
+{
+    "name":"trim_whitespace",
+    "required":False,
+    "type":bool,
+    "default":False,
+    "condition":True
+},
+{
+    "name":"remove_dup_space",
+    "required":False,
+    "type":bool,
+    "default":False,
+    "condition":True
+},
+{
+    "name":"remove_all_space",
+    "required":False,
+    "type":bool,
+    "default":False,
+    "condition":True
+},
+{
+    "name":"remove_letters",
+    "required":False,
+    "type":bool,
+    "default":False,
+    "condition":True
+},
+{
+    "name":"remove_numbers",
+    "required":False,
+    "type":bool,
+    "default":False,
+    "condition":True
+},
+{
+    "name":"remove_numbers",
+    "required":False,
+    "type":bool,
+    "default":False,
+    "condition":True
+},
+{
+    "name":"modify",
+    "required":False,
+    "type":bool,
+    "default":None,
+    "condition":True,
+    "multi_choice":["title","upper","lower"]
+}]
+
+class Clean:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(FIELD_CONSTRAINTS);
+        if yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
+        else:
+            self.config.load(kwargs)
+
+    def load_yxdb_tool(self,tool,execute=True):
+        xml = tool.xml;
+        kwargs = {}
 
         values = {int(re.sub(r"[\(\)]",'', v.get("name").split(" ")[-1])):v.text for v in xml.find(".//Configuration")}
+        kwargs["fields"] = re.sub('^\"|\"$',"",values[11]).split('","')
+        if len(kwargs["fields"])==1 and kwargs["fields"][0] == "":
+            kwargs["fields"] = []
+        kwargs["filter_na_cols"] = values[135]=="True"
+        kwargs["filter_na_rows"] = values[136]=="True"
+        kwargs["replace_na_blank"] = values[84]=="True"
+        kwargs["replace_na_zero"] = values[117]=="True"
+        kwargs["trim_whitespace"] = values[15]=="True"
+        kwargs["remove_dup_space"] = values[109]=="True"
+        kwargs["remove_all_space"] = values[122]=="True"
+        kwargs["remove_letters"] = values[53]=="True"
+        kwargs["remove_numbers"] = values[58]=="True"
+        kwargs["remove_punctuation"] = values[70]=="True"
+        kwargs["modifier"] = values[81] if values[77]=="True" else None;
 
-        c.fields = re.sub('^\"|\"$',"",values[11]).split('","')
-        c.filter_na_cols = values[135]=="True"
-        c.filter_na_rows = values[136]=="True"
-        c.replace_na_blank = values[84]=="True"
-        c.replace_na_zero = values[117]=="True"
-        c.trim_whitespace = values[15]=="True"
-        c.remove_dup_space = values[109]=="True"
-        c.remove_all_space = values[122]=="True"
-        c.remove_letters = values[53]=="True"
-        c.remove_numbers = values[58]=="True"
-        c.remove_punctuation = values[70]=="True"
-        c.modify = values[77]=="True"
-        c.modifier = values[81]
+        self.config.load(kwargs)
+
+        if execute:
+            df = tool.get_input("Input2")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
         c = self.config;
@@ -89,7 +173,7 @@ class Clean:
         if c.remove_all_space:
             new_df[string_columns] = new_df[string_columns].apply(lambda x: x.str.replace(r'\s+', '',regex=True))
 
-        if c.modify:
+        if c.modifier:
             if c.modifier=="title":
                 new_df[string_columns] = new_df[string_columns].apply(lambda x: x.str.title())
             elif c.modifier=="upper":

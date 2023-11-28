@@ -4,17 +4,18 @@ from tools.Formula import Functions,Formula
 from tools.Select import dtype_map
 
 class MultiFieldFormula:
-    def __init__(self,xml=None,json=None,config=None):
+    def __init__(self,yxdb_tool=None,json=None,config=None):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool, execute=True):
         c = self.config;
+        xml = tool.xml;
 
         c.expression =  xml.find(".//Configuration/Expression").text
 
@@ -44,6 +45,10 @@ class MultiFieldFormula:
                 c.prefix = xml.find(".//Configuration/NewFieldAddOn").text;
             else:
                 c.suffix = xml.find(".//Configuration/NewFieldAddOn").text;
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
         c = self.config

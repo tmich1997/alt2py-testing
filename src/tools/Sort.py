@@ -4,12 +4,12 @@ from natsort import natsort_keygen;
 from tools.RecordID import RecordID
 
 class Sort:
-    def __init__(self,xml=None,json=None,config=None,**kwargs):
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
         elif kwargs:
@@ -25,20 +25,10 @@ class Sort:
         c.na_position = kwargs["na_position"] if "na_position" in kwargs else c.na_position
         c.maintain_order = kwargs["maintain_order"] if "maintain_order" in kwargs else c.maintain_order
 
-        # c.fields = json["fields"]
-        # if "orders" in json:
-        #     c.orders = json["orders"]
-        # else:
-        #     c.orders = [True]*len(json["fields"])
-        #
-        # if "handle_alpha_numeric" in json:
-        #     c.handle_alpha_numeric = json["handle_alpha_numeric"]
-        #
-        # if "na_position" in json:
-        #     c.na_position = json["na_position"]
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,execute=True):
         c = self.config;
+        xml = tool.xml
 
         fields = xml.find(".//Configuration//SortInfo")
         c.handle_alpha_numeric = fields.get("locale")!="0"
@@ -46,6 +36,10 @@ class Sort:
             c.fields.append(f.get("field"))
             c.orders.append(f.get("order")=="Ascending")
         c.maintain_order = True;
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
         c = self.config;

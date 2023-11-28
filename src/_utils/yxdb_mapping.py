@@ -105,147 +105,95 @@ def handle_dtypes(df,infer=True):
     return df
 
 def execute_TextToColumns(tool):
-    #PARSE CONFIGURATION
-    # df = tool.get_input("Input")
-    # next_df = TextToColumns(xml=tool.xml).execute(df)
-    # tool.data["Output"] = next_df
     TextToColumns(yxdb_tool = tool)
 
 def execute_RegEx(tool):
     #PARSE CONFIGURATION
-    df = tool.get_input("Input")
-    next_df = RegEx(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
+    RegEx(yxdb_tool = tool)
 
 def execute_Formula(tool):
     #PARSE CONFIGURATION
-    df = tool.get_input("Input")
-    print("HERE")
-    print(df.dtypes)
-    next_df = Formula(xml=tool.xml).execute(df)
-    print(next_df.dtypes)
-    tool.data["Output"] = next_df
+    Formula(yxdb_tool = tool)
 
 def execute_Summarize(tool):
     #PARSE CONFIGURATION
-    df = tool.get_input("Input")
-    next_df = Summarise(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
+    Summarise(yxdb_tool = tool)
 
 
 def execute_Select(tool):
     #PARSE CONFIGURATION
-    df = tool.get_input("Input")
-    next_df = Select(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
-
+    Select(yxdb_tool = tool)
 
 def execute_GenerateRows(tool):
-    if len(tool.inputs)>0:
-        df = tool.get_input("Input")
-        next_df = GenerateRows(xml=tool.xml).execute(df)
-    else:
-        next_df = GenerateRows(xml=tool.xml).execute()
-
-    tool.data["Output"] = next_df
+    GenerateRows(yxdb_tool = tool)
 
 def execute_Join(tool):
-    left = tool.get_input("Left")
-    right = tool.get_input("Right")
-    out = Join(xml=tool.xml).execute(left,right)
-
-    tool.data["Left"] = out.left
-    tool.data["Join"] = out.inner
-    tool.data["Right"] = out.right
-
+    Join(yxdb_tool = tool)
 
 def execute_MultiFieldFormula(tool):
-    df = tool.get_input("Input")
-    next_df = MultiFieldFormula(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
-
+    MultiFieldFormula(yxdb_tool = tool)
 
 def execute_MultiRowFormula(tool):
-    df = tool.get_input("Input")
-    next_df = MultiRowFormula(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
+    MultiRowFormula(yxdb_tool = tool)
 
 def execute_RecordID(tool):
-    df = tool.get_input("Input")
-    next_df = RecordID(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
+    RecordID(yxdb_tool = tool)
 
 def execute_SelectRecords(tool):
-    df = tool.get_input("Input")
-    next_df = SelectRecords(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
+    SelectRecords(yxdb_tool = tool)
 
 def execute_Sort(tool):
-    df = tool.get_input("Input")
-    next_df = Sort(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
-
+    Sort(yxdb_tool = tool)
 
 def execute_Unique(tool):
-    df = tool.get_input("Input")
-    out = Unique(xml=tool.xml).execute(df)
+    Unique(yxdb_tool = tool)
 
-    tool.data["Unique"] = out.unique
-    tool.data["Duplicates"] = out.duplicates
+def execute_Union(tool):
+    Union(yxdb_tool = tool)
+
+def execute_Filter(tool):
+    Filter(yxdb_tool = tool)
+
+def execute_CrossTab(tool):
+    CrossTab(yxdb_tool = tool)
+
+def execute_Transpose(tool):
+    Transpose(yxdb_tool = tool)
+
+def execute_Clean(tool):
+    Clean(yxdb_tool = tool)
+
+def execute_Sample(tool):
+    Sample(yxdb_tool = tool)
+
+def execute_Impute(tool):
+    Impute(yxdb_tool = tool)
+
+def execute_MultiFieldBin(tool):
+    MultiFieldBin(yxdb_tool = tool)
+
+def execute_OverSample(tool):
+    OverSample(yxdb_tool = tool)
+
+def execute_Tile(tool):
+    Tile(yxdb_tool = tool)
+
+def execute_XMLParse(tool):
+    XMLParse(yxdb_tool = tool)
+
+def execute_DateTime(tool):
+    DateTime(yxdb_tool = tool)
+
+def execute_AppendFields(tool):
+    left = tool.get_input("Targets")
+    right = tool.get_input("Source")
+
+    next_df = Join(xml=tool.xml).execute(left,right)
+    tool.data["Output"] = next_df
 
 def execute_JoinMultiple(tool):
     dfs = tool.get_named_inputs("Input")
     next_df = JoinMultiple(xml=tool.xml).execute(dfs)
-    tool.data["Output"] = next_df
-
-def execute_Union(tool):
-    dfs = tool.get_named_inputs("Input")
-    ##TODO: rework the logic of how inputs are passed to exec. don't use dict, use list.
-    next_df = Union(xml=tool.xml).execute(dfs)
-    tool.data["Output"] = next_df
-
-def execute_Filter(tool):
-    df = tool.get_input("Input")
-    out = Filter(xml=tool.xml).execute(df)
-    tool.data["True"] = out.true
-    tool.data["False"] = out.false
-
-def execute_CrossTab(tool):
-    df = tool.get_input("Input")
-    next_df = CrossTab(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
-
-def execute_Transpose(tool):
-    df = tool.get_input("Input")
-    next_df = Transpose(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
-
-def execute_Clean(tool):
-    df = tool.get_input("Input2")
-    next_df = Clean(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
-
-def execute_Sample(tool):
-    df = tool.get_input("Input")
-    out = Sample(xml=tool.xml).execute(df)
-
-    tool.data["Estimation"] = out.train
-    tool.data["Validation"] = out.validate
-    tool.data["Holdout"] = out.hold
-
-def execute_Impute(tool):
-    df = tool.get_input("Input")
-    next_df = Impute(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
-
-def execute_MultiFieldBin(tool):
-    df = tool.get_input("Input")
-    next_df = MultiFieldBin(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
-
-def execute_OverSample(tool):
-    df = tool.get_input("Input")
-    next_df = OverSample(xml=tool.xml).execute(df)
     tool.data["Output"] = next_df
 
 def execute_RandomSample(tool):
@@ -263,29 +211,6 @@ def execute_RandomSample(tool):
 
     out = Sample(train=train,seed=seed).execute(df)
     tool.data["Output"] = out.train
-
-def execute_Tile(tool):
-    df = tool.get_input("Input")
-    next_df = Tile(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
-
-def execute_XMLParse(tool):
-    df = tool.get_input("Input")
-    next_df = XMLParse(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
-
-def execute_DateTime(tool):
-    df = tool.get_input("Input")
-    next_df = DateTime(xml=tool.xml).execute(df)
-    tool.data["Output"] = next_df
-
-def execute_AppendFields(tool):
-    left = tool.get_input("Targets")
-    right = tool.get_input("Source")
-
-    next_df = Join(xml=tool.xml).execute(left,right)
-    tool.data["Output"] = next_df
-
 
 executors = {
     "AppendFields":execute_AppendFields,

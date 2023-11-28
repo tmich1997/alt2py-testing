@@ -3,20 +3,21 @@ import re
 from functools import reduce;
 from .Formula import Functions
 from .Select import dtype_map
-from _utils import Aggregators
 
 class GenerateRows:
-    def __init__(self,xml=None,json=None,config=None):
+    def __init__(self,yxdb_tool=None,json=None,config=None):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
 
-    def load_xml(self,xml):
+
+    def load_yxdb_tool(self,tool, execute=True):
         c = self.config;
+        xml = tool.xml;
 
         updateField = xml.find(".//Configuration//UpdateField").get('value')=="True"
 
@@ -31,6 +32,15 @@ class GenerateRows:
         c.initialiser = xml.find(".//Configuration//Expression_Init").text
         c.should_loop = xml.find(".//Configuration//Expression_Cond").text
         c.on_loop = xml.find(".//Configuration//Expression_Loop").text
+
+        if execute:
+            if len(tool.inputs)>0:
+                df = tool.get_input("Input")
+                next_df = self.execute(df)
+            else:
+                next_df = self.execute()
+
+            tool.data["Output"] = next_df
 
     def applier(self,series):
         c = self.config;

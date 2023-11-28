@@ -327,12 +327,12 @@ class Functions:
         return v1 if con else v2
 
 class Formula:
-    def __init__(self,xml=None,json=None,config=None):
+    def __init__(self,yxdb_tool=None,json=None,config=None):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
 
@@ -348,7 +348,10 @@ class Formula:
             c.formulae.append(kwargs)
 
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,execute=True):
+
+        xml = tool.xml
+
         formulaFields = xml.find("Properties/Configuration/FormulaFields")
 
         for f in formulaFields:
@@ -358,6 +361,10 @@ class Formula:
             expression = f.get('expression')
             self.add_formula(field=field,type=type,expression=expression,size=size)
 
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def applier(self,series,**kwargs):
 

@@ -5,44 +5,33 @@ from tools.RecordID import RecordID
 
 
 class OverSample:
-    def __init__(self,xml=None,json=None,config=None,**kwargs):
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
         elif kwargs:
             self.load_json(kwargs);
 
-
     def load_json(self,json):
         c = self.config;
 
-        # c.groupings = json["groupings"]
-        # if "orders" in json:
-        #     c.orders = json["orders"]
-        # else:
-        #     c.orders = [True]*len(json["groupings"])
-        #
-        # if "handle_alpha_numeric" in json:
-        #     c.handle_alpha_numeric = json["handle_alpha_numeric"]
-        #
-        # if "na_position" in json:
-        #     c.na_position = json["na_position"]
-
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,execute=True):
         c = self.config;
+        xml = tool.xml;
         values = {v.get("name"):v.text for v in xml.find(".//Configuration")}
 
         c.field = values["Selected_Field"]
         c.value = values["Oversample_Value"]
         c.sample = int(values["Desired_Pct"])
 
-# <Value name="Selected_Field">Default</Value>
-# <Value name="Oversample_Value">Yes</Value>
-# <Value name="Desired_Pct">50</Value>
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
         c = self.config;

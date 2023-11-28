@@ -2,23 +2,23 @@ import pandas as pd;
 import xml.etree.ElementTree as ET;
 
 class XMLParse:
-    def __init__(self,xml=None,json=None,config=None,**kwargs):
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
         elif kwargs:
             self.load_json(kwargs);
 
-
-    def load_json(self,kwargs):
+    def load_json(self,json):
         c = self.config;
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,execute=True):
         c = self.config;
+        xml = tool.xml;
 
         c.field = xml.find(".//Configuration//XMLField").text
         c.parse_children = xml.find(".//Configuration//ChildValues").get("value")=="True"
@@ -31,6 +31,11 @@ class XMLParse:
             c.root=True
         elif c.root=="":
             c.root=None;
+
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def autodetect_root(self,df):
         c = self.config;

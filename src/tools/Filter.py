@@ -2,24 +2,36 @@ import pandas as pd;
 from tools.Formula import Functions
 
 class Filter:
-    def __init__(self,xml=None,json=None,config=None):
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
-        if config:
-            self.config = config
-        elif xml:
-            self.load_xml(xml)
-        elif json:
-            self.load_json(json);
-
         self.true = None;
         self.false = None;
+        if config:
+            self.config = config
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
+        elif json:
+            self.load_json(json);
+        elif kwargs:
+            self.load_json(kwargs);
 
-    def load_xml(self,xml):
+    def load_json(self,json):
         c = self.config;
+
+    def load_yxdb_tool(self,tool,execute=True):
+        c = self.config;
+        xml = tool.xml
 
         if  xml.find(".//Configuration//Mode").text != "Custom":
             raise Exception("Filter tool must use custom expression! Simply open the WF and change the filter type to a custom expression.")
+
         c.expression = xml.find(".//Configuration//Expression").text
+
+        if execute:
+            df = tool.get_input("Input")
+            out = self.execute(df)
+            tool.data["True"] = out.true
+            tool.data["False"] = out.false
 
     def applier(self,series):
         c = self.config

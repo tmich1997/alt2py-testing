@@ -20,18 +20,22 @@ dtype_map = {
 }
 
 class Select:
-    def __init__(self,xml=None,json=None,config=None):
+    def __init__(self,yxdb_tool=None,json=None,config=None, xml = None):
         self.config = self.Config();
         if config:
             self.config = config
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif xml:
-            self.load_xml(xml)
+            self.load_yxdb_tool(None,xml=xml,execute = False)
         elif json:
             self.load_json(json);
 
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,xml = None, execute=True):
         c = self.config;
+        if xml is None:
+            xml = tool.xml
         c.reorder = xml.find(".//Configuration/OrderChanged").get("value")=="True"
         c.keep_unknown = xml.find(".//SelectField[@field='*Unknown']").get("selected")=="True"
 
@@ -50,6 +54,10 @@ class Select:
                     c.types[current_field] = field.get('type')
             else:
                 c.deselected.append(current_field)
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
         c = self.config

@@ -1,12 +1,12 @@
 import pandas as pd;
 
 class MultiFieldBin:
-    def __init__(self,xml=None,json=None,config=None,**kwargs):
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
         elif kwargs:
@@ -15,25 +15,21 @@ class MultiFieldBin:
     def load_json(self,json):
         c = self.config;
 
-# <Configuration>
-# <Value name="List Box (297)">Enterprise Sales 2015=True,Commercial Sales 2015=False,Other Sales 2015=False,Number of Years in Current Position=False,401k Contribution for 2015=False</Value>
-# <Value name="Radio Button (299)">True</Value>
-# <Value name="Numeric Up Down (298)">2</Value>
-# <Value name="Radio Button (301)">False</Value>
-# <Value name="Numeric Up Down (300)">5</Value>
-# </Configuration>
-
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,execute=True):
         c = self.config;
+        xml = tool.xml;
         values = {v.get("name"):v.text for v in xml.find(".//Configuration")}
 
         field_statements = values["List Box (297)"].split(',')
-        print(field_statements)
         c.fields = [f.split("=")[0] for f in field_statements if f.split("=")[1]=="True"]
         c.mode = "count" if values["Radio Button (299)"]=="True" else "interval"#count
         c.bins = int(values["Numeric Up Down (298)"]) if values["Radio Button (299)"]=="True" else int(values["Numeric Up Down (300)"])
         c.suffix = "_Tile_Num"
 
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
         c = self.config;

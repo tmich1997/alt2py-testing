@@ -3,17 +3,18 @@ import re
 from functools import reduce;
 
 class RegEx:
-    def __init__(self,xml=None,json=None,config=None):
+    def __init__(self,yxdb_tool=None,json=None,config=None):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,execute=True):
         c = self.config
+        xml = tool.xml
         config = xml.find('Properties/Configuration')
 
         c.field = config.find("Field").text
@@ -42,6 +43,11 @@ class RegEx:
             c.method="match"
             match_config = config.find("Match")
             c.new_fields = [match_config.find("Field").text]
+
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def regex_tokenize(self,text):
         c = self.config

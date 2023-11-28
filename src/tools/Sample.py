@@ -2,17 +2,17 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 class Sample:
-    def __init__(self,xml=None,json=None,config=None,**kwargs):
+
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
         elif kwargs:
             self.load_json(kwargs);
-
 
     def load_json(self,json):
         c = self.config;
@@ -20,8 +20,9 @@ class Sample:
         c.train = json["train"]
         c.seed = json["seed"] if "seed" in json else None;
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,execute=True):
         c = self.config;
+        xml = tool.xml;
 
         values = {v.get("name"):int(v.text) for v in xml.find(".//Configuration")}
 
@@ -29,6 +30,14 @@ class Sample:
         c.validate = values["validation pct"]/100 #(100 - values["estimation pct"])
         c.seed = values["rand seed"]
         c.shuffle = False;
+
+        if execute:
+            df = tool.get_input("Input")
+            out = self.execute(df)
+
+            tool.data["Estimation"] = out.train
+            tool.data["Validation"] = out.validate
+            tool.data["Holdout"] = out.hold
 
     def execute(self,input_datasource):
         c = self.config;

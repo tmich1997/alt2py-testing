@@ -203,9 +203,9 @@ def test_OTaaT(testing):
                     df2[col] = df2[col].astype(pd.Float64Dtype()).round(6)
                     df1[col] = df1[col].astype(pd.Float64Dtype()).round(6)
 
-            print(tool.id)
-            print(df1)
-            print(df2)
+            # print(tool.id)
+            # print(df1)
+            # print(df2)
             # print(df1.dtypes)
             # print(df2.dtypes)
             df1,df2 = edge_case_handle(testing,tool.id,df1,df2)
@@ -229,7 +229,7 @@ def test_OTaaT(testing):
                 print(tool.id + " - " + tool.name[-1] + ": FAILED")
                 # Find the rows and columns with mismatches
                 mismatched_rows, mismatched_columns = find_mismatches(df1, df2)
-
+                print(df1.dtypes,df2.dtypes)
                 # Print the result
                 print("Rows with mismatches:")
                 print(df1.loc[mismatched_rows])
@@ -241,7 +241,7 @@ def test_OTaaT(testing):
                 print(tool.id + " - " + tool.name[-1] +": PASSED")
 
 
-test_OTaaT("TextToColumns")
+test_OTaaT("Clean")
 
 # for toolName in wf_paths:
 #     print("TOOLNAME")

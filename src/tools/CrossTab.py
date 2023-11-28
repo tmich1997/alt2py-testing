@@ -5,19 +5,21 @@ from tools.Sort import Sort;
 
 
 class CrossTab:
-    def __init__(self,xml=None,json=None,config=None):
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
-        if config:
-            self.config = config
-        elif xml:
-            self.load_xml(xml)
-        elif json:
-            self.load_json(json);
-
         self.unique = None;
         self.duplicates = None;
 
-    def load_xml(self,xml):
+        if config:
+            self.config = config
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
+        elif json:
+            self.load_json(json);
+        elif kwargs:
+            self.load_json(kwargs);
+
+    def load_yxdb_tool(self,tool,execute=True):
         c = self.config;
 
         sep = xml.find(".//Configuration//Methods//Separator")
@@ -38,6 +40,11 @@ class CrossTab:
         c.header = xml.find(".//Configuration//HeaderField").get("field")
         c.value_field = xml.find(".//Configuration//DataField").get("field")
         c.method = method_map[xml.find(".//Configuration//Methods//Method").get("method")]
+
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
         c = self.config;

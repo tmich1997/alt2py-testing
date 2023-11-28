@@ -1,12 +1,12 @@
 import pandas as pd;
 
 class Union:
-    def __init__(self,xml=None,json=None,config=None,**kwargs):
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
         elif kwargs:
@@ -16,8 +16,10 @@ class Union:
     def load_json(self,json):
         c = self.config;
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,execute=True):
         c = self.config;
+
+        xml = tool.xml;
 
         mode_names = {"ByName":"name","ByPos":"position","Manual":"manual","ManualDelayed":"manual"}
         c.mode = mode_names[xml.find(".//Configuration//Mode").text]
@@ -32,6 +34,11 @@ class Union:
             c.manual = []
             for meta_info in xml.find(".//Configuration//MultiMetaInfo"):
                 c.manual.append([f.get("name") for f in meta_info.find("RecordInfo")])
+        if execute:
+            dfs = tool.get_named_inputs("Input")
+            ##TODO: rework the logic of how inputs are passed to exec. don't use dict, use list.
+            next_df = self.execute(dfs)
+            tool.data["Output"] = next_df
 
 
     def union_by_manual(self,dfs):
@@ -121,7 +128,7 @@ class Union:
             dfs = [df.copy() for df in input_datasources]
 
         print(c.order)
-        
+
         if c.mode == "name":
             new_df = self.union_by_name(dfs)
         elif c.mode == "position":

@@ -8,11 +8,11 @@ class TextToColumns:
         if config:
             self.config = config
         elif yxdb_tool:
-            self.execute_yxdb_tool(yxdb_tool)
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
 
-    def execute_yxdb_tool(self,tool):
+    def load_yxdb_tool(self,tool, execute=True):
 
         c = self.config;
         xml = tool.xml;
@@ -37,9 +37,10 @@ class TextToColumns:
             if _RootName is not None:
                 c.root_name = re.sub(r'\s+|\n', '', _RootName)
 
-        df = tool.get_input("Input")
-        next_df = self.execute(df)
-        tool.data["Output"] = next_df
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def applier(self,text):
         cf = self.config;

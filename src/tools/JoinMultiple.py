@@ -80,10 +80,6 @@ class JoinMultiple:
         else:
             dfs = [df.copy() for df in input_datasources]
 
-        print("HERE")
-        print(c.fields)
-        print(c.by_position)
-        print(c.names)
         new_df = None;
         if c.by_position:
             new_df = self.join_by_pos(dfs)

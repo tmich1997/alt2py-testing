@@ -6,17 +6,16 @@ from tools.RecordID import RecordID
 import re
 
 class Tile:
-    def __init__(self,xml=None,json=None,config=None,**kwargs):
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
         elif kwargs:
             self.load_json(kwargs);
-
 
     def load_json(self,kwargs):
         c = self.config;
@@ -26,8 +25,9 @@ class Tile:
         c.handle_alpha_numeric = kwargs["handle_alpha_numeric"] if "handle_alpha_numeric" in kwargs else c.handle_alpha_numeric
         c.na_position = kwargs["na_position"] if "na_position" in kwargs else c.na_position
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,execute=True):
         c = self.config;
+        xml = tool.xml;
 
         mode = xml.find(".//Configuration//Method").text
 
@@ -55,6 +55,10 @@ class Tile:
             c.mode="unique"
             c.field = [f.get("field") for f in xml.find(".//Configuration//UniqueValue//UniqueFields")]
 
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def equal_records(self,df):
         c = self.config;

@@ -6,31 +6,18 @@ from tools.Select import dtype_map
 
 
 class MultiRowFormula:
-    def __init__(self,xml=None,json=None,config=None):
+    def __init__(self,yxdb_tool=None,json=None,config=None):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
 
-    def load_xml(self,xml):
-        # <Configuration>
-        # <UpdateField value="True" />
-        # <UpdateField_Name>Year</UpdateField_Name>
-        # <CreateField_Name>NewField</CreateField_Name>
-        # <CreateField_Type>Int32</CreateField_Type>
-        # <CreateField_Size>254</CreateField_Size>
-        # <OtherRows>Empty</OtherRows>
-        # <NumRows value="1" />
-        # <Expression>IF IsNull([Year])
-        # THEN [Row-1:Year]
-        # ELSE [Year]
-        # ENDIF</Expression>
-        # <GroupByFields />
-
+    def load_yxdb_tool(self,tool, execute=True):
         c = self.config;
+        xml = tool.xml
 
         c.expression =  xml.find(".//Configuration/Expression").text
         c.num_rows = int(xml.find(".//Configuration/NumRows").get("value"))
@@ -46,6 +33,11 @@ class MultiRowFormula:
 
         for f in xml.find(".//Configuration/GroupByFields"):
             c.groupings.append(f.get('field'))
+
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def format_multirow_formula(self,index,column_names):
         pattern = re.compile(rf'series\[\'Row([\+\-]\d+):(.*?)\'\]', re.IGNORECASE)

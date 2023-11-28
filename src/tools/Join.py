@@ -3,7 +3,7 @@ import numpy as np;
 from tools.Select import Select
 
 class Join:
-    def __init__(self,xml=None,json=None,config=None):
+    def __init__(self,yxdb_tool=None,json=None,config=None):
         self.config = self.Config();
 
         self.left = None;
@@ -12,13 +12,15 @@ class Join:
 
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool, execute=True):
         c = self.config;
+
+        xml = tool.xml
 
         node_type = xml.find(".//GuiSettings").get("Plugin").split(".")[-1]
         if node_type == "AppendFields":
@@ -33,6 +35,15 @@ class Join:
                 c.left_keys = [i.get('field') for i in left_infos]
                 c.right_keys = [i.get('field') for i in right_infos]
         c.xml = xml;
+
+        if execute:
+            left = tool.get_input("Left")
+            right = tool.get_input("Right")
+            out = self.execute(left,right)
+
+            tool.data["Left"] = out.left
+            tool.data["Join"] = out.inner
+            tool.data["Right"] = out.right
 
 
     def get_renames(self,left_df,right_df):

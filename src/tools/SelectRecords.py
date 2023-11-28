@@ -2,14 +2,16 @@ import pandas as pd
 import re
 
 class SelectRecords:
-    def __init__(self,xml=None,json=None,config=None):
+
+    def __init__(self,yxdb_tool=None,json=None,config=None):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
+
 
     def parse_range_expressions(self,text,df_name="new_df"):
         c = self.config;
@@ -45,13 +47,16 @@ class SelectRecords:
             out = f"{df_name}.index + {c.index} == {m1}"
             return f"({out})"
 
-    def load_xml(self,xml):
+    def load_yxdb_tool(self,tool,execute=True):
         c = self.config;
         c.index = 1
         values = xml.find(".//Configuration//Value").text.split("\n")
-        print(values)
         for v in values:
             c.conditions.append(self.parse_range_expressions(v))
+        if execute:
+            df = tool.get_input("Input")
+            next_df = SelectRecords(xml=tool.xml).execute(df)
+            tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
         c = self.config;

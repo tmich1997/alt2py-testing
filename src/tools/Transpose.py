@@ -1,24 +1,34 @@
 import pandas as pd;
-from tools.Sort import Sort
 
 class Transpose:
-    def __init__(self,xml=None,json=None,config=None):
+    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
         self.config = self.Config();
         if config:
             self.config = config
-        elif xml:
-            self.load_xml(xml)
+        elif yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
         elif json:
             self.load_json(json);
+        elif kwargs:
+            self.load_json(kwargs);
 
-    def load_xml(self,xml):
+    def load_json(self,json):
         c = self.config;
+
+    def load_yxdb_tool(self,tool,execute=True):
+        c = self.config;
+        xml = tool.xml;
+
         c.sort=True;
         c.key_fields = [f.get("field") for f in xml.find(".//Configuration//KeyFields")]
         c.data_fields = []
         for f in xml.find(".//Configuration//DataFields"):
             if f.get("selected")=="True" and f.get("field")!="*Unknown":
                 c.data_fields.append(f.get("field"))
+        if execute:
+            df = tool.get_input("Input")
+            next_df = self.execute(df)
+            tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
         c = self.config;
