@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/alt2py.egg-info/PKG-INFO
+src/alt2py.egg-info/SOURCES.txt
+src/alt2py.egg-info/dependency_links.txt
+src/alt2py.egg-info/top_level.txt
