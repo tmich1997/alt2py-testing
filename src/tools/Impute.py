@@ -1,37 +1,85 @@
+from .Config import Config;
 import pandas as pd;
 import re
-from tools.Summarise import Aggregators as Agg
+from _utils import Aggregators as Agg
+INPUT_CONSTRAINTS = [
+    {
+        "name":"fields",
+        "required":True,
+        "type":list,
+        "sub_type":str,
+        "field":True
+    },{
+        "name":"impute_value",
+        "default":pd.NA,
+        "type":(type(pd.NA),int,float)
+    },{
+        "name":"impute_fn",
+        "required":lambda kwargs: "impute_static" not in kwargs,
+        "required_error_msg": "either impute_static or impute_fn is required",
+        "type":str,
+        "multi_choice":["Average","Median","Mode"]
+    },{
+        "name":"impute_static",
+        "required":False,
+        "type":(int,float),
+    },{
+        "name":"indicator",
+        "required":False,
+        "type":bool,
+        "default":False
+    },{
+        "name":"add_fields",
+        "required":False,
+        "type":bool,
+        "default":False
+    },{
+        "name":"new_prefix",
+        "required":False,
+        "type":str,
+        "default":""
+    },{
+        "name":"indicator_prefix",
+        "required":False,
+        "type":str,
+        "default":""
+    },{
+        "name":"new_suffix",
+        "required":False,
+        "type":str,
+        "default":"_ImputedValue"
+    },{
+        "name":"indicator_suffix",
+        "required":False,
+        "type":str,
+        "default":"_Indicator"
+    }
+]
 
 class Impute:
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
-
-    def load_json(self,json):
-        c = self.config;
+        else:
+            self.config.load(kwargs)
 
     def load_yxdb_tool(self,tool,execute=True):
-        c = self.config;
+        kwargs = {}
         xml = tool.xml;
         values = {v.get("name"):v.text for v in xml.find(".//Configuration")}
 
-        print(values)
-
-        c.fields = re.sub('^\"|\"$',"",values["listbox Select Incoming Fields"]).split('","')
-        c.impute_value = pd.NA if values["radio Null Value"]=="True" else values["updown User Replace Value"]
-        c.impute_fn = "Avg" if values["radio Mean"]=="True" else "Median"  if values["radio Median"]=="True" else "Mode" if values["radio Mode"]=="True" else False;
-        c.impute_static = values["updown User Replace With Value"] if not c.impute_fn else False
-        c.indicator = values["checkbox Impute Indicator"]=="True"
-        c.add_fields = values["checkbox Imputed Values Separate Field"]=="True"
-        c.new_suffix = "_ImputedValue"
-        c.indicator_suffix = "_Indicator"
+        kwargs['fields'] = re.sub('^\"|\"$',"",values["listbox Select Incoming Fields"]).split('","')
+        kwargs['impute_value'] = pd.NA if values["radio Null Value"]=="True" else values["updown User Replace Value"]
+        kwargs['impute_fn'] = "Average" if values["radio Mean"]=="True" else "Median"  if values["radio Median"]=="True" else "Mode" if values["radio Mode"]=="True" else None;
+        kwargs['impute_static'] = values["updown User Replace With Value"] if not kwargs['impute_fn'] else None
+        kwargs['indicator'] = values["checkbox Impute Indicator"]=="True"
+        kwargs['add_fields'] = values["checkbox Imputed Values Separate Field"]=="True"
+        kwargs['new_suffix'] = "_ImputedValue"
+        kwargs['indicator_suffix'] = "_Indicator"
+        kwargs['impute_static'] = None if kwargs['impute_static'] is None else float(kwargs['impute_static']) if '.' in kwargs['impute_static'] else int(kwargs['impute_static'])
+        self.config.load(kwargs)
 
         if execute:
             df = tool.get_input("Input")
@@ -46,10 +94,8 @@ class Impute:
 
         if c.impute_fn:
             replacement = new_df[c.fields].apply(Agg.get_by_name(c.impute_fn))
-            print(replacement)
         else:
-            is_int = any(["Int" in str(new_df[f].dtype) for f in c.fields])
-            replacement = int(c.impute_static.split(".")[0]) if is_int else float(c.impute_static)
+            replacement = c.impute_static
 
         if c.indicator:
             indicators = new_df[c.fields] == replacement
@@ -57,41 +103,10 @@ class Impute:
             new_df = pd.concat([new_df,indicators],axis=1)
 
         if c.add_fields:
-            print("HERE")
-            print(new_df)
             added_df = new_df[c.fields].replace({pd.NA:replacement})
-            print(added_df)
             added_df.columns = [c.new_prefix + col + c.new_suffix for col in added_df.columns]
-            print(added_df)
             new_df = pd.concat([new_df,added_df],axis=1)
-            print(new_df)
         else:
             new_df[c.fields] = new_df[c.fields].replace({pd.NA:replacement}).astype(new_df[c.fields].dtypes)
 
         return new_df.reset_index(drop=True)
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.fields=[];
-            self.impute_value=pd.NA;
-            self.impute_fn = "Average";
-            self.impute_static = False;
-            self.indicator = False;
-            self.add_fields = False;
-            self.new_prefix = ""
-            self.new_suffix = ""
-            self.indicator_prefix = ""
-            self.indicator_suffix = ""
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

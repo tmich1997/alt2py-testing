@@ -1,30 +1,68 @@
+from .Config import Config;
 import pandas as pd;
 
-class Transpose:
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
-            self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
+INPUT_CONSTRAINTS = [
+    {
+        "name":"key_fields",
+        "required":True,
+        "type":list,
+        "sub_type":str,
+        "field":True
+    },
+    {
+        "name":"data_fields",
+        "required":True,
+        "type":list,
+        "sub_type":str,
+        "field":True
+    },
+    {
+        "name":"keep_unknown",
+        "required":False,
+        "type":bool,
+        "default":False
+    },
+    {
+        "name":"var_name",
+        "required":False,
+        "type":str,
+        "default":"Name"
+    },
+    {
+        "name":"value_name",
+        "required":False,
+        "type":str,
+        "default":"Value"
+    },
+    {
+        "name":"sort",
+        "required":False,
+        "type":bool,
+        "default":False
+    }
+]
 
-    def load_json(self,json):
-        c = self.config;
+class Transpose:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
+        else:
+            self.config.load(kwargs)
 
     def load_yxdb_tool(self,tool,execute=True):
-        c = self.config;
         xml = tool.xml;
+        kwargs = {};
 
-        c.sort=True;
-        c.key_fields = [f.get("field") for f in xml.find(".//Configuration//KeyFields")]
-        c.data_fields = []
+        kwargs['sort']=True;
+        kwargs['key_fields'] = [f.get("field") for f in xml.find(".//Configuration//KeyFields")]
+        kwargs['data_fields'] = []
         for f in xml.find(".//Configuration//DataFields"):
             if f.get("selected")=="True" and f.get("field")!="*Unknown":
-                c.data_fields.append(f.get("field"))
+                kwargs['data_fields'].append(f.get("field"))
+
+        self.config.load(kwargs)
         if execute:
             df = tool.get_input("Input")
             next_df = self.execute(df)
@@ -34,7 +72,7 @@ class Transpose:
         c = self.config;
         new_df = input_datasource.copy()
 
-        if c.drop_unknown:
+        if not c.keep_unknown:
             new_df = new_df[c.key_fields + c.data_fields]
 
         dtypes_of_values = set(new_df[c.data_fields].dtypes.tolist())
@@ -58,25 +96,3 @@ class Transpose:
         # if len(dtypes_of_values)==1:
         #     new_df[c.value_name] = new_df[c.value_name].astype(dtypes_of_values[0])
         return new_df
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.key_fields = []
-            self.data_fields = []
-            self.drop_unknown = True;
-            self.var_name = "Name"
-            self.value_name = "Value"
-            self.sort = False;
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

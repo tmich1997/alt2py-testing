@@ -1,45 +1,64 @@
+from .Config import Config;
 import pandas as pd;
 from functools import partial
-from tools.Summarise import Aggregators as agg;
+from _utils import Aggregators as agg;
 from tools.Sort import Sort;
 
 
+INPUT_CONSTRAINTS = [
+    {
+        "name":"groupings",
+        "required":False,
+        "type":list,
+        "sub_type":str,
+        "default":[],
+        "field":True
+    },{
+        "name":"header",
+        "required":True,
+        "type":str,
+        "field":True
+    },{
+        "name":"value_field",
+        "required":True,
+        "type":str,
+        "field":True
+    },{
+        "name":"method",
+        "required":True,
+        "type":str,
+        "default":[],
+        "multi_choice":["Sum","Average","Count","CountWithNulls","First","Last","Concat"]
+    },{
+        "name":"sep",
+        "required":lambda kwargs: kwargs["method"]=="Concat",
+        "type":str
+    }
+]
 class CrossTab:
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
-        self.unique = None;
-        self.duplicates = None;
-
-        if config:
-            self.config = config
-        elif yxdb_tool:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
+        else:
+            self.config.load(kwargs)
 
     def load_yxdb_tool(self,tool,execute=True):
-        c = self.config;
-
+        xml = tool.xml;
+        kwargs = {}
         sep = xml.find(".//Configuration//Methods//Separator")
 
         if sep is not None:
             sep = sep.text.replace("\s"," ")
-        method_map = {
-            "Sum":agg.sum,
-            "Avg":agg.avg,
-            "Count":agg.count_non_null,
-            "CountWithNulls":agg.count,
-            "First":agg.first,
-            "Last":agg.last,
-            "Concat":partial(agg.concat,sep=sep)
-        }
 
-        c.groupings = [f.get("field") for f in xml.find(".//Configuration//GroupFields")]
-        c.header = xml.find(".//Configuration//HeaderField").get("field")
-        c.value_field = xml.find(".//Configuration//DataField").get("field")
-        c.method = method_map[xml.find(".//Configuration//Methods//Method").get("method")]
+        kwargs['groupings'] = [f.get("field") for f in xml.find(".//Configuration//GroupFields")]
+        kwargs['header'] = xml.find(".//Configuration//HeaderField").get("field")
+        kwargs['value_field'] = xml.find(".//Configuration//DataField").get("field")
+        kwargs['method'] = xml.find(".//Configuration//Methods//Method").get("method")
+        kwargs['sep'] = sep;
+
+        self.config.load(kwargs)
 
         if execute:
             df = tool.get_input("Input")
@@ -48,6 +67,21 @@ class CrossTab:
 
     def execute(self,input_datasource):
         c = self.config;
+        # c.check_field_constraints(input_datasource)
+
+        method_map = {
+            "Sum":agg.sum,
+            "Avg":agg.avg,
+            "Count":agg.count_non_null,
+            "CountWithNulls":agg.count,
+            "First":agg.first,
+            "Last":agg.last,
+            "Concat":partial(agg.concat,sep=c.sep)
+        }
+
+        if isinstance(c.method,str):
+            c.method = method_map[c.method]
+
         new_df = input_datasource.copy()
 
         for header in c.header:
@@ -74,24 +108,3 @@ class CrossTab:
 
         crosstab_df = Sort(fields = c.groupings).execute(crosstab_df)
         return crosstab_df
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.groupings = []
-            self.header = None;
-            self.value_field = None
-            self.method = "first"
-            self.args = {}
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

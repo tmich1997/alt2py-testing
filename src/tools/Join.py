@@ -1,41 +1,65 @@
+from .Config import Config;
 import pandas as pd;
 import numpy as np;
 from tools.Select import Select
 
-class Join:
-    def __init__(self,yxdb_tool=None,json=None,config=None):
-        self.config = self.Config();
+INPUT_CONSTRAINTS = [
+    {
+        "name":"how",
+        "type":str,
+        "default":"key",
+        "multi_choice":["cross","key","position"]
+    },{
+        "name":"left_keys",
+        "required":lambda kwargs: kwargs["how"]=="key",
+        "required_error_msg": "left_keys is required when using how=key",
+        "type":list,
+        "sub_type":str,
+        "field":True
+    },{
+        "name":"left_keys",
+        "required":lambda kwargs: kwargs["how"]=="key",
+        "required_error_msg": "left_keys is required when using how=key",
+        "type":list,
+        "sub_type":str,
+        "field":True
+    }
+]
 
+class Join:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        self.config = Config(INPUT_CONSTRAINTS);
         self.left = None;
         self.inner = None;
         self.right = None;
-
-        if config:
-            self.config = config
-        elif yxdb_tool:
+        self.xml = None;
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
+        else:
+            self.config.load(kwargs)
 
     def load_yxdb_tool(self,tool, execute=True):
         c = self.config;
 
         xml = tool.xml
+        self.xml = xml
+        kwargs = {}
 
         node_type = xml.find(".//GuiSettings").get("Plugin").split(".")[-1]
+        print(node_type)
         if node_type == "AppendFields":
-            c.how = "cross"
+            kwargs["how"] = "cross"
         else:
-            c.how = "position" if xml.find(".//Properties//Configuration").get("joinByRecordPos")=="True" else "key"
+            kwargs["how"] = "position" if xml.find(".//Properties//Configuration").get("joinByRecordPos")=="True" else "key"
 
-            if c.how=="key":
+            if kwargs["how"]=="key":
                 left_infos = xml.find(".//Properties//Configuration//JoinInfo[@connection='Left']")
                 right_infos = xml.find(".//Properties//Configuration//JoinInfo[@connection='Right']")
 
-                c.left_keys = [i.get('field') for i in left_infos]
-                c.right_keys = [i.get('field') for i in right_infos]
-        c.xml = xml;
+                kwargs["left_keys"] = [i.get('field') for i in left_infos]
+                kwargs["right_keys"] = [i.get('field') for i in right_infos]
 
+        self.config.load(kwargs)
         if execute:
             left = tool.get_input("Left")
             right = tool.get_input("Right")
@@ -70,7 +94,6 @@ class Join:
 
 
         return (renames,renames_back)
-
 
     def join_by_pos(self,left_df,right_df,renames,renames_back):
         join_df = pd.concat([left_df, right_df], axis=1)
@@ -127,8 +150,6 @@ class Join:
         for j, name2 in enumerate(right_df.columns):
             source_names[name2] = "Source_"+name2
 
-
-
         df_merged = pd.merge(
             left_df.rename(columns=target_names),
             right_df.rename(columns=source_names),
@@ -159,33 +180,13 @@ class Join:
             self.left.reset_index(drop = True,inplace = True)
             self.inner.reset_index(drop = True,inplace = True)
             self.right.reset_index(drop = True,inplace = True)
-        if c.xml:
+        if self.xml:
             # if c.how=="cross":
             #     self.inner = self.inner.rename(columns=renames)
-            self.inner = Select(xml = c.xml.find(".//SelectConfiguration")).execute(self.inner)
+            self.inner = Select(xml = self.xml.find(".//SelectConfiguration")).execute(self.inner)
             if c.how=="cross":
                 self.inner = self.inner.rename(columns=renames_back)
             print(self.inner)
 
         print(left_df.dtypes,right_df.dtypes)
         return self if c.how!="cross" else self.inner.astype(left_df.dtypes+right_df.dtypes)
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.how = "cross";
-            self.left_keys = None;
-            self.right_keys = False;
-            self.xml = None;
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

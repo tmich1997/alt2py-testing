@@ -1,42 +1,107 @@
+from .Config import Config;
 import pandas as pd
 import re
 from functools import reduce;
 
+INPUT_CONSTRAINTS = [
+    {
+        "name":"field",
+        "required":True,
+        "type":str,
+        "field":True
+    },
+    {
+        "name":"root_name",
+        "required":False,
+        "type":str,
+        "default":""
+    },
+    {
+        "name":"num_fields",
+        "required":True,
+        "type":int
+    },
+    {
+        "name":"delim",
+        "required":False,
+        "type":str,
+        "default":","
+    },
+    {
+        "name":"error_handle",
+        "required":False,
+        "type":str,
+        "default":"last",
+        "multi_choice":["last","drop","error"]
+    },
+    {
+        "name":"ign_brackets",
+        "required":False,
+        "type":bool,
+        "default":False
+    },
+    {
+        "name":"ign_parenth",
+        "required":False,
+        "type":bool,
+        "default":False
+    },
+    {
+        "name":"ign_single_quote",
+        "required":False,
+        "type":bool,
+        "default":False
+    },
+    {
+        "name":"ign_double_quote",
+        "required":False,
+        "type":bool,
+        "default":False
+    },
+    {
+        "name":"skip_empty",
+        "required":False,
+        "type":bool,
+        "default":False
+    },
+]
 class TextToColumns:
-    def __init__(self,yxdb_tool=None,json=None,config=None):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
+        else:
+            self.config.load(kwargs)
 
-    def load_yxdb_tool(self,tool, execute=True):
-
-        c = self.config;
+    def load_yxdb_tool(self,tool,execute=True):
+        kwargs = {}
         xml = tool.xml;
 
         config = xml.find("Properties").find("Configuration")
 
-        c.field = config.find("Field").text
-        c.num_fields = int(config.find("NumFields").get('value'))
+        kwargs['field'] = config.find("Field").text
+        kwargs['num_fields'] = int(config.find("NumFields").get('value'))
         delim = config.find("Delimeters").get('value')
-        c.delim = delim.replace("\\n", "\n").replace("\\t", "\t").replace("\s", " ")
+        kwargs['delim'] = delim.replace("\\n", "\n").replace("\\t", "\t").replace("\s", " ")
         flagBin = self.flagValToBin(int(config.find("Flags").get('value')))
 
-        c.ign_double_quote = flagBin[7]
-        c.ign_parenth = flagBin[6]
-        c.ign_single_quote = flagBin[4]
-        c.skip_empty = flagBin[3]
-        c.ign_brackets = flagBin[2]
+        kwargs['ign_double_quote'] = flagBin[7] == 1
+        kwargs['ign_parenth'] = flagBin[6] == 1
+        kwargs['ign_single_quote'] = flagBin[4] == 1
+        kwargs['skip_empty'] = flagBin[3] == 1
+        kwargs['ign_brackets'] = flagBin[2] == 1
 
-        if c.num_fields > 1:
-            c.error_handle = config.find("ErrorHandling").text
+        print(kwargs['ign_brackets'])
+
+        if kwargs['num_fields'] > 1:
+
+            kwargs['error_handle'] = config.find("ErrorHandling").text.lower()
             _RootName = config.find("RootName").text
             if _RootName is not None:
-                c.root_name = re.sub(r'\s+|\n', '', _RootName)
+                kwargs['root_name'] = re.sub(r'\s+|\n', '', _RootName)
 
+        self.config.load(kwargs)
         if execute:
             df = tool.get_input("Input")
             next_df = self.execute(df)
@@ -158,7 +223,6 @@ class TextToColumns:
                 df_extend_nulls[column_name] = None
 
             df_split = pd.concat([df_split,df_extend_nulls], axis=1)
-
         df_out = pd.concat([df, df_split], axis=1)
 
         if num_fields <=1:

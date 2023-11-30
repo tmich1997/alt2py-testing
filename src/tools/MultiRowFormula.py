@@ -1,38 +1,89 @@
+from .Config import Config;
 import pandas as pd;
 import numpy as np;
 import re
-from tools.Formula import Functions
-from tools.Select import dtype_map
+from _utils import Functions,dtype_map
+
+# self.num_rows = 1;
+# self.field = None;
+# self.groupings = [];
+# self.expression = None;
+# self.type = None;
+# self.size = None;
+# self.unknown = pd.NA;
+
+
+INPUT_CONSTRAINTS = [
+    {
+        "name":"field",
+        "required":True,
+        "type":str
+    },{
+        "name":"groupings",
+        "required":False,
+        "type":list,
+        "sub_type":str,
+        "default":[],
+        "field":True
+    },{
+        "name":"num_rows",
+        "required":True,
+        "type":int
+    },{
+        "name":"expression",
+        "required":True,
+        "type":str,
+    },{
+        "name":"type",
+        "required":False,
+        "type":str,
+        "multi_choice":list(dtype_map.keys())
+    },{
+        "name":"size",
+        "required":False,
+        "type":str,
+        "default":None
+    },{
+        "name":"unknown",
+        "required":False,
+        "type":(str,type(pd.NA)),
+        "default":"null",
+        "multi_choice":["null","nearest","empty"]
+    }
+]
 
 
 class MultiRowFormula:
-    def __init__(self,yxdb_tool=None,json=None,config=None):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        self.true = None;
+        self.false = None;
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
+        else:
+            self.config.load(kwargs)
 
-    def load_yxdb_tool(self,tool, execute=True):
-        c = self.config;
-        xml = tool.xml
+    def load_yxdb_tool(self,tool,execute=True):
+        xml = tool.xml;
+        kwargs = {}
 
-        c.expression =  xml.find(".//Configuration/Expression").text
-        c.num_rows = int(xml.find(".//Configuration/NumRows").get("value"))
-        c.unknown = xml.find(".//Configuration/OtherRows").text
-
+        kwargs["expression"] =  xml.find(".//Configuration/Expression").text
+        kwargs["num_rows"] = int(xml.find(".//Configuration/NumRows").get("value"))
+        kwargs["unknown"] = xml.find(".//Configuration/OtherRows").text.lower()
 
         if xml.find(".//Configuration/UpdateField").get("value")=="True":
-            c.field = xml.find(".//Configuration/UpdateField_Name").text
+            kwargs["field"] = xml.find(".//Configuration/UpdateField_Name").text
         else:
-            c.field = xml.find(".//Configuration/CreateField_Name").text
-            c.type = dtype_map[xml.find(".//Configuration/CreateField_Type").text]
-            c.size = xml.find(".//Configuration/CreateField_Size").text
+            kwargs["field"] = xml.find(".//Configuration/CreateField_Name").text
+            kwargs["type"] = xml.find(".//Configuration/CreateField_Type").text
+            kwargs["size"] = xml.find(".//Configuration/CreateField_Size").text
 
+        kwargs["groupings"] = []
         for f in xml.find(".//Configuration/GroupByFields"):
-            c.groupings.append(f.get('field'))
+            kwargs["groupings"].append(f.get('field'))
+
+        self.config.load(kwargs)
 
         if execute:
             df = tool.get_input("Input")
@@ -49,10 +100,10 @@ class MultiRowFormula:
         c = self.config;
         null_row = []
         null_row2 = []
-        if c.unknown=="NULL":
+        if c.unknown=="null":
             null_row=[pd.NA]*len(df.columns)
             null_row2 = null_row
-        elif c.unknown=="Empty":
+        elif c.unknown=="empty":
             for col in df.columns:
                 if pd.api.types.is_bool_dtype(df[col]):
                     null_row.append(pd.NA)
@@ -88,7 +139,7 @@ class MultiRowFormula:
         new_df = input_datasource.copy()
         if c.field not in new_df:
             new_df[c.field] = pd.NA
-            new_df[c.field] = new_df[c.field].astype(c.type)
+            new_df[c.field] = new_df[c.field].astype(dtype_map[c.type])
 
         if len(c.groupings):
             dfs_to_concat = []
@@ -100,30 +151,7 @@ class MultiRowFormula:
             new_df = self.apply_formula(new_df)
 
         if c.type:
-            new_df[c.field] = new_df[c.field].astype(c.type)
-            if "." in c.size:
+            new_df[c.field] = new_df[c.field].astype(dtype_map[c.type])
+            if c.size is not None and "." in c.size:
                 new_df[c.field] = new_df[c.field].apply(lambda x: Functions.Round(x,10**(-int(c.size.split(".")[-1]))))
         return new_df;
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.num_rows = 1;
-            self.field = None;
-            self.groupings = [];
-            self.expression = None;
-            self.type = None;
-            self.size = None;
-            self.unknown = pd.NA;
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

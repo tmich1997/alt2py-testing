@@ -1,37 +1,73 @@
+from .Config import Config;
 import pandas as pd
 import re
 from functools import reduce,partial;
 from collections import OrderedDict;
-from shapely.ops import unary_union;
 from _utils import Aggregators
 
+INPUT_CONSTRAINTS = [
+    {
+        "name":"fields",
+        "required":True,
+        "type":list,
+        "sub_type":dict
+    },
+    {
+        "name":"fields.field",
+        "required":True,
+        "type":str,
+        "field":True
+    },
+    {
+        "name":"fields.action",
+        "required":True,
+        "type":str,
+        "multi_choice":Aggregators.get_names() + ["GroupBy"]
+    },
+    {
+        "name":"fields.name",
+        "required":True,
+        "type":str,
+    },
+    {
+        "name":"fields.props",
+        "required":False,
+        "type":dict,
+        "default":{}
+    },
+]
 
 class Summarise:
-    def __init__(self,yxdb_tool=None,json=None,config=None):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+
+        self.aggregators = OrderedDict();
+        self.group_names = [];
+        self.group_renames = [];
+        self.agg_renames = []; #agg_names
+        self.order = []
+
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
+        else:
+            self.config.load(kwargs)
+            self.generate_properties()
 
     def add_aggregator(self,field,rename,aggregator,**kwargs):
-        c= self.config
-        if field in c.aggregators:
-            c.aggregators[field].append(partial(aggregator,**kwargs))
+        if field in self.aggregators:
+            self.aggregators[field].append(partial(aggregator,**kwargs))
         else:
-            c.aggregators[field] = [partial(aggregator,**kwargs)]
-        c.agg_renames.append(rename)
-        c.order.append(rename)
+            self.aggregators[field] = [partial(aggregator,**kwargs)]
+        self.agg_renames.append(rename)
+        self.order.append(rename)
 
     def add_grouping(self,field,rename):
-        c= self.config
-        c.group_names.append(field)
-        c.group_renames.append(rename)
-        c.order.append(rename)
+        self.group_names.append(field)
+        self.group_renames.append(rename)
+        self.order.append(rename)
 
-    def map_xml_to_kwargs(self,fields):
+    def map_props(self,props):
         arg_map = {
             "Concat_Start":"start",
             "Separator":"sep",
@@ -39,48 +75,57 @@ class Summarise:
         }
 
         args = {}
-
-        for f in fields:
-            args[arg_map[f.tag]] = f.text
+        for p in props:
+            args[arg_map[p]] = props[p]
         return args
 
-    def load_yxdb_tool(self,tool, execute=True):
+    def generate_properties(self):
         c = self.config
+        for field in c.fields:
+            if field['action']=="GroupBy":
+                self.add_grouping(field['field'],field['name'])
+            else:
+                other_args = self.map_props(field['props'])
+                self.add_aggregator(field['field'],field['name'],Aggregators.get_by_name(field['action']),**other_args)
+
+
+    def load_yxdb_tool(self,tool, execute=True):
+        kwargs= {"fields":[]}
         xml = tool.xml
         summary_fields = xml.find("Properties/Configuration/SummarizeFields");
         for field in summary_fields:
-            field_name = field.get('field')
-            action = field.get('action')
-            rename = field.get('rename')
-            if action=="GroupBy":
-                self.add_grouping(field_name,rename)
-            else:
-                other_args = self.map_xml_to_kwargs(field)
-                self.add_aggregator(field_name,rename,Aggregators.get_by_name(action),**other_args)
+            to_add = {}
+            to_add['field'] = field.get('field')
+            to_add['action'] = field.get('action')
+            to_add['name'] = field.get('rename')
+            to_add['props'] = {f.tag: f.text for f in field}
+            kwargs["fields"].append(to_add)
+        self.config.load(kwargs)
+        self.generate_properties()
+
         if execute:
             df = tool.get_input("Input")
             next_df = self.execute(df)
             tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
-        c= self.config
         df = input_datasource.copy()
-        if len(c.group_names)>0:
-            grouped = df.groupby(c.group_names)
-            if len(c.aggregators)==0:
+        if len(self.group_names)>0:
+            grouped = df.groupby(self.group_names)
+            if len(self.aggregators)==0:
                 result_df = pd.DataFrame(list(grouped.groups.keys()))
             else:
-                result_df = grouped.agg(c.aggregators).reset_index()
+                result_df = grouped.agg(self.aggregators).reset_index()
         else:
-            if len(c.aggregators)==0:
+            if len(self.aggregators)==0:
                 result_df = df
             else:
-                result_df = df.agg(c.aggregators).reset_index(drop=True).T.stack().to_frame().T
+                result_df = df.agg(self.aggregators).reset_index(drop=True).T.stack().to_frame().T
 
-        result_df.columns = c.group_renames + c.agg_renames
+        result_df.columns = self.group_renames + self.agg_renames
         result_df.reset_index(drop=True,inplace=True)
 
-        result_df = result_df.loc[:,c.order]
+        result_df = result_df.loc[:,self.order]
 
 
 

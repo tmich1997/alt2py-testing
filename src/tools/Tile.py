@@ -1,3 +1,4 @@
+from .Config import Config;
 import pandas as pd;
 import numpy as np
 import math;
@@ -5,56 +6,97 @@ from tools.Sort import Sort
 from tools.RecordID import RecordID
 import re
 
+INPUT_CONSTRAINTS = [
+    {
+        "name":"mode",
+        "required":True,
+        "type":str,
+        "multi_choice":["records","sum","smart","manual","unique"]
+
+    },
+    {
+        "name":"field",
+        "required":lambda kwargs:kwargs["mode"]!="records",
+        "type":(str,list),
+        "field":True
+    },
+    {
+        "name":"num_tiles",
+        "required":lambda kwargs:kwargs["mode"] in["records","sum"],
+        "type":int
+    },
+    {
+        "name":"no_split",
+        "required":False,
+        "type":str
+    },
+    {
+        "name":"manual",
+        "required":False,
+        "type":list,
+        "sub_type":int
+    },
+    {
+        "name":"tile_name",
+        "required":False,
+        "type":str,
+        "default":"Tile_Num"
+    },
+    {
+        "name":"seq_name",
+        "required":False,
+        "type":str,
+        "default":"Tile_SequenceNum"
+    },
+    {
+        "name":"smart_name",
+        "required":False,
+        "type":str,
+        "default":"SmartTile_Name"
+    },
+]
+
+
 class Tile:
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
-
-    def load_json(self,kwargs):
-        c = self.config;
-
-        c.fields = kwargs["fields"] if "fields" in kwargs else c.fields
-        c.orders = kwargs["orders"] if "orders" in kwargs else [True]*len(kwargs["fields"])
-        c.handle_alpha_numeric = kwargs["handle_alpha_numeric"] if "handle_alpha_numeric" in kwargs else c.handle_alpha_numeric
-        c.na_position = kwargs["na_position"] if "na_position" in kwargs else c.na_position
+        else:
+            self.config.load(kwargs)
 
     def load_yxdb_tool(self,tool,execute=True):
-        c = self.config;
+        kwargs = {}
         xml = tool.xml;
 
         mode = xml.find(".//Configuration//Method").text
 
         if mode=="EqualRecords":
-            c.mode="records"
-            c.num_tiles = int(xml.find(".//Configuration//EqualRecords//NumTiles").get("value"))
+            kwargs['mode']="records"
+            kwargs['num_tiles'] = int(xml.find(".//Configuration//EqualRecords//NumTiles").get("value"))
             no_split = xml.find(".//Configuration//EqualRecords//EqualRecordsGroupField")
-            c.no_split = no_split.text if no_split is not None else None;
+            kwargs['no_split'] = no_split.text if no_split is not None else None;
 
         elif mode=="EqualSum":
-            c.mode="sum"
-            c.num_tiles = int(xml.find(".//Configuration//EqualSum//NumTiles").get("value"))
-            c.field = xml.find(".//Configuration//EqualSum//SumField").text
+            kwargs['mode']="sum"
+            kwargs['num_tiles'] = int(xml.find(".//Configuration//EqualSum//NumTiles").get("value"))
+            kwargs['field'] = xml.find(".//Configuration//EqualSum//SumField").text
 
         elif mode=="SmartTile":
-            c.mode="smart"
-            c.field = xml.find(".//Configuration//SmartTile//Field").text
+            kwargs['mode']="smart"
+            kwargs['field'] = xml.find(".//Configuration//SmartTile//Field").text
 
         elif mode=="Manual":
-            c.mode="manual"
-            c.field = xml.find(".//Configuration//Manual//Field").text
-            c.manual = [float(n) if "." in n else int(n) for n in re.split(r'\n',xml.find(".//Configuration//Manual//Cutoffs").text)]
+            kwargs['mode']="manual"
+            kwargs['field'] = xml.find(".//Configuration//Manual//Field").text
+            kwargs['manual'] = [float(n) if "." in n else int(n) for n in re.split(r'\n',xml.find(".//Configuration//Manual//Cutoffs").text)]
 
         elif mode=="UniqueValue":
-            c.mode="unique"
-            c.field = [f.get("field") for f in xml.find(".//Configuration//UniqueValue//UniqueFields")]
-
+            kwargs['mode']="unique"
+            kwargs['field'] = [f.get("field") for f in xml.find(".//Configuration//UniqueValue//UniqueFields")]
+        print(kwargs)
+        self.config.load(kwargs)
         if execute:
             df = tool.get_input("Input")
             next_df = self.execute(df)
@@ -289,30 +331,4 @@ class Tile:
             new_df = self.manual_tile(new_df)
         elif c.mode == "unique":
             new_df = self.unique_tile(new_df)
-
-
         return new_df
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.mode=None;
-            self.num_tiles=None;
-            self.no_split = None;
-            self.field = None;
-            self.manual = None;
-            self.tile_name = "Tile_Num"
-            self.seq_name = "Tile_SequenceNum"
-            self.smart_name = "SmartTile_Name"
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

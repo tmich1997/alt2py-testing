@@ -1,50 +1,86 @@
+from .Config import Config;
 import pandas as pd;
 import numpy as np;
-from tools.Formula import Functions,Formula
-from tools.Select import dtype_map
+from _utils import Functions;
+from tools.Formula import Formula;
+
+INPUT_CONSTRAINTS = [
+    {
+        "name":"fields",
+        "required":True,
+        "type":list,
+        "sub_type":str,
+        "field":True
+    },{
+        "name":"expression",
+        "required":True,
+        "type":str
+    },{
+        "name":"type",
+        "required":False,
+        "type":str,
+        "default":None
+    },{
+        "name":"size",
+        "required":False,
+        "type":str,
+        "default":None
+    },{
+        "name":"prefix",
+        "required":False,
+        "type":str,
+        "default":""
+    },{
+        "name":"suffix",
+        "required":False,
+        "type":str,
+        "default":""
+    }
+]
 
 class MultiFieldFormula:
-    def __init__(self,yxdb_tool=None,json=None,config=None):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
+        else:
+            self.config.load(kwargs)
 
-    def load_yxdb_tool(self,tool, execute=True):
-        c = self.config;
+    def load_yxdb_tool(self,tool,execute=True):
+        kwargs = {}
         xml = tool.xml;
 
-        c.expression =  xml.find(".//Configuration/Expression").text
+        kwargs['expression'] =  xml.find(".//Configuration/Expression").text
 
         fields =  xml.find(".//Configuration/Fields")
 
-        c.fields = []
+        kwargs['fields'] = []
 
         for f in fields:
             if not f.get("selected")=="False" and not f.get("name")=="*Unknown":
-                c.fields.append(f.get("name"))
+                kwargs['fields'].append(f.get("name"))
 
         change_type =  xml.find(".//Configuration/ChangeFieldType").get("value")=="True"
 
         if change_type:
             out = xml.find(".//Configuration/OutputFieldType")
-            c.type = out.get("type");
+            kwargs['type'] = out.get("type");
             if out.get("size"):
-                c.size = out.get("size");
+                kwargs['size'] = out.get("size");
                 if out.get("scale"):
-                    c.size+="."+out.get("scale")
+                    kwargs['size']+="."+out.get("scale")
 
         add_fields = xml.find(".//Configuration/CopyOutput").get("value")=="True"
 
         if add_fields:
             is_prefix =  xml.find(".//Configuration/NewFieldAddOnPos").text=="Prefix"
             if is_prefix:
-                c.prefix = xml.find(".//Configuration/NewFieldAddOn").text;
+                kwargs['prefix'] = xml.find(".//Configuration/NewFieldAddOn").text;
             else:
-                c.suffix = xml.find(".//Configuration/NewFieldAddOn").text;
+                kwargs['suffix'] = xml.find(".//Configuration/NewFieldAddOn").text;
+
+        self.config.load(kwargs)
         if execute:
             df = tool.get_input("Input")
             next_df = self.execute(df)
@@ -54,34 +90,16 @@ class MultiFieldFormula:
         c = self.config
         df = input_datasource.copy();
 
-        tool = Formula();
+        formulae = []
 
         for f in c.fields:
-            expression =  Functions.format_field_formula(c.expression,f)
-            tool.add_formula(field=c.prefix +f+c.suffix,expression=Functions.format_field_formula(c.expression,f),type=c.type,size=c.size)
+            formulae.append({
+                "field":c.prefix +f+c.suffix,
+                "expression":Functions.format_field_formula(c.expression,f),
+                "type":c.type,
+                "size":c.size
+            })
 
-        next_df = tool.execute(df)
+        next_df = Formula(formulae=formulae).execute(df)
+
         return next_df
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.fields = []
-            self.expression = None
-            self.type = False
-            self.size = None;
-            self.prefix = ''
-            self.suffix = ''
-
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

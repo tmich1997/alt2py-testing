@@ -1,37 +1,71 @@
+from .Config import Config;
 import pandas as pd
 import re
 from functools import reduce;
-from .Formula import Functions
-from .Select import dtype_map
+from _utils import Functions, dtype_map
+
+INPUT_CONSTRAINTS = [
+    {
+        "name":"field",
+        "required":True,
+        "type":str,
+        "field":True
+    },{
+        "name":"mode",
+        "type":str,
+        "required":False,
+        "default":"new",
+        "multi_choice":["update","new"]
+    },{
+        "name":"field_type",
+        "required":lambda kwargs: kwargs["mode"]=="new",
+        "type":str,
+        "default":lambda kwargs: "String" if kwargs["mode"]=="new" else None,
+        "multi_choice":list(dtype_map.keys())
+    },{
+        "name":"initialiser",
+        "required":True,
+        "type":str,
+    },{
+        "name":"on_loop",
+        "required":True,
+        "type":str,
+    },{
+        "name":"should_loop",
+        "required":True,
+        "type":str,
+    }
+]
 
 class GenerateRows:
-    def __init__(self,yxdb_tool=None,json=None,config=None):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
+        else:
+            self.config.load(kwargs)
 
 
     def load_yxdb_tool(self,tool, execute=True):
-        c = self.config;
+        kwargs = {}
         xml = tool.xml;
 
         updateField = xml.find(".//Configuration//UpdateField").get('value')=="True"
 
         if updateField:
-            c.mode = "UPDATE"
-            c.field = xml.find(".//Configuration//UpdateField_Name").text
+            kwargs["mode"] = "update"
+            kwargs["field"] = xml.find(".//Configuration//UpdateField_Name").text
         else:
-            c.mode = "NEW"
-            c.field = xml.find(".//Configuration//CreateField_Name").text
-            c.field_type = dtype_map[xml.find(".//Configuration//CreateField_Type").text]
+            kwargs["mode"] = "new"
+            kwargs["field"] = xml.find(".//Configuration//CreateField_Name").text
+            kwargs["field_type"] = xml.find(".//Configuration//CreateField_Type").text
 
-        c.initialiser = xml.find(".//Configuration//Expression_Init").text
-        c.should_loop = xml.find(".//Configuration//Expression_Cond").text
-        c.on_loop = xml.find(".//Configuration//Expression_Loop").text
+        kwargs["initialiser"] = xml.find(".//Configuration//Expression_Init").text
+        kwargs["should_loop"] = xml.find(".//Configuration//Expression_Cond").text
+        kwargs["on_loop"] = xml.find(".//Configuration//Expression_Loop").text
+
+        self.config.load(kwargs)
 
         if execute:
             if len(tool.inputs)>0:
@@ -56,7 +90,7 @@ class GenerateRows:
         new_df = pd.DataFrame(rows)
         result_df = pd.DataFrame.from_records([series]*len(rows[c.field]))
         if c.field_type:
-            result_df[c.field] = new_df[c.field].astype(c.field_type)
+            result_df[c.field] = new_df[c.field].astype(dtype_map[c.field_type])
         else:
             result_df[c.field] = new_df[c.field]
         return result_df
@@ -93,35 +127,7 @@ class GenerateRows:
                 series = {c.field:eval(on_loop)}
                 con = eval(should_loop)
                 # runs 1 too many times
-            df = pd.DataFrame(rows,dtype=c.field_type)
+            df = pd.DataFrame(rows,dtype=dtype_map[c.field_type])
             new_df = df
 
         return new_df
-
-    class Config:
-        def __init__(
-            self,
-            field = None,
-            mode = "NEW", #NEW OR UPDATE
-            field_type = None,
-            initialiser = None,
-            on_loop = None,
-            condition = None
-        ):
-            self.field=field
-            self.mode=mode
-            self.field_type=field_type
-            self.initialiser=initialiser
-            self.on_loop=on_loop
-            self.condition=condition
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

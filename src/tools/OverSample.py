@@ -1,33 +1,47 @@
+from .Config import Config;
 import pandas as pd;
 from sklearn.model_selection import train_test_split
 from tools.Sort import Sort
 from tools.RecordID import RecordID
 
+INPUT_CONSTRAINTS = [
+    {
+        "name":"field",
+        "required":True,
+        "type":str,
+        "field":True
+    },{
+        "name":"value",
+        "required":True
+    },{
+        "name":"sample",
+        "required":False,
+        "type":int
+    }
+]
 
 class OverSample:
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
+        else:
+            self.config.load(kwargs)
+
 
     def load_json(self,json):
         c = self.config;
 
     def load_yxdb_tool(self,tool,execute=True):
-        c = self.config;
+        kwargs = {}
         xml = tool.xml;
         values = {v.get("name"):v.text for v in xml.find(".//Configuration")}
 
-        c.field = values["Selected_Field"]
-        c.value = values["Oversample_Value"]
-        c.sample = int(values["Desired_Pct"])
-
+        kwargs["field"] = values["Selected_Field"]
+        kwargs["value"] = values["Oversample_Value"]
+        kwargs["sample"] = int(values["Desired_Pct"])
+        self.config.load(kwargs)
         if execute:
             df = tool.get_input("Input")
             next_df = self.execute(df)
@@ -58,22 +72,3 @@ class OverSample:
             return new_df
 
         return new_df.reset_index(drop=True)
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.field = None;
-            self.value = None;
-            self.sample = 50;
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

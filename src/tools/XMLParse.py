@@ -1,37 +1,78 @@
+from .Config import Config;
 import pandas as pd;
 import xml.etree.ElementTree as ET;
 
-class XMLParse:
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
-            self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
+INPUT_CONSTRAINTS = [
+    {
+        "name":"field",
+        "required":True,
+        "type":str,
+        "field":True
+    },
+    {
+        "name":"root",
+        "required":False,
+        "type":str,
+        "default":None
+    },
+    {
+        "name":"auto_detect_root",
+        "required":False,
+        "type":bool,
+        "default":False
+    },
+    {
+        "name":"parse_children",
+        "required":False,
+        "type":bool,
+        "default":False
+    },
+    {
+        "name":"return_outer",
+        "required":False,
+        "type":bool,
+        "default":False
+    },
+    {
+        "name":"ignore_errors",
+        "required":False,
+        "type":bool,
+        "default":True
+    },
+    {
+        "name":"keep_xml",
+        "required":False,
+        "type":bool,
+        "default":True
+    },
+]
 
-    def load_json(self,json):
-        c = self.config;
+
+class XMLParse:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
+        else:
+            self.config.load(kwargs)
 
     def load_yxdb_tool(self,tool,execute=True):
-        c = self.config;
         xml = tool.xml;
+        kwargs = {}
 
-        c.field = xml.find(".//Configuration//XMLField").text
-        c.parse_children = xml.find(".//Configuration//ChildValues").get("value")=="True"
-        c.return_outer = xml.find(".//Configuration//OuterXML").get("value")=="True"
-        c.ignore = xml.find(".//Configuration//IgnoreErrors").get("value")=="True"
-        c.keep = xml.find(".//Configuration//IncludeInOutput").get("value")=="True"
+        kwargs['field'] = xml.find(".//Configuration//XMLField").text
+        kwargs['parse_children'] = xml.find(".//Configuration//ChildValues").get("value")=="True"
+        kwargs['return_outer'] = xml.find(".//Configuration//OuterXML").get("value")=="True"
+        kwargs['ignore_errors'] = xml.find(".//Configuration//IgnoreErrors").get("value")=="True"
+        kwargs['keep_xml'] = xml.find(".//Configuration//IncludeInOutput").get("value")=="True"
+        kwargs['root'] = xml.find(".//Configuration//XMLElement").text
 
-        c.root = xml.find(".//Configuration//XMLElement").text
-        if xml.find(".//Configuration//ParseRoot").get("value")=="True":
-            c.root=True
-        elif c.root=="":
-            c.root=None;
 
+        print(xml.find(".//Configuration//ParseRoot").get("value") , kwargs['root'])
+        if (not xml.find(".//Configuration//ParseRoot").get("value")=="True") and kwargs['root'] is None:
+            kwargs['auto_detect_root']=True;
+        self.config.load(kwargs)
         if execute:
             df = tool.get_input("Input")
             next_df = self.execute(df)
@@ -78,8 +119,6 @@ class XMLParse:
 
         if c.root is None:
             trees = [tree]
-        elif c.root == True and isinstance(c.root, bool):
-            trees = [tree]
         else:
             trees = tree.findall(".//"+c.root)
 
@@ -113,7 +152,7 @@ class XMLParse:
         c = self.config;
         new_df = input_datasource.copy();
 
-        if c.root is None:
+        if c.auto_detect_root:
             self.autodetect_root(new_df)
 
         df_series = new_df.apply(
@@ -125,25 +164,3 @@ class XMLParse:
         new_df = pd.concat(df_list, ignore_index=True)
 
         return new_df.reset_index(drop=True)
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.field = None
-            self.root = None
-            self.parse_children = False
-            self.return_outer = False
-            self.ignore = False
-            self.keep = False
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

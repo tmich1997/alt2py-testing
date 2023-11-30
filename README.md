@@ -174,7 +174,7 @@ The Multi-Row Formula tool can only update one field per tool instance. If you w
 
 **Parameters:**
 > **field: str, required**
->> The field to update or add. If the field name already exists in the dataframe, perform an update on that field. If the field doesn't already exist in. 
+>> The field to update or add. If the field name already exists in the dataframe, perform an update on that field. If the field doesn't already exist in.
 
 > **groupings: [str], default=[]**
 >> The field/s to group each iteration by.
@@ -191,7 +191,7 @@ The Multi-Row Formula tool can only update one field per tool instance. If you w
 > **size: str, default=None**
 >> The size to assign to the updated/new column.
 
-> **unknown: field_type or pd.NA, default=pd.NA**
+> **unknown: str or pd.NA, default=pd.NA, accepts="null"|"empty"|"nearest"|pd.NA**
 >> The value to apply to non existent rows.
 
 
@@ -236,7 +236,7 @@ Use Record ID to create a new column in the data and assign a unique identifier 
 >> A list of all of the columns to remove from the dataframe.
 
 > **keep_unknown: str, default=False**
->> If True, any columns that are in the dataframe, but not in *selected* or *deselected*, will be kept in the dataframe. 
+>> If True, any columns that are in the dataframe, but not in *selected* or *deselected*, will be kept in the dataframe.
 
 > **types: {*field_name*: *type*}, default={}**
 >> A dictionary with field_names as keys and the type to remap that field to as the values.
@@ -278,7 +278,7 @@ Use Record ID to create a new column in the data and assign a unique identifier 
 Use Tile to assign a value (tile) based on ranges in the data. The tool does this based on the user specifying one of 5 methods. 2 fields are appended to the data:
 - Tile number is the assigned tile of the record.
 - Tile sequence number is the record number of the record's position within the Tile.
-  
+
 **Parameters:**
 > **mode: str, required, accepts: "records"|"sum"|"smart"|"manual"|"unique"**
 >>  The type of tiling to use:
@@ -302,7 +302,7 @@ Use Tile to assign a value (tile) based on ranges in the data. The tool does thi
 
 > **tile_name: str, default="Tile_Num"**
 >> The field name for the tile number of the record.
- 
+
 > **seq_name: str, default="Tile_SequenceNum"**
 >> The field name for the record number of the record's position within the Tile
 
@@ -315,7 +315,7 @@ Use Unique to distinguish whether a data record is unique or a duplicate by grou
 
 **Parameters:**
 > **fields: [str], required**
->> The combination of fields that you want to test for uniqueness. 
+>> The combination of fields that you want to test for uniqueness.
 
 **Returns:**
 self, with 2 new instance attributes: *self.unique* and *self.duplicates*.
@@ -364,7 +364,7 @@ Use Union to combine 2 or more datasets on column names or positions. In the out
 > **mode: str, default="position", accepts="position"|"name"|"manual"**
 >> - **position:** Stack data by the column order in the dataframes.
 >> - **name:** Stack data by column name.
->> - **manual:**  Allows you to manually specify how to stack data. When you choose this method, the manual parameter is **REQUIRED** 
+>> - **manual:**  Allows you to manually specify how to stack data. When you choose this method, the manual parameter is **REQUIRED**
 
 >**subset: bool, default=True**
 >> If true, only output the fields that match. If False, keep all fields from all dataframes and populate missing data with *pd.NA*.

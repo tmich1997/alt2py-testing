@@ -1,40 +1,65 @@
+from .Config import Config;
 import pandas as pd
-from tools.Select import dtype_map
+from _utils import dtype_map
+
+INPUT_CONSTRAINTS = [
+    {
+        "name":"field",
+        "required":True,
+        "type":str,
+    },
+    {
+        "name":"start",
+        "required":False,
+        "default":1,
+        "type":int
+    },
+    {
+        "name":"type",
+        "required":False,
+        "type":str,
+        "multi_choice":list(dtype_map.keys()),
+        "default":"Int"
+    },
+    {
+        "name":"size",
+        "required":False,
+        "type":str
+    },
+    {
+        "name":"position_first",
+        "required":False,
+        "default":False,
+        "type":bool
+    },
+]
+
 
 class RecordID:
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
-            self.load_yxdb_tool(yxdb_tool);
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
-
-    def load_json(self,kwargs):
-        c = self.config;
-
-        c.field = kwargs["field"] if "field" in kwargs else c.field
-        c.start = kwargs["start"] if "start" in kwargs else c.start
-        c.type = kwargs["type"] if "type" in kwargs else c.type
-        c.size = kwargs["size"] if "size" in kwargs else c.size
-        c.position = kwargs["position"] if "position" in kwargs else c.position
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
+        else:
+            self.config.load(kwargs)
 
 
-    def load_yxdb_tool(self,xml):
-        c = self.config;
+    def load_yxdb_tool(self,tool,execute=True):
+        xml = tool.xml
 
-        c.field = xml.find(".//Configuration//FieldName").text
-        c.start = int(xml.find(".//Configuration//StartValue").text)
-        c.type = dtype_map[xml.find(".//Configuration//FieldType").text]
-        c.size = int(xml.find(".//Configuration//FieldSize").text)
-        c.position = True if xml.find(".//Configuration//Position").text=="0" else False;
+        kwargs = {}
+        kwargs["field"] = xml.find(".//Configuration//FieldName").text
+        kwargs["start"] = int(xml.find(".//Configuration//StartValue").text)
+        kwargs["type"] = xml.find(".//Configuration//FieldType").text
+        kwargs["size"] = xml.find(".//Configuration//FieldSize").text
+        kwargs["position_first"] = True if xml.find(".//Configuration//Position").text=="0" else False;
+
+        self.config.load(kwargs)
 
         if execute:
             df = tool.get_input("Input")
-            next_df = RecordID(xml=tool.xml).execute(df)
+            next_df = self.execute(df)
             tool.data["Output"] = next_df
 
     def execute(self,input_datasource):
@@ -42,32 +67,11 @@ class RecordID:
 
         new_df = input_datasource.copy();
         new_df[c.field] = range(c.start,c.start + len(new_df))
-        new_df[c.field] = new_df[c.field].astype(c.type)
+        new_df[c.field] = new_df[c.field].astype(dtype_map[c.type])
 
-        if c.position:
+        if c.position_first:
             new_df = new_df.loc[:, [c.field]+input_datasource.columns.tolist()]
-        if c.type=="string":
-            new_df[c.field] = new_df[c.field].str.zfill(c.size)
+        if c.type=="String":
+            new_df[c.field] = new_df[c.field].str.zfill(int(c.size))
 
         return new_df
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.field=None
-            self.start=1
-            self.type=dtype_map["Int64"]
-            self.size=None
-            self.position=False
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

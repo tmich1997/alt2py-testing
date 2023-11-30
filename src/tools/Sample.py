@@ -1,35 +1,57 @@
+from .Config import Config;
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
+INPUT_CONSTRAINTS = [
+    {
+        "name":"train",
+        "required":False,
+        "type":(int,float),
+        "default":0.75
+    },
+    {
+        "name":"validate",
+        "required":False,
+        "type":(int,float),
+        "default":0.25
+    },
+    {
+        "name":"seed",
+        "required":False,
+        "type":int,
+        "default":None
+    },
+    {
+        "name":"shuffle",
+        "required":False,
+        "type":bool,
+        "default":True
+    }
+]
+
 class Sample:
-
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
+        else:
+            self.config.load(kwargs)
 
-    def load_json(self,json):
-        c = self.config;
-
-        c.train = json["train"]
-        c.seed = json["seed"] if "seed" in json else None;
 
     def load_yxdb_tool(self,tool,execute=True):
-        c = self.config;
-        xml = tool.xml;
+        xml = tool.xml
+
+        kwargs = {}
 
         values = {v.get("name"):int(v.text) for v in xml.find(".//Configuration")}
 
-        c.train = values["estimation pct"]/100
-        c.validate = values["validation pct"]/100 #(100 - values["estimation pct"])
-        c.seed = values["rand seed"]
-        c.shuffle = False;
+        kwargs['train'] = values["estimation pct"]/100
+        kwargs['validate'] = values["validation pct"]/100 #(100 - values["estimation pct"])
+        kwargs['seed'] = values["rand seed"]
+        kwargs['shuffle'] = False;
+
+        self.config.load(kwargs)
 
         if execute:
             df = tool.get_input("Input")
@@ -62,23 +84,3 @@ class Sample:
         self.hold = hold.reset_index(drop=True);
 
         return self
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.train = .75;
-            self.validate = .25;
-            self.seed = None;
-            self.shuffle = True;
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

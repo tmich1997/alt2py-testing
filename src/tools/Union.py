@@ -1,39 +1,62 @@
+from .Config import Config;
 import pandas as pd;
+INPUT_CONSTRAINTS = [
+    {
+        "name":"mode",
+        "required":False,
+        "type":str,
+        "multi_choice":["position","name","manual"]
+    },
+    {
+        "name":"subset",
+        "required":False,
+        "type":bool,
+        "default":True
+    },
+    {
+        "name":"manual",
+        "required":False,
+        "type":list,
+        "sub_type":list,
+        "default":[]
+    },
+    {
+        "name":"order",
+        "required":False,
+        "type":list,
+        "default":[]
+    },
+]
+
 
 class Union:
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
-
-
-    def load_json(self,json):
-        c = self.config;
+        else:
+            self.config.load(kwargs)
 
     def load_yxdb_tool(self,tool,execute=True):
-        c = self.config;
-
         xml = tool.xml;
+        kwargs = {};
 
         mode_names = {"ByName":"name","ByPos":"position","Manual":"manual","ManualDelayed":"manual"}
-        c.mode = mode_names[xml.find(".//Configuration//Mode").text]
-        c.subset = xml.find(".//Configuration//ByName_OutputMode").text=="Subset"
+        kwargs['mode'] = mode_names[xml.find(".//Configuration//Mode").text]
+        kwargs['subset'] = xml.find(".//Configuration//ByName_OutputMode").text=="Subset"
 
         order_changed = xml.find(".//Configuration//SetOutputOrder").get("value")=="True"
 
         if order_changed:
-            c.order = [con.text for con in xml.find(".//Configuration//OutputOrder")]
+            kwargs['order'] = [con.text for con in xml.find(".//Configuration//OutputOrder")]
 
-        if c.mode == "manual":
-            c.manual = []
+        if kwargs['mode'] == "manual":
+            kwargs['manual'] = []
             for meta_info in xml.find(".//Configuration//MultiMetaInfo"):
-                c.manual.append([f.get("name") for f in meta_info.find("RecordInfo")])
+                kwargs['manual'].append([f.get("name") for f in meta_info.find("RecordInfo")])
+        self.config.load(kwargs)
+        print(self.config)
         if execute:
             dfs = tool.get_named_inputs("Input")
             ##TODO: rework the logic of how inputs are passed to exec. don't use dict, use list.
@@ -45,7 +68,6 @@ class Union:
         c = self.config;
 
         renamed_dfs = []
-        print(c.manual)
         for i,df in enumerate(dfs):
             if i==0:
                 renamed_dfs.append(df[c.manual[0]])

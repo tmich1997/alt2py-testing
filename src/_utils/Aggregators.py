@@ -17,6 +17,7 @@ class Aggregators:
             'Last':Aggregators.last,
             'Longest':Aggregators.longest,
             'Shortest':Aggregators.shortest,
+            'Average':Aggregators.avg,
             'Avg':Aggregators.avg,
             'Median':Aggregators.median,
             'Mode':Aggregators.mode,
@@ -30,6 +31,31 @@ class Aggregators:
         if name not in names:
             return;
         return names[name]
+
+    @staticmethod
+    def get_names():
+        names = {
+            'Sum':Aggregators.sum,
+            'Min':Aggregators.min,
+            'Max':Aggregators.max,
+            'Concat':Aggregators.concat,
+            'Count':Aggregators.count,
+            'First':Aggregators.first,
+            'Last':Aggregators.last,
+            'Longest':Aggregators.longest,
+            'Shortest':Aggregators.shortest,
+            'Average':Aggregators.avg,
+            'Avg':Aggregators.avg,
+            'Median':Aggregators.median,
+            'Mode':Aggregators.mode,
+            'StdDev':Aggregators.std_dev,
+            'Variance':Aggregators.var,
+            'SpatialObjCombine':Aggregators.spatial_combine,
+            'SpatialObjConvexHull':Aggregators.convex_hull,
+            'CountBlank':Aggregators.count_blanks,
+            'CountNonBlank':Aggregators.count_non_blanks
+        }
+        return list(names.keys())
     @staticmethod
     def sum(x):
         return sum(x)

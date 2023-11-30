@@ -1,30 +1,56 @@
+from .Config import Config;
 import pandas as pd;
 
-class MultiFieldBin:
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
-            self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
+INPUT_CONSTRAINTS = [
+    {
+        "name":"fields",
+        "required":True,
+        "type":list,
+        "sub_type":str,
+        "field":True
+    },{
+        "name":"mode",
+        "required":False,
+        "type":str,
+        "multi_choice":["count","interval"],
+        "default":"count"
+    },{
+        "name":"bins",
+        "required":True,
+        "type":int
+    },{
+        "name":"prefix",
+        "required":False,
+        "type":str,
+        "default":""
+    },{
+        "name":"suffix",
+        "required":False,
+        "type":str,
+        "default":"_Tile_Num"
+    }
+]
 
-    def load_json(self,json):
-        c = self.config;
+class MultiFieldBin:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
+        else:
+            self.config.load(kwargs)
 
     def load_yxdb_tool(self,tool,execute=True):
-        c = self.config;
+        kwargs = {}
         xml = tool.xml;
         values = {v.get("name"):v.text for v in xml.find(".//Configuration")}
 
         field_statements = values["List Box (297)"].split(',')
-        c.fields = [f.split("=")[0] for f in field_statements if f.split("=")[1]=="True"]
-        c.mode = "count" if values["Radio Button (299)"]=="True" else "interval"#count
-        c.bins = int(values["Numeric Up Down (298)"]) if values["Radio Button (299)"]=="True" else int(values["Numeric Up Down (300)"])
-        c.suffix = "_Tile_Num"
+        kwargs['fields'] = [f.split("=")[0] for f in field_statements if f.split("=")[1]=="True"]
+        kwargs['mode'] = "count" if values["Radio Button (299)"]=="True" else "interval"#count
+        kwargs['bins'] = int(values["Numeric Up Down (298)"]) if values["Radio Button (299)"]=="True" else int(values["Numeric Up Down (300)"])
+        kwargs['suffix'] = "_Tile_Num"
+
+        self.config.load(kwargs)
 
         if execute:
             df = tool.get_input("Input")
@@ -46,24 +72,3 @@ class MultiFieldBin:
             raise Exception("mode must be set to 'count' or 'interval'.")
 
         return new_df
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.fields = []
-            self.mode = "count" # count|interval
-            self.bins = 2
-            self.prefix = ''
-            self.suffix = ''
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

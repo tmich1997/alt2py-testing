@@ -1,30 +1,49 @@
+from .Config import Config;
 import pandas as pd
 from datetime import datetime
 import re
 
-class DateTime:
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
-        if config:
-            self.config = config
-        elif yxdb_tool:
-            self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
+INPUT_CONSTRAINTS = [
+    {
+        "name":"field",
+        "required":True,
+        "type":str,
+        "field":True
+    },{
+        "name":"to_string",
+        "required":False,
+        "type":bool,
+        "default":True
+    },{
+        "name":"pattern",
+        "required":True,
+        "type":str
+    },{
+        "name":"label",
+        "required":True,
+        "type":str
+    }
+]
 
-    def load_json(self,json):
-        c = self.config;
+class DateTime:
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
+        if yxdb_tool:
+            self.load_yxdb_tool(yxdb_tool)
+        else:
+            self.config.load(kwargs)
 
     def load_yxdb_tool(self,tool,execute=True):
-        c = self.config;
         xml = tool.xml;
+        kwargs = {}
 
-        c.field = xml.find(".//Configuration//InputFieldName").text
-        c.to_string = xml.find(".//Configuration//IsFrom").get("value") == "True"
-        c.pattern = xml.find(".//Configuration//Format").text
-        c.label = xml.find(".//Configuration//OutputFieldName").text
+        kwargs["field"] = xml.find(".//Configuration//InputFieldName").text
+        kwargs["to_string"] = xml.find(".//Configuration//IsFrom").get("value") == "True"
+        kwargs["pattern"] = xml.find(".//Configuration//Format").text
+        kwargs["label"] = xml.find(".//Configuration//OutputFieldName").text
+
+        self.config.load(kwargs)
 
         if execute:
             df = tool.get_input("Input")
@@ -76,23 +95,3 @@ class DateTime:
             new_df[c.label] = new_df[c.field].apply(strft).astype(pd.StringDtype())
 
         return new_df.reset_index(drop=True)
-
-    class Config:
-        def __init__(
-            self
-        ):
-            self.to_string = False
-            self.field = None
-            self.pattern = None
-            self.label = None
-
-        def __str__(self):
-            attributes = vars(self)
-            out=""
-            max_spacing = max([len(attr) for attr,_ in attributes.items()])
-
-            for attribute, value in attributes.items():
-                space = " "*(max_spacing - len(attribute))
-                newline = '\n' if len(out) else ''
-                out +=(f"{newline}{attribute}: {space}{{{value}}}")
-            return out

@@ -205,9 +205,9 @@ def test_OTaaT(testing):
 
             # print(tool.id)
             # print(df1)
+            # print(df1.columns)
             # print(df2)
-            # print(df1.dtypes)
-            # print(df2.dtypes)
+            # print(df2.columns)
             df1,df2 = edge_case_handle(testing,tool.id,df1,df2)
 
             comp = df1 == df2
@@ -241,12 +241,12 @@ def test_OTaaT(testing):
                 print(tool.id + " - " + tool.name[-1] +": PASSED")
 
 
-test_OTaaT("Clean")
+# test_OTaaT("Unique")
 
-# for toolName in wf_paths:
-#     print("TOOLNAME")
-#     print(toolName)
-#     test_OTaaT(toolName)
+for toolName in wf_paths:
+    print("TOOLNAME")
+    print(toolName)
+    test_OTaaT(toolName)
 
 
 # for t in results:

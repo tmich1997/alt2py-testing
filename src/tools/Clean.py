@@ -1,5 +1,3 @@
-
-print(type(True))
 from .Config import Config;
 import pandas as pd;
 import numpy as np;
@@ -8,97 +6,86 @@ import re;
 
 # IF A CONSTRAINT IS REQUIRED YOU SHOULD NOT SET A DEFAULT
 # IF A CONSTRAINT IS NOT REQUIRED YOU MUST SET A DEFAULT
-FIELD_CONSTRAINTS = [
+INPUT_CONSTRAINTS = [
 {
     "name":"fields",
     "required":False,
     "type":list,
     "sub_type":str,
-    "default":[],
+    "default":[]
 },
 {
     "name":"filter_na_cols",
     "required":False,
     "type":bool,
-    "default":False,
-    "condition":True
+    "default":False
 },
 {
     "name":"filter_na_rows",
     "required":False,
     "type":bool,
-    "default":False,
-    "condition":True
+    "default":False
 },
 {
     "name":"replace_na_blank",
     "required":False,
     "type":bool,
-    "default":False,
-    "condition":True
+    "default":False
 },
 {
     "name":"replace_na_zero",
     "required":False,
     "type":bool,
-    "default":False,
-    "condition":True
+    "default":False
 },
 {
     "name":"trim_whitespace",
     "required":False,
     "type":bool,
-    "default":False,
-    "condition":True
+    "default":False
 },
 {
     "name":"remove_dup_space",
     "required":False,
     "type":bool,
-    "default":False,
-    "condition":True
+    "default":False
 },
 {
     "name":"remove_all_space",
     "required":False,
     "type":bool,
-    "default":False,
-    "condition":True
+    "default":False
 },
 {
     "name":"remove_letters",
     "required":False,
     "type":bool,
-    "default":False,
-    "condition":True
+    "default":False
 },
 {
     "name":"remove_numbers",
     "required":False,
     "type":bool,
-    "default":False,
-    "condition":True
+    "default":False
 },
 {
     "name":"remove_numbers",
     "required":False,
     "type":bool,
-    "default":False,
-    "condition":True
+    "default":False
 },
 {
     "name":"modify",
     "required":False,
     "type":bool,
     "default":None,
-    "condition":True,
     "multi_choice":["title","upper","lower"]
 }]
 
 class Clean:
     def __init__(self,yxdb_tool=None,**kwargs):
         # LOAD DEFAULTS
-        self.config = Config(FIELD_CONSTRAINTS);
+        self.config = Config(INPUT_CONSTRAINTS);
         if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
         else:
@@ -133,8 +120,8 @@ class Clean:
 
     def execute(self,input_datasource):
         c = self.config;
-
-        new_df = input_datasource.copy()
+        # c.check_field_constraints(input_datasource)
+        new_df = input_datasource.copy();
 
         if c.fields is None:
             c.fields = input_datasource.columns.tolist();

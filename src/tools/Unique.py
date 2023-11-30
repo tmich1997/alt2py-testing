@@ -1,28 +1,37 @@
+from .Config import Config;
 import pandas as pd;
 
+
+INPUT_CONSTRAINTS = [
+    {
+        "name":"fields",
+        "required":True,
+        "type":list,
+        "sub_type":str,
+        "field":True
+    }
+]
+
 class Unique:
-    def __init__(self,yxdb_tool=None,json=None,config=None,**kwargs):
-        self.config = self.Config();
+    def __init__(self,yxdb_tool=None,**kwargs):
+        # LOAD DEFAULTS
+        self.config = Config(INPUT_CONSTRAINTS);
         self.unique = None;
         self.duplicates = None;
-
-        if config:
-            self.config = config
-        elif yxdb_tool:
+        if yxdb_tool:
             self.load_yxdb_tool(yxdb_tool)
-        elif json:
-            self.load_json(json);
-        elif kwargs:
-            self.load_json(kwargs);
+        else:
+            self.config.load(kwargs)
 
-    def load_yxdb_tool(self,xml):
-        c = self.config;
-
-        c.fields = [f.get("field") for f in xml.find(".//Configuration//UniqueFields")]
+    def load_yxdb_tool(self,tool,execute=True):
+        xml = tool.xml;
+        kwargs = {};
+        kwargs['fields'] = [f.get("field") for f in xml.find(".//Configuration//UniqueFields")]
+        self.config.load(kwargs)
 
         if execute:
             df = tool.get_input("Input")
-            out = Unique(xml=tool.xml).execute(df)
+            out = self.execute(df)
 
             tool.data["Unique"] = out.unique
             tool.data["Duplicates"] = out.duplicates
