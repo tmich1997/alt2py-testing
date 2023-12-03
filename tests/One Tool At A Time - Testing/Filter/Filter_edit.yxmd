@@ -623,9 +623,6 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>143 T - Basic Filter, Greater Than.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -648,9 +645,6 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>143 F - Basic Filter, Greater Than.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -673,9 +667,6 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>142 T - Basic Filter, Is Not Null.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -698,9 +689,6 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>142 F - Basic Filter, Is Not Null.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -723,9 +711,6 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>139 T - Basic Filter, Date Expressions.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -748,9 +733,6 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>139 F - Basic Filter, Date Expressions.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -773,9 +755,6 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>152 T - Basic Filter, Date and Period Expressions.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -798,9 +777,6 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>152 F - Basic Filter, Date and Period Expressions.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -823,9 +799,6 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>141 T - Custom Filter, Multiple Columns.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -848,9 +821,6 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>141 F - Custom Filter, Multiple Columns.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -873,9 +843,6 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>140 T - Custom Filter, Complex Expression.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -898,15 +865,12 @@ If a column has DateTime data, a check box displays the option to filter using j
           <DefaultAnnotationText>140 F - Custom Filter, Complex Expression.avro</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
     <Node ToolID="159">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="140" y="201" width="188" height="189" />
+        <Position x="140" y="188" width="188" height="202" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -922,40 +886,6 @@ If a column has DateTime data, a check box displays the option to filter using j
         </Annotation>
       </Properties>
       <ChildNodes>
-        <Node ToolID="156">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
-            <Position x="201" y="235" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <JoinByRecPos value="True" />
-              <OutputJoinOnly value="False" />
-              <SelectConfiguration>
-                <Configuration outputConnection="Output">
-                  <OrderChanged value="True" />
-                  <CommaDecimal value="False" />
-                  <SelectFields>
-                    <SelectField field="Input_#1_CustomerID" selected="True" />
-                    <SelectField field="Input_#1_FirstName" selected="True" />
-                    <SelectField field="Input_#1_LastName" selected="True" />
-                    <SelectField field="Input_#1_Gender" selected="True" />
-                    <SelectField field="Input_#1_Region" selected="True" />
-                    <SelectField field="Input_#1_Score" selected="True" />
-                    <SelectField field="Input_#2_JoinDate" selected="True" />
-                    <SelectField field="Input_#2_FirstPurchaseDate" selected="True" />
-                    <SelectField field="*Unknown" selected="True" />
-                  </SelectFields>
-                </Configuration>
-              </SelectConfiguration>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
-        </Node>
         <Node ToolID="158">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
             <Position x="237" y="283" />
@@ -992,6 +922,40 @@ If a column has DateTime data, a check box displays the option to filter using j
 ]]></Expression_Cond>
               <Expression_Loop>DateTimeAdd([JoinDate],1,"days")</Expression_Loop>
               <RecordCount value="6" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
@@ -1020,6 +984,30 @@ If a column has DateTime data, a check box displays the option to filter using j
               <Left value="False" />
             </Annotation>
           </Properties>
+        </Node>
+        <Node ToolID="174">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="198" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="True">
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
         </Node>
       </ChildNodes>
     </Node>
@@ -1073,41 +1061,41 @@ If a column has DateTime data, a check box displays the option to filter using j
       <Origin ToolID="152" Connection="False" />
       <Destination ToolID="168" Connection="Input" />
     </Connection>
-    <Connection name="#1">
+    <Connection>
       <Origin ToolID="155" Connection="Output" />
-      <Destination ToolID="156" Connection="Input" />
+      <Destination ToolID="174" Connection="Left" />
     </Connection>
-    <Connection name="#2" Wireless="True">
+    <Connection>
       <Origin ToolID="158" Connection="Output" />
-      <Destination ToolID="156" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="156" Connection="Output" />
-      <Destination ToolID="143" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="156" Connection="Output" />
-      <Destination ToolID="142" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="156" Connection="Output" />
-      <Destination ToolID="139" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="156" Connection="Output" />
-      <Destination ToolID="152" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="156" Connection="Output" />
-      <Destination ToolID="141" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="156" Connection="Output" />
-      <Destination ToolID="140" Connection="Input" />
+      <Destination ToolID="174" Connection="Right" />
     </Connection>
     <Connection>
       <Origin ToolID="157" Connection="Output" />
       <Destination ToolID="158" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="Join" />
+      <Destination ToolID="143" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="Join" />
+      <Destination ToolID="142" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="Join" />
+      <Destination ToolID="139" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="Join" />
+      <Destination ToolID="152" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="Join" />
+      <Destination ToolID="141" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="Join" />
+      <Destination ToolID="140" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>

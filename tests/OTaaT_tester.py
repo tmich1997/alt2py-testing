@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET;
 import sys
 sys.path.append('../src')
 from tools.ReadYXDB import Workflow
-from _utils.yxdb_mapping import execute_DbFileInput
+from tools import FileInput
 from tools.Sort import Sort
 
 wf_paths = {
@@ -59,12 +59,14 @@ def test_OTaaT(testing):
     avro_files = [filename for filename in filenames if filename.endswith('.avro')]
 
     for filename in avro_files:
-        df = execute_DbFileInput(None,os.path.join(folder_path, filename))
+        df = FileInput(file_path = os.path.join(folder_path, filename)).execute()
         solutions[filename.split(' - ')[0]] = {
             "df":df,
             "filename":filename.split('.')[0]
         }
 
+
+    print(solutions)
     workflow = Workflow(workflow_yxmd)
 
     output_anchors = []
@@ -187,6 +189,10 @@ def test_OTaaT(testing):
             sol_key = tool.id
             if tool.name[-1] != testing:
                 continue;
+
+            print(tool.name)
+            print(tool.data)
+
             if tool.name[-1] in ('Join','Unique','Filter',"Sample"):
                 sol_key = tool.id + (" " +anch[0] if anch!="Join" else "")
                 if sol_key not in solutions:
@@ -241,8 +247,8 @@ def test_OTaaT(testing):
                 print(tool.id + " - " + tool.name[-1] +": PASSED")
 
 
-# test_OTaaT("Unique")
-
+# test_OTaaT("CrossTab")
+#
 for toolName in wf_paths:
     print("TOOLNAME")
     print(toolName)
